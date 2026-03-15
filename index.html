@@ -276,6 +276,81 @@
 
         @keyframes fadeUp { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
         .au { animation:fadeUp 0.5s ease both; }
+
+        /* ══ TABLET ══ */
+        @media (max-width: 900px) {
+            nav { padding: 16px 24px; }
+            .hero-content { grid-template-columns: 1fr; gap: 40px; padding: 110px 24px 60px; }
+            .hero-title { font-size: clamp(40px, 8vw, 60px); }
+            .step-wrap { padding: 90px 28px 32px; }
+            .step-footer { padding: 18px 28px; }
+            .two-col { grid-template-columns: 1fr; gap: 32px; }
+            .event-grid { grid-template-columns: 1fr 1fr; }
+            .v-card { grid-template-columns: 160px 1fr 180px; }
+            .modal { padding: 32px 28px; }
+        }
+
+        /* ══ MOBILE ══ */
+        @media (max-width: 600px) {
+            nav { padding: 14px 18px; }
+            .nav-badge { font-size: 10px; letter-spacing: 0.1em; gap: 5px; }
+            .wordmark { font-size: 15px; letter-spacing: 0.18em; }
+            .hero-content { padding: 90px 18px 48px; gap: 32px; }
+            .hero-title { font-size: clamp(36px, 10vw, 52px); }
+            .hero-sub { font-size: 14px; max-width: 100%; }
+            .hero-cta-row { flex-direction: column; align-items: stretch; }
+            .hero-cta-row .btn-primary,
+            .hero-cta-row .btn-ghost { width: 100%; justify-content: center; }
+            .hero-stats { flex-direction: column; }
+            .h-stat { border-right: none; border-bottom: 1px solid var(--faint); padding: 12px; }
+            .h-stat:last-child { border-bottom: none; }
+            .step-wrap { padding: 80px 18px 24px; }
+            .step-footer { padding: 16px 18px; flex-wrap: wrap; gap: 12px; }
+            .step-footer .btn-primary,
+            .step-footer .btn-ghost { flex: 1; min-width: 0; justify-content: center; text-align: center; }
+            .step-hd { margin-bottom: 28px; }
+            .step-title { font-size: clamp(24px, 6vw, 36px); }
+            .two-col { grid-template-columns: 1fr; gap: 24px; }
+            .event-grid { grid-template-columns: 1fr; gap: 10px; }
+            .space-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+            .catering-grid { grid-template-columns: 1fr; gap: 8px; }
+            .checks-grid { grid-template-columns: 1fr; gap: 6px; }
+            .tod-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
+            .date-row { flex-wrap: wrap; }
+            .date-pill { min-width: calc(50% - 4px); }
+            .v-card { grid-template-columns: 1fr; }
+            .v-img { min-height: 160px; }
+            .v-cta { border-left: none; border-top: 1.5px solid var(--faint); padding: 16px; flex-direction: row; flex-wrap: wrap; align-items: center; }
+            .v-min-label, .v-min-price { display: inline; margin: 0; }
+            .v-min-price { font-size: 22px; margin-left: 8px; }
+            .v-pp-divider { display: none; }
+            .v-pp-row { margin-bottom: 0; }
+            .v-book { width: auto; flex: 1; }
+            .v-notice { align-self: center; }
+            .modal { padding: 28px 20px; max-width: 100%; border-radius: 6px; }
+            .modal-title { font-size: 24px; }
+            .modal-actions { flex-direction: column; }
+            .load-bar-bg { width: 200px; }
+            .load-title { font-size: clamp(22px, 5vw, 36px); }
+            .pill-row { gap: 5px; }
+            .pill { padding: 7px 12px; font-size: 11px; }
+            .vibe-row { gap: 6px; }
+            .vibe-pill { padding: 7px 12px; font-size: 12px; }
+            .ctr-val { font-size: 40px; min-width: 64px; }
+            .ctr-btn { width: 38px; height: 38px; font-size: 18px; }
+            .hero-event-chips { gap: 6px; }
+            .h-chip { padding: 6px 10px; font-size: 12px; }
+        }
+
+        /* ══ VERY SMALL ══ */
+        @media (max-width: 380px) {
+            .hero-content { padding: 82px 14px 36px; }
+            .step-wrap { padding: 72px 14px 20px; }
+            .step-footer { padding: 14px; }
+            .space-grid { grid-template-columns: 1fr; }
+            .tod-grid { grid-template-columns: 1fr; }
+            .modal { padding: 22px 16px; }
+        }
     </style>
 </head>
 <body>
