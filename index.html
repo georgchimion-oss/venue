@@ -126,7 +126,7 @@
 
         /* Date/time */
         .date-row { display:flex; gap:8px; }
-        .date-pill { flex:1; padding:11px 8px; border:1.5px solid var(--faint); background:#fff; color:var(--mid); cursor:pointer; text-align:center; transition:all 0.2s; border-radius:var(--r); box-shadow:var(--shadow); }
+        .date-pill { flex:1; padding:11px 8px; border:1.5px solid var(--faint); background:#fff; color:var(--mid); cursor:pointer; text-align:center; transition:all 0.2s; border-radius:var(--r); box-shadow:var(--shadow); position:relative; }
         .date-pill:hover { border-color:var(--accent-b); }
         .date-pill.sel { border-color:var(--accent); background:var(--accent-glow); }
         .dp-main { font-family:'Cormorant Garamond',serif; font-size:17px; font-style:italic; font-weight:300; display:block; margin-bottom:2px; color:var(--dark); }
@@ -359,7 +359,7 @@
 
 <nav>
     <div class="wordmark">VENUE</div>
-    <div class="nav-badge"><span class="live-dot"></span>500+ venues available</div>
+    <div class="nav-badge"><span class="live-dot"></span>200+ Miami venues</div>
 </nav>
 
 <!-- ══════════════ HERO ══════════════ -->
@@ -407,8 +407,8 @@
                     <div class="h-stat-l">Min notice</div>
                 </div>
                 <div class="h-stat">
-                    <div class="h-stat-n">500+</div>
-                    <div class="h-stat-l">Venues</div>
+                    <div class="h-stat-n">200+</div>
+                    <div class="h-stat-l">Miami Venues</div>
                 </div>
                 <div class="h-stat">
                     <div class="h-stat-n">15m</div>
@@ -504,7 +504,7 @@
             <div>
                 <div class="field-group">
                     <label class="field-label">Your Location</label>
-                    <input class="text-input" id="zip-input" type="text" placeholder="ZIP code or neighborhood (e.g. 10013)" oninput="state.zip=this.value;this.classList.toggle('filled',this.value.length>0)">
+                    <input class="text-input" id="zip-input" type="text" placeholder="ZIP code or neighborhood (e.g. Wynwood, 33137)" oninput="state.zip=this.value;this.classList.toggle('filled',this.value.length>0)">
                     <button class="loc-btn" onclick="useMyLocation()">
                         <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="2.5" stroke="currentColor" stroke-width="1.2"/><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 2"/></svg>
                         Use my current location
@@ -567,8 +567,9 @@
                             <span class="dp-sub">Tomorrow</span>
                         </div>
                         <div class="date-pill" onclick="pickDate(this,'custom')">
-                            <span class="dp-main">+ Date</span>
+                            <span class="dp-main" id="dp-custom-label">+ Date</span>
                             <span class="dp-sub">Custom</span>
+                            <input type="date" id="dp-custom-input" style="position:absolute;opacity:0;width:0;height:0;pointer-events:none;" onchange="handleCustomDate(this.value)">
                         </div>
                     </div>
                 </div>
@@ -785,117 +786,117 @@
         </div>
         <div class="venues-list">
 
-            <!-- Venue 1 -->
+            <!-- Venue 1 — Wynwood -->
             <div class="v-card au" style="animation-delay:0.05s">
                 <div class="v-img">
-                    <div class="v-img-bg" style="background:linear-gradient(145deg,#C8D5B9,#A8C094,#8FAF7A);display:flex;align-items:center;justify-content:center;">
-                        <span style="font-size:44px;opacity:0.5">🌿</span>
+                    <div class="v-img-bg" style="background:linear-gradient(145deg,#7ECEC1,#5AB8A9,#3DA294);display:flex;align-items:center;justify-content:center;">
+                        <span style="font-size:44px;opacity:0.5">🌴</span>
                     </div>
                     <div class="v-badge-wrap"><div class="v-badge badge-top">Top Rated</div></div>
                 </div>
                 <div class="v-body">
-                    <div class="v-name">The Garden Room</div>
-                    <div class="v-loc">Upper West Side · 0.3 mi away</div>
-                    <div class="v-rating"><span class="stars">★★★★★</span><span class="rating-num">4.9 (203 events)</span></div>
-                    <div class="v-tags"><div class="v-tag">Garden</div><div class="v-tag">Natural Light</div><div class="v-tag">Kid-Friendly</div><div class="v-tag">Parking</div></div>
-                    <div class="v-meta"><span><strong>55</strong> cap</span><span><strong>Full catering</strong> avail.</span><span><strong>ADA</strong> accessible</span><span><strong>Cake OK</strong></span></div>
+                    <div class="v-name">Palma Garden</div>
+                    <div class="v-loc">Wynwood · 0.4 mi away</div>
+                    <div class="v-rating"><span class="stars">★★★★★</span><span class="rating-num">4.9 (187 events)</span></div>
+                    <div class="v-tags"><div class="v-tag">Courtyard</div><div class="v-tag">Tropical</div><div class="v-tag">Kid-Friendly</div><div class="v-tag">Parking</div></div>
+                    <div class="v-meta"><span><strong>65</strong> cap</span><span><strong>Full catering</strong> avail.</span><span><strong>ADA</strong> accessible</span><span><strong>Cake OK</strong></span></div>
                 </div>
                 <div class="v-cta">
                     <div>
                         <div class="v-min-label">Minimum Spend</div>
-                        <div class="v-min-price">$1,400</div>
+                        <div class="v-min-price">$2,200</div>
                         <div class="v-pp-divider"></div>
-                        <div class="v-pp-row"><span class="v-pp-lbl">Before tax &amp; tip</span><span class="v-pp-val" id="pp-garden">—</span></div>
-                        <div class="v-pp-row total"><span class="v-pp-lbl">With tax + gratuity</span><span class="v-pp-val" id="pptot-garden">—</span></div>
-                        <div class="v-pp-note" id="ppnote-garden"></div>
+                        <div class="v-pp-row"><span class="v-pp-lbl">Before tax &amp; tip</span><span class="v-pp-val" id="pp-palma">—</span></div>
+                        <div class="v-pp-row total"><span class="v-pp-lbl">With tax + gratuity</span><span class="v-pp-val" id="pptot-palma">—</span></div>
+                        <div class="v-pp-note" id="ppnote-palma"></div>
                     </div>
                     <div class="v-notice">2h min notice</div>
-                    <button class="v-book" onclick="showConfirm('The Garden Room','$1,400',1400)">Book This Space</button>
+                    <button class="v-book" onclick="showConfirm('Palma Garden','$2,200',2200)">Book This Space</button>
                 </div>
             </div>
 
-            <!-- Venue 2 -->
+            <!-- Venue 2 — Brickell -->
             <div class="v-card au" style="animation-delay:0.12s">
                 <div class="v-img">
-                    <div class="v-img-bg" style="background:linear-gradient(145deg,#D4A89A,#C48E82,#B5786A);display:flex;align-items:center;justify-content:center;">
-                        <span style="font-size:44px;opacity:0.5">🌹</span>
+                    <div class="v-img-bg" style="background:linear-gradient(145deg,#6B8CC7,#4A72B5,#3560A0);display:flex;align-items:center;justify-content:center;">
+                        <span style="font-size:44px;opacity:0.5">🌇</span>
                     </div>
-                    <div class="v-badge-wrap"><div class="v-badge badge-few">3 left this week</div></div>
+                    <div class="v-badge-wrap"><div class="v-badge badge-few">2 left this week</div></div>
                 </div>
                 <div class="v-body">
-                    <div class="v-name">Rosewood Hall</div>
-                    <div class="v-loc">Midtown · 0.9 mi away</div>
-                    <div class="v-rating"><span class="stars">★★★★★</span><span class="rating-num">4.8 (156 events)</span></div>
-                    <div class="v-tags"><div class="v-tag">Ballroom</div><div class="v-tag">Elegant</div><div class="v-tag">Full Catering</div><div class="v-tag">AV System</div></div>
+                    <div class="v-name">Azul Rooftop</div>
+                    <div class="v-loc">Brickell · 1.1 mi away</div>
+                    <div class="v-rating"><span class="stars">★★★★★</span><span class="rating-num">4.8 (142 events)</span></div>
+                    <div class="v-tags"><div class="v-tag">Rooftop</div><div class="v-tag">Bay Views</div><div class="v-tag">Full Bar</div><div class="v-tag">AV System</div></div>
                     <div class="v-meta"><span><strong>80</strong> cap</span><span><strong>Event staff</strong> incl.</span><span><strong>Bar service</strong></span><span><strong>Photo backdrop</strong></span></div>
                 </div>
                 <div class="v-cta">
                     <div>
                         <div class="v-min-label">Minimum Spend</div>
-                        <div class="v-min-price">$3,200</div>
+                        <div class="v-min-price">$3,800</div>
                         <div class="v-pp-divider"></div>
-                        <div class="v-pp-row"><span class="v-pp-lbl">Before tax &amp; tip</span><span class="v-pp-val" id="pp-rosewood">—</span></div>
-                        <div class="v-pp-row total"><span class="v-pp-lbl">With tax + gratuity</span><span class="v-pp-val" id="pptot-rosewood">—</span></div>
-                        <div class="v-pp-note" id="ppnote-rosewood"></div>
+                        <div class="v-pp-row"><span class="v-pp-lbl">Before tax &amp; tip</span><span class="v-pp-val" id="pp-azul">—</span></div>
+                        <div class="v-pp-row total"><span class="v-pp-lbl">With tax + gratuity</span><span class="v-pp-val" id="pptot-azul">—</span></div>
+                        <div class="v-pp-note" id="ppnote-azul"></div>
                     </div>
                     <div class="v-notice">3h min notice</div>
-                    <button class="v-book" onclick="showConfirm('Rosewood Hall','$3,200',3200)">Book This Space</button>
+                    <button class="v-book" onclick="showConfirm('Azul Rooftop','$3,800',3800)">Book This Space</button>
                 </div>
             </div>
 
-            <!-- Venue 3 -->
+            <!-- Venue 3 — Coral Gables -->
             <div class="v-card au" style="animation-delay:0.2s">
                 <div class="v-img">
-                    <div class="v-img-bg" style="background:linear-gradient(145deg,#C4A882,#B08E66,#9A7A52);display:flex;align-items:center;justify-content:center;">
-                        <span style="font-size:44px;opacity:0.5">🏡</span>
+                    <div class="v-img-bg" style="background:linear-gradient(145deg,#E8D5C4,#D4BC9E,#C0A37A);display:flex;align-items:center;justify-content:center;">
+                        <span style="font-size:44px;opacity:0.5">🏛️</span>
                     </div>
                 </div>
                 <div class="v-body">
-                    <div class="v-name">The Mill House</div>
-                    <div class="v-loc">Brooklyn · 1.4 mi away</div>
-                    <div class="v-rating"><span class="stars">★★★★★</span><span class="rating-num">4.7 (98 events)</span></div>
-                    <div class="v-tags"><div class="v-tag">Rustic</div><div class="v-tag">Outdoor Patio</div><div class="v-tag">Versatile</div><div class="v-tag">Parking</div></div>
-                    <div class="v-meta"><span><strong>65</strong> cap</span><span><strong>Outdoor patio</strong></span><span><strong>Kid-friendly</strong></span><span><strong>BYO welcome</strong></span></div>
+                    <div class="v-name">The Coral Room</div>
+                    <div class="v-loc">Coral Gables · 2.3 mi away</div>
+                    <div class="v-rating"><span class="stars">★★★★★</span><span class="rating-num">4.7 (91 events)</span></div>
+                    <div class="v-tags"><div class="v-tag">Art Deco</div><div class="v-tag">Private Dining</div><div class="v-tag">Intimate</div><div class="v-tag">Valet</div></div>
+                    <div class="v-meta"><span><strong>45</strong> cap</span><span><strong>Chef's menu</strong></span><span><strong>Kid-friendly</strong></span><span><strong>BYO cake OK</strong></span></div>
                 </div>
                 <div class="v-cta">
                     <div>
                         <div class="v-min-label">Minimum Spend</div>
-                        <div class="v-min-price">$1,800</div>
+                        <div class="v-min-price">$1,600</div>
                         <div class="v-pp-divider"></div>
-                        <div class="v-pp-row"><span class="v-pp-lbl">Before tax &amp; tip</span><span class="v-pp-val" id="pp-mill">—</span></div>
-                        <div class="v-pp-row total"><span class="v-pp-lbl">With tax + gratuity</span><span class="v-pp-val" id="pptot-mill">—</span></div>
-                        <div class="v-pp-note" id="ppnote-mill"></div>
+                        <div class="v-pp-row"><span class="v-pp-lbl">Before tax &amp; tip</span><span class="v-pp-val" id="pp-coral">—</span></div>
+                        <div class="v-pp-row total"><span class="v-pp-lbl">With tax + gratuity</span><span class="v-pp-val" id="pptot-coral">—</span></div>
+                        <div class="v-pp-note" id="ppnote-coral"></div>
                     </div>
                     <div class="v-notice">2h min notice</div>
-                    <button class="v-book" onclick="showConfirm('The Mill House','$1,800',1800)">Book This Space</button>
+                    <button class="v-book" onclick="showConfirm('The Coral Room','$1,600',1600)">Book This Space</button>
                 </div>
             </div>
 
-            <!-- Venue 4 -->
+            <!-- Venue 4 — South Beach -->
             <div class="v-card au" style="animation-delay:0.28s">
                 <div class="v-img">
-                    <div class="v-img-bg" style="background:linear-gradient(145deg,#9BADB8,#7D98A6,#638294);display:flex;align-items:center;justify-content:center;">
-                        <span style="font-size:44px;opacity:0.5">🏙️</span>
+                    <div class="v-img-bg" style="background:linear-gradient(145deg,#8CC5D6,#62ABBD,#3F8FA4);display:flex;align-items:center;justify-content:center;">
+                        <span style="font-size:44px;opacity:0.5">🌊</span>
                     </div>
                 </div>
                 <div class="v-body">
-                    <div class="v-name">The Skyline Suite</div>
-                    <div class="v-loc">Downtown · 0.7 mi away</div>
-                    <div class="v-rating"><span class="stars">★★★★★</span><span class="rating-num">5.0 (71 events)</span></div>
-                    <div class="v-tags"><div class="v-tag">City Views</div><div class="v-tag">Rooftop</div><div class="v-tag">Full Service</div><div class="v-tag">ADA</div></div>
-                    <div class="v-meta"><span><strong>100</strong> cap</span><span><strong>Full catering</strong></span><span><strong>Event coord.</strong></span><span><strong>AV system</strong></span></div>
+                    <div class="v-name">Oceana Terrace</div>
+                    <div class="v-loc">South Beach · 3.1 mi away</div>
+                    <div class="v-rating"><span class="stars">★★★★★</span><span class="rating-num">5.0 (64 events)</span></div>
+                    <div class="v-tags"><div class="v-tag">Oceanfront</div><div class="v-tag">Terrace</div><div class="v-tag">Full Service</div><div class="v-tag">ADA</div></div>
+                    <div class="v-meta"><span><strong>120</strong> cap</span><span><strong>Full catering</strong></span><span><strong>Event coord.</strong></span><span><strong>AV system</strong></span></div>
                 </div>
                 <div class="v-cta">
                     <div>
                         <div class="v-min-label">Minimum Spend</div>
-                        <div class="v-min-price">$4,500</div>
+                        <div class="v-min-price">$5,500</div>
                         <div class="v-pp-divider"></div>
-                        <div class="v-pp-row"><span class="v-pp-lbl">Before tax &amp; tip</span><span class="v-pp-val" id="pp-skyline">—</span></div>
-                        <div class="v-pp-row total"><span class="v-pp-lbl">With tax + gratuity</span><span class="v-pp-val" id="pptot-skyline">—</span></div>
-                        <div class="v-pp-note" id="ppnote-skyline"></div>
+                        <div class="v-pp-row"><span class="v-pp-lbl">Before tax &amp; tip</span><span class="v-pp-val" id="pp-oceana">—</span></div>
+                        <div class="v-pp-row total"><span class="v-pp-lbl">With tax + gratuity</span><span class="v-pp-val" id="pptot-oceana">—</span></div>
+                        <div class="v-pp-note" id="ppnote-oceana"></div>
                     </div>
                     <div class="v-notice">3h min notice</div>
-                    <button class="v-book" onclick="showConfirm('The Skyline Suite','$4,500',4500)">Book This Space</button>
+                    <button class="v-book" onclick="showConfirm('Oceana Terrace','$5,500',5500)">Book This Space</button>
                 </div>
             </div>
 
@@ -903,13 +904,43 @@
     </div>
     <div class="step-footer">
         <button class="btn-ghost" onclick="go('s3')">← Adjust Preferences</button>
-        <span style="font-size:11px;color:var(--mid);letter-spacing:0.1em;">Prices for <span id="footer-guests">25</span> guests · 8.875% tax · 20% gratuity</span>
+        <span style="font-size:11px;color:var(--mid);letter-spacing:0.1em;">Prices for <span id="footer-guests">25</span> guests · 7% tax · 20% gratuity</span>
     </div>
 </div>
 
-<!-- ══════════════ MODAL ══════════════ -->
+<!-- ══════════════ MODAL — CONTACT CAPTURE ══════════════ -->
 <div id="overlay" onclick="if(event.target===this)closeModal()">
-    <div class="modal">
+    <!-- Phase 1: Contact form -->
+    <div class="modal" id="modal-contact">
+        <button class="modal-x" onclick="closeModal()">×</button>
+        <div style="text-align:center;margin-bottom:8px;">
+            <span style="font-size:32px;">🎉</span>
+        </div>
+        <div class="modal-title">Almost there!</div>
+        <div class="modal-sub" style="margin-bottom:24px;">Tell us where to send your confirmation for <strong id="mc-venue"></strong>.</div>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:20px;">
+            <div>
+                <label class="field-label" style="margin-bottom:6px;display:block;">Your Name</label>
+                <input class="text-input" id="contact-name" type="text" placeholder="First and last name" oninput="state.contactName=this.value;checkContactForm()">
+            </div>
+            <div>
+                <label class="field-label" style="margin-bottom:6px;display:block;">Email</label>
+                <input class="text-input" id="contact-email" type="email" placeholder="you@email.com" oninput="state.contactEmail=this.value;checkContactForm()">
+            </div>
+            <div>
+                <label class="field-label" style="margin-bottom:6px;display:block;">Phone</label>
+                <input class="text-input" id="contact-phone" type="tel" placeholder="(305) 555-0123" oninput="state.contactPhone=this.value;checkContactForm()">
+            </div>
+        </div>
+        <button class="btn-primary" id="btn-confirm-booking" style="width:100%;justify-content:center;opacity:0.3;pointer-events:none;" onclick="confirmBooking()">
+            <span>Confirm Booking</span>
+            <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M1 7H13M13 7L8 2M13 7L8 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div style="text-align:center;margin-top:12px;font-size:11px;color:var(--mid);letter-spacing:0.06em;">No payment required · Your coordinator will reach out to confirm</div>
+    </div>
+
+    <!-- Phase 2: Confirmation -->
+    <div class="modal" id="modal-confirm" style="display:none;">
         <button class="modal-x" onclick="closeModal()">×</button>
         <div class="check-ring">
             <svg class="check-svg" width="26" height="26" viewBox="0 0 28 28">
@@ -939,17 +970,8 @@
             <div class="s-row price-row"><span class="s-k">Est. per person (before tax/tip)</span><span class="s-v" id="m-pp-before">—</span></div>
             <div class="s-row price-row"><span class="s-k">Est. per person (with tax + tip)</span><span class="s-v" id="m-pp-total">—</span></div>
         </div>
-        <div class="modal-actions">
-            <button class="cal-btn" onclick="this.innerHTML='✓ Added'">
-                <svg width="12" height="12" viewBox="0 0 13 13" fill="none"><rect x="1" y="2.5" width="11" height="10" rx="1" stroke="currentColor" stroke-width="1.1"/><line x1="4" y1="1" x2="4" y2="4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/><line x1="9" y1="1" x2="9" y2="4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/><line x1="1" y1="6" x2="12" y2="6" stroke="currentColor" stroke-width="1.1"/></svg>
-                Add to Calendar
-            </button>
-            <button class="cal-btn" onclick="this.innerHTML='✓ Shared'">
-                <svg width="12" height="12" viewBox="0 0 13 13" fill="none"><circle cx="10.5" cy="2.5" r="1.5" stroke="currentColor" stroke-width="1.1"/><circle cx="10.5" cy="10.5" r="1.5" stroke="currentColor" stroke-width="1.1"/><circle cx="2.5" cy="6.5" r="1.5" stroke="currentColor" stroke-width="1.1"/><line x1="4" y1="5.8" x2="9" y2="3.2" stroke="currentColor" stroke-width="1.1"/><line x1="4" y1="7.2" x2="9" y2="9.8" stroke="currentColor" stroke-width="1.1"/></svg>
-                Share Details
-            </button>
-        </div>
         <div class="modal-note">
+            We'll email your confirmation to <strong id="m-email-echo"></strong>.<br>
             Your coordinator will contact you within <strong>15 minutes</strong> to confirm all details, setup, and any special requests.
         </div>
     </div>
@@ -957,17 +979,19 @@
 
 <script>
     const VENUES_DATA = [
-        { id:'garden',  minSpend:1400 },
-        { id:'rosewood',minSpend:3200 },
-        { id:'mill',    minSpend:1800 },
-        { id:'skyline', minSpend:4500 }
+        { id:'palma',   minSpend:2200 },
+        { id:'azul',    minSpend:3800 },
+        { id:'coral',   minSpend:1600 },
+        { id:'oceana',  minSpend:5500 }
     ];
 
     const state = {
         screen:'s0', eventType:null, zip:'', radius:'1 mi', space:'Private Room',
-        guests:25, date:'today', timeOfDay:'Evening', occ:null,
+        guests:25, date:'today', customDate:null, timeOfDay:'Evening', occ:null,
         budget:null, catering:null, drinks:null, vibe:null,
-        mustHaves:[], notes:''
+        mustHaves:[], notes:'',
+        contactName:'', contactEmail:'', contactPhone:'',
+        _pendingVenue:null, _pendingMinSpend:null, _pendingMinNum:null
     };
 
     const PROG = { s0:0, s1:18, s2:42, s3:66, 's-load':83, s4:100 };
@@ -992,8 +1016,8 @@
     }
     function useMyLocation() {
         const i=document.getElementById('zip-input');
-        i.value='New York, NY 10013'; i.classList.add('filled');
-        state.zip='New York, NY 10013';
+        i.value='Miami, FL 33137'; i.classList.add('filled');
+        state.zip='Miami, FL 33137';
     }
     function pickPill(el,group) {
         el.closest('.pill-row').querySelectorAll('.pill').forEach(p=>p.classList.remove('sel'));
@@ -1019,6 +1043,24 @@
     function pickDate(el,val) {
         document.querySelectorAll('.date-pill').forEach(p=>p.classList.remove('sel'));
         el.classList.add('sel'); state.date=val;
+        if (val === 'custom') {
+            const inp = document.getElementById('dp-custom-input');
+            // Set min to today
+            const today = new Date().toISOString().split('T')[0];
+            inp.min = today;
+            inp.showPicker ? inp.showPicker() : inp.click();
+        }
+    }
+    function handleCustomDate(val) {
+        if (!val) return;
+        state.customDate = val;
+        state.date = 'custom';
+        const d = new Date(val + 'T12:00:00');
+        const label = d.toLocaleDateString('en-US',{month:'short',day:'numeric'});
+        document.getElementById('dp-custom-label').textContent = label;
+        // Ensure custom pill is selected
+        document.querySelectorAll('.date-pill').forEach(p=>p.classList.remove('sel'));
+        document.getElementById('dp-custom-input').closest('.date-pill').classList.add('sel');
     }
     function pickTod(el,val) {
         document.querySelectorAll('.tod-pill').forEach(p=>p.classList.remove('sel'));
@@ -1055,7 +1097,7 @@
         document.getElementById('footer-guests').textContent = g;
         VENUES_DATA.forEach(v=>{
             const base = v.minSpend / g;
-            const total = base * 1.28875;
+            const total = base * 1.27;
             const pp  = document.getElementById('pp-'+v.id);
             const tot = document.getElementById('pptot-'+v.id);
             const nte = document.getElementById('ppnote-'+v.id);
@@ -1101,30 +1143,81 @@
     }
 
     function showConfirm(venue,minSpend,minNum) {
-        const ref='FTE-'+Math.floor(10000+Math.random()*90000);
-        const hosts=['Sarah M.','David K.','Priya L.','Tom R.'];
-        const host=hosts[Math.floor(Math.random()*hosts.length)];
-        const base=minNum/state.guests;
-        const total=base*1.28875;
-        const dateStr = state.date==='tomorrow'
-            ? new Date(Date.now()+86400000).toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'})
-            : new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
-        document.getElementById('m-ref').textContent='Booking #'+ref;
-        document.getElementById('m-host').textContent=host+' — Your Event Coordinator';
-        document.getElementById('m-venue').textContent=venue;
-        document.getElementById('m-event').textContent=state.eventType||'Event';
-        document.getElementById('m-space').textContent=state.space||'Private Room';
-        document.getElementById('m-datetime').textContent=dateStr+' · '+state.timeOfDay;
-        document.getElementById('m-guests').textContent=state.guests+' guests';
-        document.getElementById('m-catering').textContent=state.catering||'Not selected';
-        document.getElementById('m-drinks').textContent=state.drinks||'Not selected';
-        document.getElementById('m-budget').textContent=state.budget||'Not specified';
-        document.getElementById('m-min').textContent=minSpend;
-        document.getElementById('m-pp-before').textContent='$'+Math.round(base)+'/person';
-        document.getElementById('m-pp-total').textContent='$'+Math.round(total)+'/person';
+        // Store pending booking data for phase 2
+        state._pendingVenue = venue;
+        state._pendingMinSpend = minSpend;
+        state._pendingMinNum = minNum;
+        // Reset contact form
+        state.contactName = ''; state.contactEmail = ''; state.contactPhone = '';
+        document.getElementById('contact-name').value = '';
+        document.getElementById('contact-email').value = '';
+        document.getElementById('contact-phone').value = '';
+        const btn = document.getElementById('btn-confirm-booking');
+        btn.style.opacity = '0.3'; btn.style.pointerEvents = 'none';
+        // Show venue name in contact modal
+        document.getElementById('mc-venue').textContent = venue;
+        // Show phase 1, hide phase 2
+        document.getElementById('modal-contact').style.display = '';
+        document.getElementById('modal-confirm').style.display = 'none';
         document.getElementById('overlay').classList.add('open');
     }
-    function closeModal() { document.getElementById('overlay').classList.remove('open'); }
+
+    function checkContactForm() {
+        const ok = state.contactName.trim() && state.contactEmail.trim() && state.contactPhone.trim();
+        const btn = document.getElementById('btn-confirm-booking');
+        btn.style.opacity = ok ? '1' : '0.3';
+        btn.style.pointerEvents = ok ? 'auto' : 'none';
+    }
+
+    function confirmBooking() {
+        const venue = state._pendingVenue;
+        const minSpend = state._pendingMinSpend;
+        const minNum = state._pendingMinNum;
+        const ref = 'FTE-' + Math.floor(10000 + Math.random() * 90000);
+        const hosts = ['Sarah M.','David K.','Priya L.','Tom R.'];
+        const host = hosts[Math.floor(Math.random() * hosts.length)];
+        const base = minNum / state.guests;
+        const total = base * 1.27;
+        let dateStr;
+        if (state.date === 'custom' && state.customDate) {
+            dateStr = new Date(state.customDate + 'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
+        } else if (state.date === 'tomorrow') {
+            dateStr = new Date(Date.now()+86400000).toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
+        } else {
+            dateStr = new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
+        }
+        document.getElementById('m-ref').textContent = 'Booking #' + ref;
+        document.getElementById('m-host').textContent = host + ' — Your Event Coordinator';
+        document.getElementById('m-venue').textContent = venue;
+        document.getElementById('m-event').textContent = state.eventType || 'Event';
+        document.getElementById('m-space').textContent = state.space || 'Private Room';
+        document.getElementById('m-datetime').textContent = dateStr + ' · ' + state.timeOfDay;
+        document.getElementById('m-guests').textContent = state.guests + ' guests';
+        document.getElementById('m-catering').textContent = state.catering || 'Not selected';
+        document.getElementById('m-drinks').textContent = state.drinks || 'Not selected';
+        document.getElementById('m-budget').textContent = state.budget || 'Not specified';
+        document.getElementById('m-min').textContent = minSpend;
+        document.getElementById('m-pp-before').textContent = '$' + Math.round(base) + '/person';
+        document.getElementById('m-pp-total').textContent = '$' + Math.round(total) + '/person';
+        document.getElementById('m-email-echo').textContent = state.contactEmail;
+        // Transition: hide contact form, show confirmation
+        document.getElementById('modal-contact').style.display = 'none';
+        document.getElementById('modal-confirm').style.display = '';
+        // Re-trigger confirmation modal animation
+        const confirm = document.getElementById('modal-confirm');
+        confirm.style.animation = 'none';
+        void confirm.offsetWidth;
+        confirm.style.animation = '';
+    }
+
+    function closeModal() {
+        document.getElementById('overlay').classList.remove('open');
+        // Reset both modals after animation
+        setTimeout(() => {
+            document.getElementById('modal-contact').style.display = '';
+            document.getElementById('modal-confirm').style.display = 'none';
+        }, 300);
+    }
 
     // Init
     document.getElementById('dp-today-day').textContent =
