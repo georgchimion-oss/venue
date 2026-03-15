@@ -811,7 +811,7 @@
                         <div class="v-pp-note" id="ppnote-palma"></div>
                     </div>
                     <div class="v-notice">2h min notice</div>
-                    <button class="v-book" onclick="showConfirm('Palma Garden','$2,200',2200)">Book This Space</button>
+                    <button class="v-book" onclick="showConfirm('Palma Garden','$2,200',2200)">Request This Space</button>
                 </div>
             </div>
 
@@ -840,7 +840,7 @@
                         <div class="v-pp-note" id="ppnote-azul"></div>
                     </div>
                     <div class="v-notice">3h min notice</div>
-                    <button class="v-book" onclick="showConfirm('Azul Rooftop','$3,800',3800)">Book This Space</button>
+                    <button class="v-book" onclick="showConfirm('Azul Rooftop','$3,800',3800)">Request This Space</button>
                 </div>
             </div>
 
@@ -868,7 +868,7 @@
                         <div class="v-pp-note" id="ppnote-coral"></div>
                     </div>
                     <div class="v-notice">2h min notice</div>
-                    <button class="v-book" onclick="showConfirm('The Coral Room','$1,600',1600)">Book This Space</button>
+                    <button class="v-book" onclick="showConfirm('The Coral Room','$1,600',1600)">Request This Space</button>
                 </div>
             </div>
 
@@ -896,7 +896,7 @@
                         <div class="v-pp-note" id="ppnote-oceana"></div>
                     </div>
                     <div class="v-notice">3h min notice</div>
-                    <button class="v-book" onclick="showConfirm('Oceana Terrace','$5,500',5500)">Book This Space</button>
+                    <button class="v-book" onclick="showConfirm('Oceana Terrace','$5,500',5500)">Request This Space</button>
                 </div>
             </div>
 
@@ -908,16 +908,16 @@
     </div>
 </div>
 
-<!-- ══════════════ MODAL — CONTACT CAPTURE ══════════════ -->
+<!-- ══════════════ MODAL — BOOKING REQUEST ══════════════ -->
 <div id="overlay" onclick="if(event.target===this)closeModal()">
     <!-- Phase 1: Contact form -->
     <div class="modal" id="modal-contact">
         <button class="modal-x" onclick="closeModal()">×</button>
         <div style="text-align:center;margin-bottom:8px;">
-            <span style="font-size:32px;">🎉</span>
+            <span style="font-size:28px;">📋</span>
         </div>
-        <div class="modal-title">Almost there!</div>
-        <div class="modal-sub" style="margin-bottom:24px;">Tell us where to send your confirmation for <strong id="mc-venue"></strong>.</div>
+        <div class="modal-title">Request This Space</div>
+        <div class="modal-sub" style="margin-bottom:24px;">We'll check availability at <strong id="mc-venue"></strong> and get back to you.</div>
         <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:20px;">
             <div>
                 <label class="field-label" style="margin-bottom:6px;display:block;">Your Name</label>
@@ -932,14 +932,15 @@
                 <input class="text-input" id="contact-phone" type="tel" placeholder="(305) 555-0123" oninput="state.contactPhone=this.value;checkContactForm()">
             </div>
         </div>
-        <button class="btn-primary" id="btn-confirm-booking" style="width:100%;justify-content:center;opacity:0.3;pointer-events:none;" onclick="confirmBooking()">
-            <span>Confirm Booking</span>
-            <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M1 7H13M13 7L8 2M13 7L8 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <button class="btn-primary" id="btn-confirm-booking" style="width:100%;justify-content:center;opacity:0.3;pointer-events:none;" onclick="submitBookingRequest()">
+            <span id="btn-confirm-text">Send Request</span>
+            <svg id="btn-confirm-arrow" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M1 7H13M13 7L8 2M13 7L8 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         </button>
-        <div style="text-align:center;margin-top:12px;font-size:11px;color:var(--mid);letter-spacing:0.06em;">No payment required · Your coordinator will reach out to confirm</div>
+        <div id="submit-error" style="display:none;text-align:center;margin-top:10px;font-size:12px;color:#c0392b;"></div>
+        <div style="text-align:center;margin-top:12px;font-size:11px;color:var(--mid);letter-spacing:0.06em;">No payment required · We'll confirm availability within 24 hours</div>
     </div>
 
-    <!-- Phase 2: Confirmation -->
+    <!-- Phase 2: Request received -->
     <div class="modal" id="modal-confirm" style="display:none;">
         <button class="modal-x" onclick="closeModal()">×</button>
         <div class="check-ring">
@@ -947,32 +948,21 @@
                 <path d="M5 14L11 20L23 8" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </div>
-        <div class="modal-title">You're all set!</div>
-        <div class="modal-sub">Your space is being reserved right now.</div>
-        <div class="booking-ref" id="m-ref">Booking #FTE-00000</div>
-        <div class="host-row">
-            <div class="host-avatar">👤</div>
-            <div>
-                <div class="host-name" id="m-host">Sarah M. — Your Event Coordinator</div>
-                <div class="host-role">Will reach out within 15 minutes</div>
-            </div>
-        </div>
-        <div class="summary">
+        <div class="modal-title">Request Received</div>
+        <div class="modal-sub">We're checking availability and will be in touch shortly.</div>
+        <div class="summary" style="margin-top:20px;">
             <div class="s-row"><span class="s-k">Venue</span><span class="s-v" id="m-venue">—</span></div>
             <div class="s-row"><span class="s-k">Event</span><span class="s-v" id="m-event">—</span></div>
-            <div class="s-row"><span class="s-k">Space Type</span><span class="s-v" id="m-space">—</span></div>
-            <div class="s-row"><span class="s-k">Date &amp; Time</span><span class="s-v" id="m-datetime">—</span></div>
+            <div class="s-row"><span class="s-k">Date & Time</span><span class="s-v" id="m-datetime">—</span></div>
             <div class="s-row"><span class="s-k">Guests</span><span class="s-v" id="m-guests">—</span></div>
-            <div class="s-row"><span class="s-k">Catering</span><span class="s-v" id="m-catering">—</span></div>
-            <div class="s-row"><span class="s-k">Drinks</span><span class="s-v" id="m-drinks">—</span></div>
+            <div class="s-row"><span class="s-k">Space Type</span><span class="s-v" id="m-space">—</span></div>
             <div class="s-row"><span class="s-k">Budget</span><span class="s-v" id="m-budget">—</span></div>
-            <div class="s-row"><span class="s-k">Min. Spend</span><span class="s-v" id="m-min">—</span></div>
-            <div class="s-row price-row"><span class="s-k">Est. per person (before tax/tip)</span><span class="s-v" id="m-pp-before">—</span></div>
+            <div class="s-row"><span class="s-k">Est. Minimum</span><span class="s-v" id="m-min">—</span></div>
             <div class="s-row price-row"><span class="s-k">Est. per person (with tax + tip)</span><span class="s-v" id="m-pp-total">—</span></div>
         </div>
-        <div class="modal-note">
-            We'll email your confirmation to <strong id="m-email-echo"></strong>.<br>
-            Your coordinator will contact you within <strong>15 minutes</strong> to confirm all details, setup, and any special requests.
+        <div class="modal-note" style="margin-top:16px;">
+            We'll email next steps to <strong id="m-email-echo"></strong>.<br>
+            Expect to hear from us within <strong>24 hours</strong> — usually much sooner.
         </div>
     </div>
 </div>
@@ -1154,6 +1144,9 @@
         document.getElementById('contact-phone').value = '';
         const btn = document.getElementById('btn-confirm-booking');
         btn.style.opacity = '0.3'; btn.style.pointerEvents = 'none';
+        document.getElementById('btn-confirm-text').textContent = 'Send Request';
+        document.getElementById('btn-confirm-arrow').style.display = '';
+        document.getElementById('submit-error').style.display = 'none';
         // Show venue name in contact modal
         document.getElementById('mc-venue').textContent = venue;
         // Show phase 1, hide phase 2
@@ -1169,13 +1162,10 @@
         btn.style.pointerEvents = ok ? 'auto' : 'none';
     }
 
-    function confirmBooking() {
+    async function submitBookingRequest() {
         const venue = state._pendingVenue;
         const minSpend = state._pendingMinSpend;
         const minNum = state._pendingMinNum;
-        const ref = 'FTE-' + Math.floor(10000 + Math.random() * 90000);
-        const hosts = ['Sarah M.','David K.','Priya L.','Tom R.'];
-        const host = hosts[Math.floor(Math.random() * hosts.length)];
         const base = minNum / state.guests;
         const total = base * 1.27;
         let dateStr;
@@ -1186,28 +1176,69 @@
         } else {
             dateStr = new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
         }
-        document.getElementById('m-ref').textContent = 'Booking #' + ref;
-        document.getElementById('m-host').textContent = host + ' — Your Event Coordinator';
-        document.getElementById('m-venue').textContent = venue;
-        document.getElementById('m-event').textContent = state.eventType || 'Event';
-        document.getElementById('m-space').textContent = state.space || 'Private Room';
-        document.getElementById('m-datetime').textContent = dateStr + ' · ' + state.timeOfDay;
-        document.getElementById('m-guests').textContent = state.guests + ' guests';
-        document.getElementById('m-catering').textContent = state.catering || 'Not selected';
-        document.getElementById('m-drinks').textContent = state.drinks || 'Not selected';
-        document.getElementById('m-budget').textContent = state.budget || 'Not specified';
-        document.getElementById('m-min').textContent = minSpend;
-        document.getElementById('m-pp-before').textContent = '$' + Math.round(base) + '/person';
-        document.getElementById('m-pp-total').textContent = '$' + Math.round(total) + '/person';
-        document.getElementById('m-email-echo').textContent = state.contactEmail;
-        // Transition: hide contact form, show confirmation
-        document.getElementById('modal-contact').style.display = 'none';
-        document.getElementById('modal-confirm').style.display = '';
-        // Re-trigger confirmation modal animation
-        const confirm = document.getElementById('modal-confirm');
-        confirm.style.animation = 'none';
-        void confirm.offsetWidth;
-        confirm.style.animation = '';
+
+        // Show loading state
+        const btn = document.getElementById('btn-confirm-booking');
+        const btnText = document.getElementById('btn-confirm-text');
+        const btnArrow = document.getElementById('btn-confirm-arrow');
+        const errEl = document.getElementById('submit-error');
+        errEl.style.display = 'none';
+        btn.style.pointerEvents = 'none'; btn.style.opacity = '0.6';
+        btnText.textContent = 'Sending...'; btnArrow.style.display = 'none';
+
+        // Build form data for FormSubmit
+        const formData = {
+            name: state.contactName,
+            email: state.contactEmail,
+            phone: state.contactPhone,
+            venue: venue,
+            event_type: state.eventType || 'Not specified',
+            date: dateStr,
+            time_of_day: state.timeOfDay,
+            guests: state.guests,
+            space_type: state.space || 'Private Room',
+            budget: state.budget || 'Not specified',
+            catering: state.catering || 'Not selected',
+            drinks: state.drinks || 'Not selected',
+            minimum_spend: state._pendingMinSpend,
+            est_per_person: '$' + Math.round(total) + ' (with tax + tip)',
+            special_requests: state.notes || 'None',
+            _subject: 'VENUE Request: ' + venue + ' — ' + (state.eventType||'Event') + ' for ' + state.guests + ' guests',
+            _template: 'table'
+        };
+
+        try {
+            const res = await fetch('https://formsubmit.co/ajax/georg.chimion@gmail.com', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+            if (!res.ok) throw new Error('Request failed');
+
+            // Success — populate confirmation and show phase 2
+            document.getElementById('m-venue').textContent = venue;
+            document.getElementById('m-event').textContent = state.eventType || 'Event';
+            document.getElementById('m-space').textContent = state.space || 'Private Room';
+            document.getElementById('m-datetime').textContent = dateStr + ' · ' + state.timeOfDay;
+            document.getElementById('m-guests').textContent = state.guests + ' guests';
+            document.getElementById('m-budget').textContent = state.budget || 'Not specified';
+            document.getElementById('m-min').textContent = state._pendingMinSpend;
+            document.getElementById('m-pp-total').textContent = '$' + Math.round(total) + '/person';
+            document.getElementById('m-email-echo').textContent = state.contactEmail;
+
+            document.getElementById('modal-contact').style.display = 'none';
+            document.getElementById('modal-confirm').style.display = '';
+            const confirmEl = document.getElementById('modal-confirm');
+            confirmEl.style.animation = 'none';
+            void confirmEl.offsetWidth;
+            confirmEl.style.animation = '';
+        } catch (err) {
+            // Show error, let user retry
+            errEl.textContent = 'Something went wrong. Please try again or call us directly.';
+            errEl.style.display = 'block';
+            btn.style.pointerEvents = 'auto'; btn.style.opacity = '1';
+            btnText.textContent = 'Send Request'; btnArrow.style.display = '';
+        }
     }
 
     function closeModal() {
