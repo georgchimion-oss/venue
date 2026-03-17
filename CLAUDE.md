@@ -138,33 +138,27 @@ Venues are stored in `src/data/venues.json` with this structure per venue:
 
 ## Deployment
 
-### Current: GitHub Pages
+### Production: VPS (DigitalOcean + Nginx + pm2)
 ```bash
-git add . && git commit -m "message" && git push
-```
-
-### Target: VPS (DigitalOcean + Nginx + pm2)
-```bash
-# Local: push to GitHub
+# Deploy: push to GitHub, pull + build + restart on VPS
 git push origin HEAD:main
-
-# VPS: pull, build, restart
-ssh vps "cd /var/www/venue && git pull && npm run build && pm2 restart venue"
+ssh root@159.89.185.96 "cd /var/www/venue-app && git pull && npm run build && pm2 restart venue"
 ```
 
-Nginx config: `venue.georg.miami` → `proxy_pass http://localhost:3001`
+- **VPS path**: `/var/www/venue-app/`
+- **pm2 process**: `venue` (port 3001)
+- **Nginx**: `venue.georg.miami` → `proxy_pass http://localhost:3001`
+- **SSL**: Wildcard cert `/etc/letsencrypt/live/georg.miami/`
+- **Note**: TypeScript check skipped on VPS builds (1GB RAM OOM) — validate types locally before pushing
+
+### Legacy: GitHub Pages (index.html prototype)
+The original `index.html` is still in the repo for reference but no longer deployed.
 
 ## Development
 
-### Phase 1 (current): Still using index.html prototype
-```bash
-open index.html
-```
-
-### After Next.js migration:
 ```bash
 npm install
-npm run dev          # localhost:3000
+npm run dev          # localhost:3001
 npm run build        # production build
 npm start -- -p 3001 # production server
 ```
