@@ -1,0 +1,1201 @@
+{
+  "meta": {
+    "lastUpdated": "2026-03-17",
+    "market": "Miami, FL",
+    "neighborhoods": ["Wynwood", "Brickell", "Design District", "South Beach", "Coral Gables", "Coconut Grove", "Little River", "Downtown"],
+    "totalVenues": 31,
+    "dataSources": [
+      "Google Maps",
+      "Yelp",
+      "Peerspace",
+      "Giggster",
+      "Tagvenue",
+      "Eventective",
+      "Venue websites",
+      "OpenTable",
+      "TripAdvisor",
+      "WeddingWire",
+      "PartySlate"
+    ]
+  },
+  "venues": [
+    {
+      "id": "r-house-wynwood",
+      "name": "R House Wynwood",
+      "neighborhood": "Wynwood",
+      "address": "2727 NW 2nd Ave, Miami, FL 33127",
+      "description": "Dynamic Latin American restaurant in the heart of Wynwood's Arts District with a massive patio, known for its drag brunches and vibrant entertainment programming.",
+      "spaceTypes": ["full-venue", "patio", "private-room", "indoor-outdoor"],
+      "capacity": {
+        "min": 20,
+        "max": 500,
+        "seated": 250,
+        "cocktail": 500
+      },
+      "pricing": {
+        "model": "f&b-minimum",
+        "minimumSpend": 5000,
+        "minimumSpendNotes": "$50/person F&B minimum; no rental fee; wedding packages $12,500-$35,000 for 100-200 guests",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["outdoor-space", "in-house-catering", "full-bar", "av-equipment", "live-entertainment", "parking-nearby", "wheelchair-accessible"],
+      "bestFor": ["birthday", "corporate", "wedding", "bridal-shower", "holiday-party", "celebration"],
+      "ratings": {
+        "google": 4.3,
+        "googleReviewCount": 4200,
+        "yelp": 4.0,
+        "yelpReviewCount": 1410
+      },
+      "contact": {
+        "phone": "(305) 576-0201",
+        "email": null,
+        "website": "https://www.rhousewynwood.com/event-space-miami",
+        "eventsUrl": "https://www.rhousewynwood.com/bookanevent"
+      },
+      "hours": "Tue-Sun, varies by event",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "wynwood-walls",
+      "name": "Wynwood Walls",
+      "neighborhood": "Wynwood",
+      "address": "2520 NW 2nd Ave, Miami, FL 33127",
+      "description": "World-famous outdoor street art museum surrounded by murals from internationally acclaimed artists -- the only place to host an event with iconic Wynwood street art as your backdrop.",
+      "spaceTypes": ["outdoor-garden", "gallery", "full-venue"],
+      "capacity": {
+        "min": 50,
+        "max": 1600,
+        "seated": 300,
+        "cocktail": 600
+      },
+      "pricing": {
+        "model": "venue-rental",
+        "minimumSpend": 15000,
+        "minimumSpendNotes": "Estimated $15,000-$25,000+ venue rental depending on date and scope; welcomes outside caterers; tiered open-bar packages available",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["outdoor-space", "byob-catering-allowed", "full-bar", "wheelchair-accessible", "iconic-art-backdrop"],
+      "bestFor": ["corporate", "brand-activation", "wedding", "gala", "product-launch", "art-event"],
+      "ratings": {
+        "google": 4.7,
+        "googleReviewCount": 24000,
+        "yelp": 4.5,
+        "yelpReviewCount": 1352
+      },
+      "contact": {
+        "phone": null,
+        "email": null,
+        "website": "https://thewynwoodwalls.com/events-page/",
+        "eventsUrl": "https://thewynwoodwalls.com/events-page/"
+      },
+      "hours": "By arrangement for private events",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "arlo-wynwood-rooftop",
+      "name": "Arlo Wynwood Rooftop",
+      "neighborhood": "Wynwood",
+      "address": "2217 NW Miami Ct, Miami, FL 33127",
+      "description": "Stylish 9th-floor rooftop at the boutique Arlo hotel with a heated pool, panoramic Wynwood skyline views, colorful murals, and a dedicated rooftop bar -- ideal for upscale cocktail receptions.",
+      "spaceTypes": ["rooftop", "poolside", "full-venue"],
+      "capacity": {
+        "min": 30,
+        "max": 350,
+        "seated": 150,
+        "cocktail": 350
+      },
+      "pricing": {
+        "model": "venue-rental",
+        "minimumSpend": 10000,
+        "minimumSpendNotes": "Starts at $10,000 for events; includes rooftop bar and pool access; contact for custom proposals",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["rooftop-views", "pool", "full-bar", "in-house-catering", "valet-parking", "av-equipment", "wheelchair-accessible", "hotel-rooms-available"],
+      "bestFor": ["birthday", "corporate", "cocktail-party", "brand-activation", "wedding", "holiday-party"],
+      "ratings": {
+        "google": 4.3,
+        "googleReviewCount": 1800,
+        "yelp": 4.0,
+        "yelpReviewCount": 61
+      },
+      "contact": {
+        "phone": "(786) 522-6600",
+        "email": null,
+        "website": "https://arlohotels.com/wynwood/meetings-and-events/rooftop/",
+        "eventsUrl": "https://arlohotels.com/wynwood/meetings-and-events/rooftop/"
+      },
+      "hours": "By arrangement for private events",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "mayami-wynwood",
+      "name": "Mayami Wynwood",
+      "neighborhood": "Wynwood",
+      "address": "127 NW 23rd St, Miami, FL 33127",
+      "description": "Spectacular 8,500 sq ft open-air Mexican fusion restaurant with Oaxacan-inspired architecture, fire performers, aerialists, live DJs, and a lush courtyard -- a true dinner-and-a-show experience.",
+      "spaceTypes": ["full-venue", "patio", "indoor-outdoor", "private-room"],
+      "capacity": {
+        "min": 15,
+        "max": 200,
+        "seated": 120,
+        "cocktail": 200
+      },
+      "pricing": {
+        "model": "f&b-minimum",
+        "minimumSpend": 2500,
+        "minimumSpendNotes": "Starting at $42/person for private events; minimum spend varies by day; groups of 15+ for private events; patio seats 30 dinner / 50 cocktail",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["outdoor-space", "in-house-catering", "full-bar", "live-entertainment", "parking-nearby", "wheelchair-accessible"],
+      "bestFor": ["birthday", "celebration", "bachelorette", "corporate", "bridal-shower", "date-night-group"],
+      "ratings": {
+        "google": 4.6,
+        "googleReviewCount": 3500,
+        "yelp": 4.0,
+        "yelpReviewCount": 734
+      },
+      "contact": {
+        "phone": "(786) 660-1341",
+        "email": null,
+        "website": "https://www.mayamiwynwood.com/",
+        "eventsUrl": "https://www.mayamiwynwood.com/private-events"
+      },
+      "hours": "Daily, varies",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "aether-room",
+      "name": "Aether Room",
+      "neighborhood": "Wynwood",
+      "address": "65 NW 21st St, Miami, FL 33127",
+      "description": "Intimate, vibrant 1,300 sq ft Wynwood event space with nightclub-grade sound system, intelligent lighting, DJ booth, dance floor, and two bars -- perfect for high-energy private parties.",
+      "spaceTypes": ["full-venue", "lounge", "dance-floor"],
+      "capacity": {
+        "min": 15,
+        "max": 100,
+        "seated": 50,
+        "cocktail": 100
+      },
+      "pricing": {
+        "model": "hourly",
+        "minimumSpend": 1500,
+        "minimumSpendNotes": "$1,500 minimum on weekend evenings; 4-hour rental minimum; weekday/daytime rates from $200/hr; weekend night rates $300-$700/hr based on guest count",
+        "hourlyRate": 300,
+        "currency": "USD"
+      },
+      "amenities": ["sound-system", "dj-booth", "dance-floor", "lighting-system", "two-bars", "wheelchair-accessible"],
+      "bestFor": ["birthday", "corporate", "cocktail-party", "holiday-party", "milestone-celebration", "bachelorette"],
+      "ratings": {
+        "google": 4.8,
+        "googleReviewCount": 120,
+        "yelp": 4.5,
+        "yelpReviewCount": 22
+      },
+      "contact": {
+        "phone": null,
+        "email": null,
+        "website": "https://www.tagvenue.com/us/venues/miami/23002/aether-room",
+        "eventsUrl": "https://giggster.com/listing/energetic-vibrant-space-in-wynwood"
+      },
+      "hours": "By arrangement; 4-hour minimum",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "collectors-club",
+      "name": "Collectors Club",
+      "neighborhood": "Wynwood",
+      "address": "2812 NW 2nd Ave, Miami, FL 33127",
+      "description": "Stylish 4,000 sq ft Wynwood venue doubling as a premium sports and Pokemon card trading space, with a furnished lounge, bar area, outdoor patio, and kitchen access -- a unique backdrop for creative events.",
+      "spaceTypes": ["full-venue", "lounge", "patio", "indoor-outdoor"],
+      "capacity": {
+        "min": 20,
+        "max": 300,
+        "seated": 80,
+        "cocktail": 300
+      },
+      "pricing": {
+        "model": "hourly",
+        "minimumSpend": 2000,
+        "minimumSpendNotes": "Parties from $2,000/event; standard rate $500/hr or $3,000 for full 8-hour rental; peak season rates higher during Art Basel, Ultra, Miami Grand Prix",
+        "hourlyRate": 500,
+        "currency": "USD"
+      },
+      "amenities": ["outdoor-patio", "bar-area", "kitchen-access", "wifi", "lounge-seating", "wheelchair-accessible"],
+      "bestFor": ["birthday", "corporate", "brand-activation", "networking", "holiday-party", "kids-party"],
+      "ratings": {
+        "google": 4.5,
+        "googleReviewCount": 80,
+        "yelp": 4.5,
+        "yelpReviewCount": 15
+      },
+      "contact": {
+        "phone": null,
+        "email": null,
+        "website": "https://collectorsclub.com/",
+        "eventsUrl": "https://collectorsclub.com/pages/venue"
+      },
+      "hours": "By arrangement",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "rosa-sky-rooftop",
+      "name": "Rosa Sky Rooftop",
+      "neighborhood": "Brickell",
+      "address": "115 SW 8th St, 22nd Floor, Miami, FL 33130",
+      "description": "Elevated 3,500 sq ft rooftop lounge perched on the 22nd floor above Brickell with panoramic skyline views, handcrafted cocktails, globally inspired tapas, and a bold music lineup.",
+      "spaceTypes": ["rooftop", "lounge", "full-venue"],
+      "capacity": {
+        "min": 18,
+        "max": 150,
+        "seated": 60,
+        "cocktail": 150
+      },
+      "pricing": {
+        "model": "f&b-minimum",
+        "minimumSpend": 5000,
+        "minimumSpendNotes": "$50/person table charge (applies toward bill); full buyout available for up to 150 guests; pricing varies by day/time; contact for custom proposals",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["rooftop-views", "full-bar", "in-house-catering", "dj-music", "valet-parking", "wheelchair-accessible"],
+      "bestFor": ["birthday", "corporate", "cocktail-party", "bachelorette", "anniversary", "milestone-celebration"],
+      "ratings": {
+        "google": 4.2,
+        "googleReviewCount": 2800,
+        "yelp": 3.4,
+        "yelpReviewCount": 462
+      },
+      "contact": {
+        "phone": null,
+        "email": null,
+        "website": "https://rosaskyrooftop.com/",
+        "eventsUrl": "https://rosaskyrooftop.com/private-events/"
+      },
+      "hours": "Varies; 21+ after hours",
+      "ageRestriction": "21+",
+      "images": []
+    },
+    {
+      "id": "rosa-negra",
+      "name": "Rosa Negra Miami",
+      "neighborhood": "Brickell",
+      "address": "1346 S Miami Ave, Miami, FL 33130",
+      "description": "Luxury Latin fine dining spanning 13,600 sq ft in the heart of Brickell, featuring live Latin music, fire shows, bongo performances, and a resident DJ every night -- a showstopper for private events.",
+      "spaceTypes": ["private-room", "full-venue", "indoor-outdoor", "speakeasy"],
+      "capacity": {
+        "min": 20,
+        "max": 300,
+        "seated": 200,
+        "cocktail": 300
+      },
+      "pricing": {
+        "model": "f&b-minimum",
+        "minimumSpend": 8000,
+        "minimumSpendNotes": "Estimated F&B minimum varies by space and day; Amante speakeasy available for intimate private events; contact for custom proposals",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["live-entertainment", "in-house-catering", "full-bar", "speakeasy-space", "valet-parking", "wheelchair-accessible"],
+      "bestFor": ["birthday", "corporate", "celebration", "bachelorette", "anniversary", "holiday-party", "wedding-rehearsal"],
+      "ratings": {
+        "google": 4.4,
+        "googleReviewCount": 600,
+        "yelp": 4.0,
+        "yelpReviewCount": 78
+      },
+      "contact": {
+        "phone": null,
+        "email": null,
+        "website": "https://www.rosanegrarestaurant.us/",
+        "eventsUrl": "https://www.rosanegrarestaurant.us/privates-events-miami"
+      },
+      "hours": "Daily, varies",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "sugar-east-miami",
+      "name": "Sugar at EAST Miami",
+      "neighborhood": "Brickell",
+      "address": "788 Brickell Plz, 40th Floor, Miami, FL 33131",
+      "description": "Lush 40th-floor rooftop garden bar at the EAST hotel with a hand-carved Balinese bar, Asian-inspired cocktails and share plates, and sweeping panoramic views of Downtown Miami and Biscayne Bay.",
+      "spaceTypes": ["rooftop", "lounge", "garden"],
+      "capacity": {
+        "min": 20,
+        "max": 200,
+        "seated": 80,
+        "cocktail": 200
+      },
+      "pricing": {
+        "model": "f&b-minimum",
+        "minimumSpend": 5000,
+        "minimumSpendNotes": "$100/person minimum for table bookings; full buyout pricing available on request; contact for private event packages",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["rooftop-views", "full-bar", "in-house-catering", "dj-music", "outdoor-space", "wheelchair-accessible", "hotel-rooms-available"],
+      "bestFor": ["birthday", "corporate", "cocktail-party", "date-night-group", "anniversary", "celebration"],
+      "ratings": {
+        "google": 4.4,
+        "googleReviewCount": 5500,
+        "yelp": 3.5,
+        "yelpReviewCount": 871
+      },
+      "contact": {
+        "phone": "(786) 805-4655",
+        "email": null,
+        "website": "https://www.easthotels.com/en/miami/restaurants-and-bars/sugar/",
+        "eventsUrl": "https://www.sevenrooms.com/reservations/sugarmiami"
+      },
+      "hours": "Mon-Wed 4pm-2am, Thu-Fri 4pm-3am, Sat 12pm-3am, Sun 12pm-2am",
+      "ageRestriction": "21+ after 6pm",
+      "images": []
+    },
+    {
+      "id": "tulum-w-miami",
+      "name": "TULUM at W Miami",
+      "neighborhood": "Brickell",
+      "address": "485 Brickell Ave, 15th Floor, Miami, FL 33131",
+      "description": "Sleek 15th-floor rooftop bar and restaurant at the W Miami with near 360-degree views of Miami and Biscayne Bay, a 120-seat indoor-outdoor layout, and a private dining room for exclusive events.",
+      "spaceTypes": ["rooftop", "private-room", "indoor-outdoor", "full-venue"],
+      "capacity": {
+        "min": 12,
+        "max": 120,
+        "seated": 80,
+        "cocktail": 120
+      },
+      "pricing": {
+        "model": "f&b-minimum",
+        "minimumSpend": 5000,
+        "minimumSpendNotes": "Private dining room and full buyout available; pricing varies by day/time; contact hotel events team for custom proposals",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["rooftop-views", "private-dining-room", "full-bar", "in-house-catering", "valet-parking", "hotel-rooms-available", "wheelchair-accessible"],
+      "bestFor": ["corporate", "birthday", "anniversary", "rehearsal-dinner", "cocktail-party", "holiday-party"],
+      "ratings": {
+        "google": 4.2,
+        "googleReviewCount": 800,
+        "yelp": 3.5,
+        "yelpReviewCount": 45
+      },
+      "contact": {
+        "phone": "(305) 503-4400",
+        "email": null,
+        "website": "https://www.marriott.com/en-us/dining/restaurant-bar/miawm-w-miami/7152629-tulum-rooftop-bar-restaurant.mi",
+        "eventsUrl": null
+      },
+      "hours": "Daily, varies",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "edge-four-seasons",
+      "name": "EDGE at Four Seasons Miami",
+      "neighborhood": "Brickell",
+      "address": "1435 Brickell Ave, Miami, FL 33131",
+      "description": "Refined private dining at Four Seasons Miami with two fully privatized rooms featuring wall-to-wall Biscayne Bay views, plus an alfresco terrace -- the gold standard for intimate luxury events.",
+      "spaceTypes": ["private-room", "terrace", "restaurant"],
+      "capacity": {
+        "min": 8,
+        "max": 45,
+        "seated": 22,
+        "cocktail": 45
+      },
+      "pricing": {
+        "model": "f&b-minimum",
+        "minimumSpend": 3000,
+        "minimumSpendNotes": "Two private rooms seat 12 or 22; EDGE Terrace up to 45 cocktail; custom menus by Four Seasons culinary team; contact for pricing",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["bay-views", "private-dining-room", "in-house-catering", "full-bar", "valet-parking", "hotel-rooms-available", "wheelchair-accessible", "concierge-service"],
+      "bestFor": ["corporate", "rehearsal-dinner", "anniversary", "birthday", "business-dinner", "bridal-shower"],
+      "ratings": {
+        "google": 4.5,
+        "googleReviewCount": 3200,
+        "yelp": 4.0,
+        "yelpReviewCount": 191
+      },
+      "contact": {
+        "phone": "(305) 381-3190",
+        "email": "privatedining.miami@fourseasons.com",
+        "website": "https://www.edgebrasserie.com/",
+        "eventsUrl": "https://www.edgebrasserie.com/private-dining/"
+      },
+      "hours": "Daily, varies",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "quinto-la-huella",
+      "name": "Quinto La Huella",
+      "neighborhood": "Brickell",
+      "address": "788 Brickell Plz, 5th Floor, Miami, FL 33131",
+      "description": "Warm, inviting 9,700 sq ft South American wood-fire restaurant on the 5th floor of EAST Miami, with indoor/outdoor dining, a private room (El Faro), and sweeping Brickell City Centre views.",
+      "spaceTypes": ["private-room", "indoor-outdoor", "restaurant", "full-venue"],
+      "capacity": {
+        "min": 10,
+        "max": 200,
+        "seated": 120,
+        "cocktail": 200
+      },
+      "pricing": {
+        "model": "f&b-minimum",
+        "minimumSpend": 4000,
+        "minimumSpendNotes": "El Faro private room seats 14; full restaurant available for buyout; preset menus available; contact for pricing",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["private-dining-room", "outdoor-terrace", "in-house-catering", "full-bar", "valet-parking", "hotel-rooms-available", "wheelchair-accessible"],
+      "bestFor": ["corporate", "rehearsal-dinner", "birthday", "anniversary", "business-dinner", "bridal-shower"],
+      "ratings": {
+        "google": 4.2,
+        "googleReviewCount": 2400,
+        "yelp": 3.5,
+        "yelpReviewCount": 576
+      },
+      "contact": {
+        "phone": "(786) 805-4646",
+        "email": null,
+        "website": "https://www.quintomiami.us/",
+        "eventsUrl": "https://www.quintomiami.us/events"
+      },
+      "hours": "Mon-Thu & Sun 7am-10:30pm, Fri-Sat 7am-11pm",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "the-moore",
+      "name": "The Moore",
+      "neighborhood": "Design District",
+      "address": "4040 NE 2nd Ave, Miami, FL 33137",
+      "description": "Reimagined 1920s landmark building spanning 90,000 sq ft in the Design District, anchored by a Zaha Hadid installation, with Michelin-starred catering, a boutique hotel, private club, and grand central atrium.",
+      "spaceTypes": ["full-venue", "ballroom", "gallery", "atrium", "private-room"],
+      "capacity": {
+        "min": 50,
+        "max": 2500,
+        "seated": 1100,
+        "cocktail": 2500
+      },
+      "pricing": {
+        "model": "venue-rental",
+        "minimumSpend": 25000,
+        "minimumSpendNotes": "Estimated rental fee varies significantly by space and configuration; catering by Michelin-starred Chef Joe Anthony; cocktails by Nico de Soto; contact for custom proposals",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["in-house-catering", "full-bar", "valet-parking", "av-equipment", "wheelchair-accessible", "hotel-rooms-available", "concierge-service", "historic-architecture"],
+      "bestFor": ["wedding", "gala", "corporate", "brand-activation", "fashion-show", "product-launch", "art-event", "fundraiser"],
+      "ratings": {
+        "google": 4.3,
+        "googleReviewCount": 500,
+        "yelp": 4.0,
+        "yelpReviewCount": 42
+      },
+      "contact": {
+        "phone": null,
+        "email": null,
+        "website": "https://www.mooremiami.com/",
+        "eventsUrl": "https://www.mooremiami.com/events"
+      },
+      "hours": "By arrangement for private events",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "paradise-plaza",
+      "name": "Paradise Plaza Event Space",
+      "neighborhood": "Design District",
+      "address": "151 NE 41st St, Miami, FL 33137",
+      "description": "Striking 7,800 sq ft indoor-outdoor event space in the Design District with floor-to-ceiling windows, views of Museum Garage, accordion-style doors opening to a garden oasis, and full production capabilities.",
+      "spaceTypes": ["full-venue", "indoor-outdoor", "gallery"],
+      "capacity": {
+        "min": 50,
+        "max": 800,
+        "seated": 200,
+        "cocktail": 800
+      },
+      "pricing": {
+        "model": "daily-rental",
+        "minimumSpend": 15000,
+        "minimumSpendNotes": "Venues leased on a daily basis (24 hours, 5:59am to 5:59am); pricing not publicly listed -- contact events@miamidesigndistrict.net for proposals",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["loading-dock", "kitchen-capabilities", "built-in-bathrooms", "indoor-outdoor", "garden-oasis", "wheelchair-accessible", "byob-catering-allowed"],
+      "bestFor": ["wedding", "corporate", "fashion-show", "brand-activation", "product-launch", "art-event", "gala"],
+      "ratings": {
+        "google": 4.4,
+        "googleReviewCount": 350,
+        "yelp": null,
+        "yelpReviewCount": null
+      },
+      "contact": {
+        "phone": null,
+        "email": "events@miamidesigndistrict.net",
+        "website": "https://www.miamidesigndistrict.com/event-venue/747/paradise-plaza-event-space/",
+        "eventsUrl": "https://www.miamidesigndistrict.com/event-venues/"
+      },
+      "hours": "By arrangement; 24-hour daily rental",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "mc-kitchen",
+      "name": "MC Kitchen",
+      "neighborhood": "Design District",
+      "address": "4141 NE 2nd Ave, Miami, FL 33137",
+      "description": "Beloved Italian restaurant in the Design District with a Chef's Dining Room for intimate gatherings and a full main dining room for buyouts, featuring custom menus with wine pairings and premium AV.",
+      "spaceTypes": ["private-room", "restaurant", "full-venue"],
+      "capacity": {
+        "min": 8,
+        "max": 120,
+        "seated": 120,
+        "cocktail": 150
+      },
+      "pricing": {
+        "model": "f&b-minimum",
+        "minimumSpend": 3000,
+        "minimumSpendNotes": "Chef's Dining Room up to 14 guests with custom menus and wine pairings; main dining room up to 120 seated; full restaurant buyout 120+ guests; contact for pricing",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["private-dining-room", "in-house-catering", "full-bar", "av-equipment", "72-inch-screen", "parking-nearby", "wheelchair-accessible"],
+      "bestFor": ["corporate", "birthday", "rehearsal-dinner", "anniversary", "business-dinner", "bridal-shower", "holiday-party"],
+      "ratings": {
+        "google": 4.4,
+        "googleReviewCount": 2000,
+        "yelp": 4.0,
+        "yelpReviewCount": 440
+      },
+      "contact": {
+        "phone": "(305) 456-9948",
+        "email": "info@mckitchenmiami.com",
+        "website": "https://www.mckitchenmiami.com/",
+        "eventsUrl": "https://www.mckitchenmiami.com/privateEvents"
+      },
+      "hours": "Daily, varies",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "mandolin-aegean-bistro",
+      "name": "Mandolin Aegean Bistro",
+      "neighborhood": "Design District",
+      "address": "4312 NE 2nd Ave, Miami, FL 33137",
+      "description": "Michelin Bib Gourmand Greek-Turkish garden bistro set in a charming bungalow near the Design District, with a lush courtyard, preset menus for groups, and full buyout options for up to 220 guests.",
+      "spaceTypes": ["garden", "private-room", "full-venue", "indoor-outdoor"],
+      "capacity": {
+        "min": 9,
+        "max": 220,
+        "seated": 120,
+        "cocktail": 220
+      },
+      "pricing": {
+        "model": "f&b-minimum",
+        "minimumSpend": 5000,
+        "minimumSpendNotes": "Groups 9-50 with preset menus; private space fee for 30-50 guests; full buyout for 51-220 guests; all packages priced per person; events 12pm-9pm only",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["outdoor-garden", "in-house-catering", "full-bar", "parking-nearby", "wheelchair-accessible", "charming-bungalow-setting"],
+      "bestFor": ["birthday", "bridal-shower", "baby-shower", "rehearsal-dinner", "anniversary", "corporate", "wedding"],
+      "ratings": {
+        "google": 4.6,
+        "googleReviewCount": 3877,
+        "yelp": 4.5,
+        "yelpReviewCount": 2507
+      },
+      "contact": {
+        "phone": "(305) 749-9140",
+        "email": "reservations@mandolinmiami.com",
+        "website": "https://www.mandolinrestaurant.com/",
+        "eventsUrl": "https://www.mandolinrestaurant.com/large-parties/"
+      },
+      "hours": "Events scheduled 12pm-9pm",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "temple-house",
+      "name": "The Temple House",
+      "neighborhood": "South Beach",
+      "address": "1415 Euclid Ave, Miami Beach, FL 33139",
+      "description": "Iconic 16,000 sq ft Art Deco event venue in the heart of South Beach with 25-foot ceilings, a dramatic mezzanine, 360° projection architecture, and fully private standalone building — the gold standard for luxury events.",
+      "spaceTypes": ["full-venue", "ballroom", "indoor-outdoor"],
+      "capacity": {
+        "min": 50,
+        "max": 500,
+        "seated": 240,
+        "cocktail": 450
+      },
+      "pricing": {
+        "model": "venue-rental",
+        "minimumSpend": 20000,
+        "minimumSpendNotes": "Estimated $20,000-$50,000+ venue rental depending on date, season, and configuration; includes full production capabilities; contact for custom proposals",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["360-projection", "full-bar", "byob-catering-allowed", "valet-parking", "av-equipment", "wheelchair-accessible", "bridal-suite", "mezzanine"],
+      "bestFor": ["wedding", "gala", "corporate", "brand-activation", "fashion-show", "product-launch", "fundraiser"],
+      "ratings": {
+        "google": 4.6,
+        "googleReviewCount": 800,
+        "yelp": 4.5,
+        "yelpReviewCount": 120
+      },
+      "contact": {
+        "phone": "(305) 673-1915",
+        "email": null,
+        "website": "https://thetemplehouse.com/",
+        "eventsUrl": "https://thetemplehouse.com/venue"
+      },
+      "hours": "By arrangement for private events",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "1-hotel-south-beach",
+      "name": "1 Hotel South Beach",
+      "neighborhood": "South Beach",
+      "address": "2341 Collins Ave, Miami Beach, FL 33139",
+      "description": "Luxury beachfront hotel with 23,000+ sq ft of versatile event space including the Watr rooftop, Habitat restaurant, Plnthouse with ocean terrace, and the 50,000 sq ft Tala Beach oasis — nature-inspired elegance for events of any scale.",
+      "spaceTypes": ["rooftop", "restaurant", "terrace", "ballroom", "beachfront", "full-venue"],
+      "capacity": {
+        "min": 10,
+        "max": 1000,
+        "seated": 400,
+        "cocktail": 1000
+      },
+      "pricing": {
+        "model": "varies",
+        "minimumSpend": 10000,
+        "minimumSpendNotes": "Multiple spaces from intimate dinners to full beach buyouts; pricing varies significantly by space, date, and scope; contact hotel events team",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["beachfront", "rooftop-views", "in-house-catering", "full-bar", "valet-parking", "av-equipment", "hotel-rooms-available", "spa", "wheelchair-accessible"],
+      "bestFor": ["wedding", "corporate", "gala", "cocktail-party", "brand-activation", "product-launch", "rehearsal-dinner"],
+      "ratings": {
+        "google": 4.4,
+        "googleReviewCount": 6500,
+        "yelp": 4.0,
+        "yelpReviewCount": 482
+      },
+      "contact": {
+        "phone": "(305) 604-1000",
+        "email": null,
+        "website": "https://www.1hotels.com/south-beach",
+        "eventsUrl": "https://www.1hotels.com/south-beach/gather"
+      },
+      "hours": "By arrangement for private events",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "kimpton-anglers-hotel",
+      "name": "Kimpton Angler's Hotel",
+      "neighborhood": "South Beach",
+      "address": "660 Washington Ave, Miami Beach, FL 33139",
+      "description": "Boutique Art Deco hotel in the heart of South Beach with two brand-new event spaces — the 2,500 sq ft SoBe Room and the 1,470 sq ft SoBe Terrace — plus a lush pool courtyard perfect for intimate and mid-size events.",
+      "spaceTypes": ["private-room", "terrace", "poolside", "indoor-outdoor"],
+      "capacity": {
+        "min": 20,
+        "max": 150,
+        "seated": 100,
+        "cocktail": 150
+      },
+      "pricing": {
+        "model": "varies",
+        "minimumSpend": 5000,
+        "minimumSpendNotes": "SoBe Room (2,500 sq ft) and SoBe Terrace (1,470 sq ft) available separately or combined; pricing varies by day and configuration; contact events team",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["pool", "in-house-catering", "full-bar", "av-equipment", "hotel-rooms-available", "wheelchair-accessible", "art-deco-architecture"],
+      "bestFor": ["corporate", "birthday", "cocktail-party", "bridal-shower", "baby-shower", "holiday-party"],
+      "ratings": {
+        "google": 4.3,
+        "googleReviewCount": 1200,
+        "yelp": 4.0,
+        "yelpReviewCount": 180
+      },
+      "contact": {
+        "phone": "(305) 534-9600",
+        "email": null,
+        "website": "https://www.anglershotelmiami.com/",
+        "eventsUrl": "https://www.anglershotelmiami.com/meetings-events/"
+      },
+      "hours": "By arrangement for private events",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "fairchild-tropical-garden",
+      "name": "Fairchild Tropical Botanic Garden",
+      "neighborhood": "Coral Gables",
+      "address": "10901 Old Cutler Rd, Coral Gables, FL 33156",
+      "description": "Sprawling 83-acre tropical garden with multiple stunning event spaces — the Garden House, lakeside marquee tent, and Arts Center — surrounded by rare palms, rainforest, and coastal habitat. Miami's most magical outdoor venue.",
+      "spaceTypes": ["garden", "full-venue", "tent", "indoor-outdoor"],
+      "capacity": {
+        "min": 20,
+        "max": 500,
+        "seated": 450,
+        "cocktail": 500
+      },
+      "pricing": {
+        "model": "venue-rental",
+        "minimumSpend": 4000,
+        "minimumSpendNotes": "Base rental $3,400-$7,000 for up to 75 guests (5 hours); additional guests $30/person; Garden House up to 250 seated; Lakeside Tent up to 450 seated; Arts Center up to 175 seated",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["outdoor-garden", "lakeside", "byob-catering-allowed", "parking", "wheelchair-accessible", "photo-opportunities", "tent-available"],
+      "bestFor": ["wedding", "gala", "corporate", "baby-shower", "bridal-shower", "fundraiser", "celebration"],
+      "ratings": {
+        "google": 4.7,
+        "googleReviewCount": 12000,
+        "yelp": 4.5,
+        "yelpReviewCount": 477
+      },
+      "contact": {
+        "phone": "(305) 667-1651",
+        "email": null,
+        "website": "https://fairchildgarden.org/",
+        "eventsUrl": "https://fairchildgarden.org/miami-botanical-garden/event-venue-miami/"
+      },
+      "hours": "Events by arrangement; garden open daily 9:30am-4:30pm",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "coral-gables-country-club",
+      "name": "Coral Gables Country Club",
+      "neighborhood": "Coral Gables",
+      "address": "997 N Greenway Dr, Coral Gables, FL 33134",
+      "description": "Historic country club with elegant ballroom, lush outdoor spaces, and sweeping green views — a classic Coral Gables setting for weddings, galas, and corporate events with capacity up to 1,000 guests.",
+      "spaceTypes": ["ballroom", "outdoor-garden", "full-venue"],
+      "capacity": {
+        "min": 50,
+        "max": 1000,
+        "seated": 500,
+        "cocktail": 1000
+      },
+      "pricing": {
+        "model": "venue-rental",
+        "minimumSpend": 5000,
+        "minimumSpendNotes": "Refundable security deposit $2,000 (daytime) / $3,000 (evening); venue rental varies by space, day, and guest count; contact for custom proposals",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["outdoor-garden", "ballroom", "parking", "in-house-catering", "full-bar", "wheelchair-accessible", "bridal-suite"],
+      "bestFor": ["wedding", "gala", "corporate", "quinceañera", "holiday-party", "fundraiser", "anniversary"],
+      "ratings": {
+        "google": 4.2,
+        "googleReviewCount": 350,
+        "yelp": 3.5,
+        "yelpReviewCount": 45
+      },
+      "contact": {
+        "phone": "(305) 460-5364",
+        "email": null,
+        "website": "https://www.coralgablescountryclub.com/",
+        "eventsUrl": "https://www.coralgablescountryclub.com/venue"
+      },
+      "hours": "By arrangement for private events",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "thesis-hotel",
+      "name": "THesis Hotel Miami",
+      "neighborhood": "Coral Gables",
+      "address": "1350 S Dixie Hwy, Coral Gables, FL 33146",
+      "description": "Modern lifestyle hotel near the University of Miami with 20,000+ sq ft of flexible indoor and outdoor event space, a rooftop pool, multiple restaurants, and contemporary design throughout.",
+      "spaceTypes": ["rooftop", "ballroom", "terrace", "private-room", "indoor-outdoor"],
+      "capacity": {
+        "min": 20,
+        "max": 500,
+        "seated": 250,
+        "cocktail": 500
+      },
+      "pricing": {
+        "model": "varies",
+        "minimumSpend": 5000,
+        "minimumSpendNotes": "20,000+ sq ft of flexible event space; multiple configurations available; contact hotel events team for custom proposals",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["rooftop-pool", "in-house-catering", "full-bar", "av-equipment", "hotel-rooms-available", "parking", "wheelchair-accessible"],
+      "bestFor": ["corporate", "wedding", "birthday", "cocktail-party", "holiday-party", "graduation"],
+      "ratings": {
+        "google": 4.3,
+        "googleReviewCount": 2200,
+        "yelp": 4.0,
+        "yelpReviewCount": 280
+      },
+      "contact": {
+        "phone": "(305) 667-5611",
+        "email": null,
+        "website": "https://thesishotelmiami.com/",
+        "eventsUrl": "https://thesishotelmiami.com/meetings"
+      },
+      "hours": "By arrangement for private events",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "vizcaya-museum",
+      "name": "Vizcaya Museum & Gardens",
+      "neighborhood": "Coconut Grove",
+      "address": "3251 S Miami Ave, Miami, FL 33129",
+      "description": "Breathtaking Italian Renaissance-style villa on Biscayne Bay with 10 acres of formal gardens, a stone barge, and ornate interiors — Miami's most iconic and photographed event venue for weddings and galas.",
+      "spaceTypes": ["garden", "terrace", "historic-mansion", "waterfront"],
+      "capacity": {
+        "min": 25,
+        "max": 200,
+        "seated": 150,
+        "cocktail": 200
+      },
+      "pricing": {
+        "model": "venue-rental",
+        "minimumSpend": 10000,
+        "minimumSpendNotes": "Daytime garden ceremonies from $2,000 (up to 25 guests, +$25/additional guest); evening rentals significantly higher; parking for 125 cars included in evening rental; police required for 200+ guests ($150/hr each)",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["waterfront", "historic-architecture", "formal-gardens", "parking", "wheelchair-accessible", "photo-opportunities"],
+      "bestFor": ["wedding", "gala", "corporate", "fundraiser", "anniversary", "photo-shoot"],
+      "ratings": {
+        "google": 4.6,
+        "googleReviewCount": 5942,
+        "yelp": 4.5,
+        "yelpReviewCount": 910
+      },
+      "contact": {
+        "phone": "(305) 250-9133",
+        "email": null,
+        "website": "https://vizcaya.org/",
+        "eventsUrl": "https://vizcaya.org/visit-2/wedding-events/"
+      },
+      "hours": "Events by arrangement; museum open Wed-Mon 9:30am-4:30pm",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "mayfair-house-hotel",
+      "name": "Mayfair House Hotel & Garden",
+      "neighborhood": "Coconut Grove",
+      "address": "3000 Florida Ave, Coconut Grove, FL 33133",
+      "description": "Boutique hotel in the heart of Coconut Grove with 18,000+ sq ft of event space across 12 unique venues — from a wood-paneled ballroom with vaulted ceilings to an outdoor terrace and rooftop rum bar, plus catering by Lost Boy & Co.",
+      "spaceTypes": ["ballroom", "terrace", "rooftop", "private-room", "indoor-outdoor"],
+      "capacity": {
+        "min": 14,
+        "max": 350,
+        "seated": 300,
+        "cocktail": 350
+      },
+      "pricing": {
+        "model": "varies",
+        "minimumSpend": 5000,
+        "minimumSpendNotes": "12 unique event spaces; ballroom up to 300 seated; terrace up to 350; catering by Lost Boy & Co.; contact events team for pricing",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["rooftop-bar", "in-house-catering", "full-bar", "av-equipment", "hotel-rooms-available", "valet-parking", "wheelchair-accessible", "bridal-suite"],
+      "bestFor": ["wedding", "corporate", "birthday", "rehearsal-dinner", "bridal-shower", "cocktail-party", "holiday-party"],
+      "ratings": {
+        "google": 4.4,
+        "googleReviewCount": 1800,
+        "yelp": 4.0,
+        "yelpReviewCount": 250
+      },
+      "contact": {
+        "phone": "(305) 441-0000",
+        "email": null,
+        "website": "https://www.mayfairhousemiami.com/",
+        "eventsUrl": "https://www.mayfairhousemiami.com/gather/"
+      },
+      "hours": "By arrangement for private events",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "mr-c-coconut-grove",
+      "name": "Mr. C Coconut Grove",
+      "neighborhood": "Coconut Grove",
+      "address": "2988 McFarlane Rd, Coconut Grove, FL 33133",
+      "description": "Italian luxury hotel by the Cipriani family with a 2,500 sq ft indoor event space, wraparound terrace, and Port-Cochere for up to 400 guests — refined European elegance meets tropical Coconut Grove charm.",
+      "spaceTypes": ["ballroom", "terrace", "full-venue", "indoor-outdoor"],
+      "capacity": {
+        "min": 20,
+        "max": 400,
+        "seated": 200,
+        "cocktail": 400
+      },
+      "pricing": {
+        "model": "varies",
+        "minimumSpend": 8000,
+        "minimumSpendNotes": "Indoor event space 2,500 sq ft; Port-Cochere accommodates up to 400; Cipriani-level catering; contact hotel events team for custom proposals",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["in-house-catering", "full-bar", "terrace", "valet-parking", "hotel-rooms-available", "wheelchair-accessible", "concierge-service"],
+      "bestFor": ["wedding", "corporate", "gala", "rehearsal-dinner", "anniversary", "cocktail-party", "luxury-celebration"],
+      "ratings": {
+        "google": 4.3,
+        "googleReviewCount": 1500,
+        "yelp": 3.5,
+        "yelpReviewCount": 200
+      },
+      "contact": {
+        "phone": "(305) 800-0672",
+        "email": null,
+        "website": "https://www.mrccoconutgrove.com/",
+        "eventsUrl": "https://www.mrccoconutgrove.com/events/"
+      },
+      "hours": "By arrangement for private events",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "little-river-studios",
+      "name": "Little River Studios",
+      "neighborhood": "Little River",
+      "address": "300 NE 71st St, Miami, FL 33138",
+      "description": "Sprawling 10,000 sq ft indoor-outdoor production and event space on an acre of land in Miami's creative Little River district — a blank canvas for weddings, festivals, brand activations, and large-scale events up to 2,750 guests.",
+      "spaceTypes": ["full-venue", "indoor-outdoor", "production-space", "outdoor-garden"],
+      "capacity": {
+        "min": 50,
+        "max": 2750,
+        "seated": 1500,
+        "cocktail": 2750
+      },
+      "pricing": {
+        "model": "venue-rental",
+        "minimumSpend": 5000,
+        "minimumSpendNotes": "Events range from $2,500-$100,000; minimum spend $5,000; half-day, full-day, and multi-day rentals available; multiple indoor-outdoor spaces",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["outdoor-space", "production-capabilities", "byob-catering-allowed", "parking", "loading-dock", "flexible-layout"],
+      "bestFor": ["wedding", "brand-activation", "festival", "corporate", "product-launch", "fashion-show", "concert", "art-event"],
+      "ratings": {
+        "google": 4.5,
+        "googleReviewCount": 200,
+        "yelp": 4.0,
+        "yelpReviewCount": 30
+      },
+      "contact": {
+        "phone": "(305) 632-1581",
+        "email": null,
+        "website": "https://littleriverstudios.com/",
+        "eventsUrl": "https://littleriverstudios.com/contact-us/"
+      },
+      "hours": "By arrangement; half/full/multi-day rentals",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "the-citadel",
+      "name": "The Citadel",
+      "neighborhood": "Little River",
+      "address": "8300 NE 2nd Ave, Miami, FL 33138",
+      "description": "Multi-level food hall and event complex in Little River with a 5,000 sq ft rooftop bar offering sweeping views, a 4,000 sq ft indoor mezzanine, and a 500-capacity entertainment space — vibrant, creative, and endlessly versatile.",
+      "spaceTypes": ["rooftop", "mezzanine", "full-venue", "indoor-outdoor"],
+      "capacity": {
+        "min": 20,
+        "max": 500,
+        "seated": 200,
+        "cocktail": 500
+      },
+      "pricing": {
+        "model": "varies",
+        "minimumSpend": 3000,
+        "minimumSpendNotes": "Rooftop semi-private up to 100 guests; mezzanine 4,000 sq ft for brand launches, galleries, banquets; entertainment space up to 500; contact for pricing",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["rooftop-views", "food-hall", "full-bar", "outdoor-space", "parking-nearby", "wheelchair-accessible", "flexible-layout"],
+      "bestFor": ["corporate", "birthday", "networking", "brand-activation", "holiday-party", "cocktail-party", "celebration"],
+      "ratings": {
+        "google": 4.2,
+        "googleReviewCount": 1800,
+        "yelp": 3.5,
+        "yelpReviewCount": 350
+      },
+      "contact": {
+        "phone": null,
+        "email": null,
+        "website": "https://www.thecitadelmiami.com/",
+        "eventsUrl": null
+      },
+      "hours": "Varies; rooftop hours seasonal",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "biltmore-hotel",
+      "name": "Biltmore Hotel",
+      "neighborhood": "Coral Gables",
+      "address": "1200 Anastasia Ave, Coral Gables, FL 33134",
+      "description": "A National Historic Landmark featuring Mediterranean Revival architecture with over 75,000 sq ft of indoor/outdoor event space — three ballrooms, terraces, an amphitheater, and Miami's most legendary pool. The definitive grand venue.",
+      "spaceTypes": ["ballroom", "terrace", "full-venue", "outdoor-garden", "pool-area"],
+      "capacity": {
+        "min": 20,
+        "max": 1000,
+        "seated": 600,
+        "cocktail": 1000
+      },
+      "pricing": {
+        "model": "venue-rental",
+        "minimumSpend": 15000,
+        "minimumSpendNotes": "Estimated $15,000-$75,000+ depending on space, date, and scope; three ballrooms; outdoor terraces and amphitheater; in-house catering by award-winning culinary team",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["historic-architecture", "ballroom", "outdoor-terrace", "pool", "in-house-catering", "full-bar", "valet-parking", "hotel-rooms-available", "spa", "golf-course", "wheelchair-accessible", "bridal-suite"],
+      "bestFor": ["wedding", "gala", "corporate", "fundraiser", "holiday-party", "anniversary", "quinceañera", "product-launch"],
+      "ratings": {
+        "google": 4.5,
+        "googleReviewCount": 9500,
+        "yelp": 4.0,
+        "yelpReviewCount": 650
+      },
+      "contact": {
+        "phone": "(855) 311-6903",
+        "email": null,
+        "website": "https://biltmorehotel.com/",
+        "eventsUrl": "https://biltmorehotel.com/meetings-events/"
+      },
+      "hours": "By arrangement for private events",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "ball-and-chain",
+      "name": "Ball & Chain",
+      "neighborhood": "Little Havana",
+      "address": "1513 SW 8th St, Miami, FL 33135",
+      "description": "Legendary live music venue on Calle Ocho open since 1935, blending Cuban culture with vibrant nightlife — salsa dancers, award-winning musicians, DJs, authentic cigar rollers, and an electric open-air pineapple-shaped stage in the back garden.",
+      "spaceTypes": ["full-venue", "outdoor-garden", "lounge", "stage"],
+      "capacity": {
+        "min": 20,
+        "max": 500,
+        "seated": 200,
+        "cocktail": 500
+      },
+      "pricing": {
+        "model": "f&b-minimum",
+        "minimumSpend": 1500,
+        "minimumSpendNotes": "F&B minimum varies by space and day; back garden with pineapple stage available for private events; full venue buyout for larger events; contact for pricing",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["live-entertainment", "outdoor-space", "full-bar", "in-house-catering", "dance-floor", "cigar-rolling", "parking-nearby"],
+      "bestFor": ["birthday", "corporate", "celebration", "bachelorette", "cocktail-party", "cultural-event", "holiday-party"],
+      "ratings": {
+        "google": 4.4,
+        "googleReviewCount": 7500,
+        "yelp": 4.0,
+        "yelpReviewCount": 1800
+      },
+      "contact": {
+        "phone": "(305) 643-7820",
+        "email": null,
+        "website": "https://ballandchainmiami.com/",
+        "eventsUrl": "https://ballandchainmiami.com/private-events/"
+      },
+      "hours": "Daily 12pm-3am",
+      "ageRestriction": "21+ after certain hours",
+      "images": []
+    },
+    {
+      "id": "cafe-la-trova",
+      "name": "Café La Trova",
+      "neighborhood": "Little Havana",
+      "address": "971 SW 8th St, Miami, FL 33130",
+      "description": "Michelin-recognized Cuban cocktail bar and restaurant on Calle Ocho by celebrity chef Michelle Bernstein and master cantinero Julio Cabrera — three configurable sections with traditional folding doors, live entertainment, and world-class cocktails.",
+      "spaceTypes": ["restaurant", "private-room", "full-venue", "indoor-outdoor"],
+      "capacity": {
+        "min": 20,
+        "max": 350,
+        "seated": 150,
+        "cocktail": 350
+      },
+      "pricing": {
+        "model": "f&b-minimum",
+        "minimumSpend": 1000,
+        "minimumSpendNotes": "Starting at $550 for smaller sections; full venue buyout for up to 350 guests; three configurable spaces with folding doors; contact for custom proposals",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["live-entertainment", "in-house-catering", "full-bar", "craft-cocktails", "flexible-layout", "wheelchair-accessible"],
+      "bestFor": ["birthday", "corporate", "cocktail-party", "celebration", "bachelorette", "rehearsal-dinner", "cultural-event"],
+      "ratings": {
+        "google": 4.5,
+        "googleReviewCount": 3200,
+        "yelp": 4.5,
+        "yelpReviewCount": 950
+      },
+      "contact": {
+        "phone": "(786) 615-4379",
+        "email": null,
+        "website": "https://www.cafelatrova.com/",
+        "eventsUrl": "https://www.cafelatrova.com/private-events"
+      },
+      "hours": "Mon-Thu 5pm-12am, Fri-Sat 5pm-3am, Sun 11am-12am",
+      "ageRestriction": null,
+      "images": []
+    },
+    {
+      "id": "pamm",
+      "name": "Pérez Art Museum Miami (PAMM)",
+      "neighborhood": "Downtown",
+      "address": "1103 Biscayne Blvd, Miami, FL 33132",
+      "description": "World-class waterfront art museum designed by Herzog & de Meuron with stunning Biscayne Bay views, hanging gardens, and 120,000 sq ft of dramatic architecture — the ultimate backdrop for sophisticated corporate events, galas, and celebrations.",
+      "spaceTypes": ["terrace", "gallery", "full-venue", "waterfront"],
+      "capacity": {
+        "min": 50,
+        "max": 800,
+        "seated": 400,
+        "cocktail": 800
+      },
+      "pricing": {
+        "model": "venue-rental",
+        "minimumSpend": 15000,
+        "minimumSpendNotes": "Venue rental varies by space and date; East Terrace and West Terrace available; gallery spaces for cocktail receptions; contact events team for proposals",
+        "hourlyRate": null,
+        "currency": "USD"
+      },
+      "amenities": ["waterfront", "bay-views", "hanging-gardens", "byob-catering-allowed", "av-equipment", "valet-parking", "wheelchair-accessible", "art-backdrop"],
+      "bestFor": ["gala", "corporate", "fundraiser", "wedding", "brand-activation", "art-event", "product-launch"],
+      "ratings": {
+        "google": 4.5,
+        "googleReviewCount": 11000,
+        "yelp": 4.5,
+        "yelpReviewCount": 620
+      },
+      "contact": {
+        "phone": "(305) 375-3000",
+        "email": null,
+        "website": "https://www.pamm.org/",
+        "eventsUrl": "https://www.pamm.org/en/venue-rentals/"
+      },
+      "hours": "Events by arrangement; museum open Thu-Mon",
+      "ageRestriction": null,
+      "images": []
+    }
+  ]
+}
