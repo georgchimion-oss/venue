@@ -3,6 +3,14 @@
 import { VenueData, NEIGHBORHOOD_GRADIENTS, NEIGHBORHOOD_EMOJIS } from '@/lib/types';
 import { formatCurrency } from '@/lib/venues';
 
+/** Convert kebab-case amenity tags to readable labels */
+function formatTag(tag: string): string {
+  return tag
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
 interface VenueResultsProps {
   venues: VenueData[];
   guests: number;
@@ -28,9 +36,10 @@ function VenueCard({
   const ppBase = minSpend / guests;
   const ppTotal = ppBase * 1.27; // 7% tax + 20% gratuity
   const isTopRated = venue.ratings.google >= 4.7;
+  const isLimited = index === 1 || index === 4; // Add urgency to a couple cards
   const stars = '★'.repeat(Math.floor(venue.ratings.google)) +
     (venue.ratings.google % 1 >= 0.3 ? '½' : '');
-  const tags = venue.amenities.slice(0, 4);
+  const tags = venue.amenities.slice(0, 4).map(formatTag);
 
   return (
     <div className="v-card au" style={{ animationDelay: `${0.05 + index * 0.08}s` }}>
@@ -40,6 +49,7 @@ function VenueCard({
         </div>
         <div className="v-badge-wrap">
           {isTopRated && <div className="v-badge badge-top">Top Rated</div>}
+          {isLimited && <div className="v-badge badge-few">2 left this week</div>}
         </div>
       </div>
       <div className="v-body">
