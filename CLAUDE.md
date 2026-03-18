@@ -117,9 +117,12 @@ Venues in `src/data/venues.json` — nullable fields: `contact.phone`, `contact.
 
 ### Production: VPS (DigitalOcean + Nginx + pm2)
 ```bash
-# Deploy: push to GitHub, then pull + build + restart on VPS
+# Deploy: build locally, push code, rsync build, restart
+npm run build                                    # Build locally (VPS OOMs on 44+ static pages)
 git push origin HEAD:main
-ssh root@159.89.185.96 "cd /var/www/venue-app && git pull origin main && rm -rf .next && npm install && npm run build && pm2 restart venue"
+ssh root@159.89.185.96 "cd /var/www/venue-app && git pull origin main && npm install"
+rsync -az --delete .next/ root@159.89.185.96:/var/www/venue-app/.next/
+ssh root@159.89.185.96 "pm2 restart venue"
 ```
 
 - **VPS path**: `/var/www/venue-app/`
@@ -127,7 +130,7 @@ ssh root@159.89.185.96 "cd /var/www/venue-app && git pull origin main && rm -rf 
 - **Nginx**: `venue.georg.miami` → `proxy_pass http://localhost:3001`
 - **DNS**: A record `venue` → `159.89.185.96` (Namecheap Advanced DNS)
 - **SSL**: Wildcard cert `/etc/letsencrypt/live/georg.miami/`
-- **Note**: TypeScript check skipped on VPS builds (1GB RAM OOM) — validate types locally
+- **IMPORTANT**: Always build locally then rsync `.next/` to VPS. The 1GB droplet OOMs when generating 44+ static pages.
 
 ### Development
 ```bash
