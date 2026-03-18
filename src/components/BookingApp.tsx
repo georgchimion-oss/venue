@@ -3,6 +3,16 @@
 import { useState, useCallback } from 'react';
 import { Step, FormState, DEFAULT_FORM_STATE, PROGRESS_MAP, VenueData } from '@/lib/types';
 import { filterVenues, getVenueCount } from '@/lib/venues';
+import {
+  trackWizardStart,
+  trackEventTypeSelected,
+  trackLocationCompleted,
+  trackPreferencesCompleted,
+  trackSearchStarted,
+  trackResultsViewed,
+  trackVenueClicked,
+  trackBookingSubmitted,
+} from '@/lib/analytics';
 import HeroSection from './HeroSection';
 import EventTypeStep from './EventTypeStep';
 import LocationStep from './LocationStep';
@@ -34,6 +44,7 @@ export default function BookingApp() {
 
   // ── Find Venues (with loading animation) ──
   const handleFindVenues = useCallback(() => {
+    trackSearchStarted(form.guests, form.eventType);
     goTo('loading');
     setTimeout(() => {
       const venues = filterVenues({
@@ -41,13 +52,16 @@ export default function BookingApp() {
         budget: form.budget || undefined,
         eventType: form.eventType || undefined,
       });
-      setMatchedVenues(venues.slice(0, 8));
+      const results = venues.slice(0, 8);
+      setMatchedVenues(results);
+      trackResultsViewed(results.length);
       goTo('results');
     }, 2500);
   }, [form.guests, form.budget, form.eventType, goTo]);
 
   // ── Booking Modal ──
   const handleBook = useCallback((venue: VenueData) => {
+    trackVenueClicked(venue.id, venue.name);
     setSelectedVenue(venue);
     setModalOpen(true);
   }, []);
@@ -77,14 +91,14 @@ export default function BookingApp() {
       {step === 'hero' && (
         <HeroSection
           venueCount={venueCount}
-          onStart={() => goTo('event-type')}
+          onStart={() => { trackWizardStart(); goTo('event-type'); }}
         />
       )}
 
       {step === 'event-type' && (
         <EventTypeStep
           selected={form.eventType}
-          onSelect={type => updateForm('eventType', type)}
+          onSelect={type => { trackEventTypeSelected(type); updateForm('eventType', type); }}
           onNext={() => goTo('location')}
           onBack={() => goTo('hero')}
         />
@@ -94,7 +108,7 @@ export default function BookingApp() {
         <LocationStep
           form={form}
           updateForm={updateForm}
-          onNext={() => goTo('preferences')}
+          onNext={() => { trackLocationCompleted(form.guests, form.zip); goTo('preferences'); }}
           onBack={() => goTo('event-type')}
         />
       )}
@@ -103,7 +117,7 @@ export default function BookingApp() {
         <PreferencesStep
           form={form}
           updateForm={updateForm}
-          onFindVenues={handleFindVenues}
+          onFindVenues={() => { trackPreferencesCompleted(form.budget || 'not set'); handleFindVenues(); }}
           onBack={() => goTo('location')}
         />
       )}
