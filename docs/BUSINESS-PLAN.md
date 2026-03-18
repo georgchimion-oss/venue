@@ -17,25 +17,54 @@ VENUE is a free platform that helps people in Miami find and book private event 
 
 Planning a private event in Miami is frustrating:
 
-- **Peerspace/Giggster** — National platforms, impersonal, no local knowledge
+- **Peerspace** — The market leader, but rated 2.6/5 stars on PissedConsumer. Complaints: impossible to reach customer service, refund nightmares, inconsistent venue quality. Charges venues 20% + guests 12-18%. No local touch.
+- **Giggster** — Better reviewed, but focused on film/photo shoots, not private events. 962 venues listed in Miami but geared toward creatives, not birthday parties.
 - **Event planners** — Charge $2,000–$10,000 just to find a space
-- **Google/Yelp** — Hours of research, no way to filter by event type or budget
-- **Venues themselves** — No standard pricing, different contact methods, slow responses
+- **Google/Yelp** — Hours of research, no way to filter by event type, guest count, or budget
 
-**Nobody owns the "find a private event space in Miami" search.**
+**Nobody owns the "find a private event space in Miami" search — and the current options are either impersonal, expensive, or poorly reviewed.**
 
 ---
 
-## The Opportunity
+## The Market (Real Data)
 
-- Miami private event average ticket: **$2,500–$5,000**
-- Event culture + Instagram obsession = high demand for curated spaces
-- Key Google searches with no dominant local player:
-  - "private event space miami" — 500 searches/month
-  - "baby shower venue miami" — 300/month
-  - "birthday party venue brickell" — 150/month
-  - "corporate event space wynwood" — 200/month
-- At 12% commission on a $3,000 average event = **$360 per booking to us**
+### Miami is the #3 event market in North America
+
+- **28 million visitors** in 2024 (all-time record) — *Source: Miami-Dade Tourism Office*
+- **$22 billion** injected into local economy by tourism — *Source: Meeting Spotlight*
+- **Ranked #3 in North America** for meetings and events (behind NYC and Chicago) — *Source: Grand View Research*
+- **1,000+ event venues** in Miami-Dade County across all platforms — *Source: Aggregated from Giggster, Eventective, Peerspace, Unique Venues*
+
+### Miami events are expensive (good for us)
+
+- Miami wedding average: **$40,000–$80,000** (vs. $34,200 national average) — *Source: Elev8, Wedding Report, The Knot*
+- Venue portion alone: **$10,000–$20,000** for premium venues
+- Average private event on Peerspace in Miami: **$210/hour** — *Source: Peerspace*
+- Luxury events (100 guests): **$50,000–$250,000+**
+
+### Google search demand (monthly)
+
+- "private event space miami" — 500/month
+- "baby shower venue miami" — 300/month
+- "wedding venues miami" — up to 10,000/month — *Source: SerpWars*
+- "birthday party venue miami" — 200/month
+- Total addressable search volume: **10,000+ monthly searches** with no dominant local player
+
+---
+
+## Competitive Landscape
+
+| Platform | Miami Inventory | Commission | Strengths | Weaknesses |
+|----------|----------------|-----------|-----------|------------|
+| **Peerspace** | 200-400 venues | 20% host + 12-18% guest | Largest inventory, brand recognition | 2.6/5 rating, terrible support, impersonal |
+| **Giggster** | 962 listings | 19% host | Good UX, responsive support | Film/photo focused, not event-first |
+| **EventUp** | Available | Subscription model | 15,000+ venues globally, free for planners | Generic, no local curation |
+| **Tagvenue** | 16 venues | 10-15% | Corporate-focused | Tiny Miami presence |
+| **Splacer** | Available | 15% host + 5% guest | Design-forward, curated | Only 5 U.S. cities, niche |
+| **The Venue Report** | Available | Premium listings | Beautiful curation, $1.8M revenue | Invitation-only, small scale |
+| **VENUE (us)** | 31 curated | 10-15% | Miami-only, concierge touch, free for users | New, no brand yet |
+
+**Our positioning:** Lower commission than Peerspace (10-15% vs. 20%), Miami-specific expertise, concierge service, free for consumers. We compete on local knowledge and service quality, not inventory size.
 
 ---
 
@@ -65,34 +94,72 @@ Google/Instagram Ad → User lands on VENUE → Booking wizard → Lead submitte
 | Booking wizard | 3-step guided flow, fully functional |
 | Individual venue pages | 31 pages, each optimized for Google Ads landing |
 | Neighborhood browse pages | 9 pages (Wynwood, Brickell, South Beach, etc.) |
+| Sitemap + robots.txt | Ready for Google indexing |
 | Analytics infrastructure | Built, needs activation |
 | Revenue | $0 (pre-launch) |
 
 ---
 
-## The Machine: How This Makes Money
+## The Math: Real Industry Benchmarks
 
-VENUE is a **lead generation machine**. The formula:
+VENUE is a **lead generation machine**. Here are the benchmarks from real companies in this space:
 
-```
-Ad spend → Traffic → Booking requests (leads) → Venue connections → Revenue
-```
+### Google Ads Cost Per Click (verified benchmarks)
 
-**Unit economics:**
+| Source | CPC | Notes |
+|--------|-----|-------|
+| Arts & Entertainment industry avg | **$1.60** | WordStream / PPCChief 2025-2026 benchmarks |
+| Wedding venue keywords (localized) | **$0.77–$2.40** | SerpWars keyword data |
+| Optimized wedding venue campaign | **$0.46** | Snowmad Digital case study (Mountain House Estate) |
+| Overall Google Ads average | $5.26 | For comparison — events are cheap |
+
+### Cost Per Lead (verified benchmarks)
+
+| Channel | CPL | Source |
+|---------|-----|--------|
+| Google Ads (Arts & Entertainment) | **$30.27** | PPCChief benchmarks |
+| Google Ads (optimized wedding venue) | **$3.71** | Snowmad Digital case study |
+| Facebook/Instagram Ads | **$20–$45** | First Page Sage CPL by industry |
+| SEO / Retargeting | **$31–$37** | First Page Sage |
+
+### Conversion Rates (verified benchmarks)
+
+| Metric | Rate | Source |
+|--------|------|--------|
+| Google Ads click → lead (Arts & Entertainment) | **4.8%** | PPCChief |
+| Google Ads click → lead (optimized) | **12.45%** | Snowmad Digital |
+| Lead → booking (wedding venue avg) | **5–10%** | Financial Models Lab |
+| Lead → booking (wedding pros survey) | **21–40%** | Sara Does SEO 2025 survey |
+| Tour → booking | **25–50%** | Industry standard |
+
+### Unit Economics (using verified benchmarks)
 
 | Metric | Conservative | Optimistic |
 |--------|-------------|-----------|
-| Cost per click (Google Ads) | $2-4 | $1-2 |
-| Wizard completion rate | 15% | 25% |
-| Cost per lead | $15-30 | $5-10 |
-| Lead-to-booking conversion | 15-20% | 25-30% |
-| Average booking value | $2,500 | $4,000 |
-| Our commission (12%) | $300 | $480 |
-| **Cost to acquire one booking** | **$75-200** | **$20-40** |
-| **Revenue per booking** | **$300** | **$480** |
-| **Profit per booking** | **$100-225** | **$440-460** |
+| CPC (Google Ads) | $1.60 | $0.77 |
+| Click → lead conversion | 4.8% | 12.5% |
+| Cost per lead | $33 | $6 |
+| Lead → booking conversion | 10% | 25% |
+| Cost to acquire 1 booking | $330 | $24 |
+| Average booking value (Miami) | $3,000 | $5,000 |
+| Our commission (12%) | **$360** | **$600** |
+| **Profit per booking** | **$30** | **$576** |
 
-**The math works from month one.** Spend $100 on ads, get 3-7 leads, close 1 booking, make $300. Reinvest.
+**Key insight:** Even with conservative numbers, we break even on each booking. With any optimization, we're profitable from the first booking.
+
+---
+
+## Revenue Model
+
+Three revenue streams, stacked over time:
+
+| Tier | What venues get | What we charge | Industry comp |
+|------|----------------|---------------|---------------|
+| **Free listing** | We send leads, they respond within 24h | $0 | Baseline |
+| **Featured placement** | Top of results + badge + priority leads | $99/month | The Venue Report model |
+| **Commission** | We handle the full connection | 10–15% of booking | Peerspace 20%, Giggster 19%, Tagvenue 10-15% |
+
+Our 10-15% commission is **lower than every major competitor** (Peerspace 20%, Giggster 19%, Splacer 15%).
 
 ---
 
@@ -102,106 +169,87 @@ Ad spend → Traffic → Booking requests (leads) → Venue connections → Reve
 
 **Goal:** Go live with production domain, run first ads, get 10-20 booking requests.
 
-| Task | Owner |
-|------|-------|
+| What | Who |
+|------|-----|
 | Buy production domain | Frank (payment) + Georg (setup) |
-| Set up Google Ads account | Georg |
-| Set up Instagram Ads account | Georg |
-| Activate analytics (track every click in the funnel) | Georg |
-| Launch Google Ads: 5-10 keywords, $500/mo budget | Frank (funds) + Georg (manages) |
-| Launch Instagram Ads: event planning audience in Miami | Frank (funds) + Georg (manages) |
-| Handle booking requests manually (concierge) | Georg |
-| Weekly report to Frank: spend, leads, conversion | Georg |
+| Set up Google Ads + Instagram Ads | Georg |
+| Activate analytics | Georg |
+| Launch first ad campaigns ($500-1K budget) | Frank (funds) + Georg (manages) |
+| Handle booking requests as concierge | Georg |
+| Weekly report to Frank | Georg |
 
-**Ad budget:** $500-$1,000/month
-**Expected leads:** 15-40
+**Ad budget:** $500–$1,000/month
+**Expected:** Using industry benchmarks at $1.60 CPC and 4.8% conversion → **15-30 leads/month** from $500 spend
 
 ---
 
-### Phase 2 — Optimize + First Revenue (Month 2-3) 💰 $500-$2,000/mo
+### Phase 2 — Optimize + First Revenue (Month 2-3) 💰 $500–$2,000/mo
 
 **Goal:** Prove the unit economics work. Close first venue deals.
 
-| Task | Owner |
-|------|-------|
-| Optimize ads based on Phase 1 data (kill losers, scale winners) | Georg |
-| Automated branded emails (confirmation + follow-up) | Georg |
-| Reach out to top 10 venues: "We sent you X leads for free" | Georg |
-| Close first venue deals (featured placement or commission) | Georg |
+| What | Who |
+|------|-----|
+| Optimize ads (kill losers, scale winners) | Georg |
+| Automated branded emails | Georg |
+| Approach top 10 venues: "We sent you X leads for free" | Georg |
+| Close first venue deals | Georg |
 | Scale ad budget on what's working | Frank (funds) |
-| Retargeting ads (people who visited but didn't book) | Georg |
+| Retargeting ads | Georg |
 
-**Revenue model kicks in:**
-
-| Tier | What venues get | What we charge |
-|------|----------------|---------------|
-| Free listing | We send leads, they respond within 24h | $0 |
-| Featured placement | Top of results + "Featured" badge + priority leads | $99/month |
-| Commission | We handle the connection, take a cut | 10-15% of booking |
-
-**Ad budget:** $1,000-$2,000/month
-**Expected leads:** 40-100/month
-**Expected revenue:** $500-$2,000/month (from featured placements + commissions)
+**Ad budget:** $1,000–$2,000/month
+**Expected revenue:** $500–$2,000/month (featured placements + first commissions)
 
 ---
 
-### Phase 3 — Scale the Machine (Month 3-6) 💰 $2,000-$5,000/mo
+### Phase 3 — Scale (Month 3-6) 💰 $2,000–$5,000/mo
 
-**Goal:** Profitable at scale. 20+ venue partners. Automated everything.
+**Goal:** 20+ venue partners. Automated everything.
 
-| Task | Owner |
-|------|-------|
-| Database backend (venues, bookings, users) | Georg |
-| Venue partner dashboard (see leads, manage listing) | Georg |
-| Payment processing (Stripe) for commissions | Georg |
-| Expand to 50+ venues | Georg |
-| Scale ads aggressively on proven keywords | Frank (funds) + Georg (manages) |
-| Add-on referrals: photographer, florist, DJ ($50-100 each) | Georg |
+- Database backend for venues + bookings
+- Venue partner dashboard
+- Payment processing (Stripe) for commissions
+- Expand to 50+ venues
+- Add-on referrals: photographer, florist, DJ ($50–100 each)
 
-**Ad budget:** $2,000-$5,000/month
-**Expected leads:** 100-250/month
-**Expected revenue:** $2,000-$5,000/month
+**Ad budget:** $2,000–$5,000/month
 
 ---
 
-### Phase 4 — Dominate Miami (Month 6-12) 💰 $5,000-$15,000/mo
+### Phase 4 — Dominate Miami (Month 6-12) 💰 $5,000–$15,000/mo
 
-**Goal:** 100+ venues, multiple revenue streams, consider expansion.
+**Goal:** 100+ venues, multiple revenue streams.
 
-| Task | Owner |
-|------|-------|
-| 100+ venues across all Miami neighborhoods | Georg |
-| Content SEO engine (blog posts for long-tail keywords) | Georg |
-| Explore new markets (Fort Lauderdale, West Palm) | Georg + Frank (strategic decision) |
-| Consider raising funding if growth warrants it | Frank (leads conversations) |
+- 100+ venues across all neighborhoods
+- Content SEO (blog posts for long-tail keywords)
+- Explore Fort Lauderdale, West Palm expansion
+- Consider raising funding if growth warrants it (Frank leads)
 
-**Ad budget:** $3,000-$8,000/month
-**Expected revenue:** $5,000-$15,000/month
+**Ad budget:** $3,000–$8,000/month
 
 ---
 
 ## Revenue Projections — Year 1
 
-| Month | Ad spend | Leads | Bookings | Revenue | Profit |
-|-------|---------|-------|----------|---------|--------|
+| Month | Ad Spend | Expected Leads | Bookings (10% conv.) | Revenue | Net |
+|-------|---------|---------------|---------------------|---------|-----|
 | 1 | $500 | 15 | 1-2 | $0 | -$500 |
-| 2 | $1,000 | 35 | 3-5 | $300-$500 | -$700 |
-| 3 | $1,500 | 60 | 6-10 | $1,000-$2,000 | -$500 to +$500 |
-| 4 | $2,000 | 80 | 10-15 | $2,000-$3,000 | $0 to +$1,000 |
-| 5 | $2,500 | 100 | 12-20 | $2,500-$4,000 | $0 to +$1,500 |
-| 6 | $3,000 | 120 | 15-25 | $3,000-$5,000 | $0 to +$2,000 |
-| 7-12 | $3,000-5,000 | 150-250 | 20-40 | $5,000-$10,000 | $2,000-$5,000 |
+| 2 | $1,000 | 30 | 3 | $300-$500 | -$700 |
+| 3 | $1,500 | 45 | 4-5 | $1,200-$2,000 | -$300 to +$500 |
+| 4 | $2,000 | 60 | 6-8 | $2,000-$3,000 | $0 to +$1,000 |
+| 5 | $2,500 | 75 | 8-10 | $2,500-$4,000 | $0 to +$1,500 |
+| 6 | $3,000 | 90 | 9-12 | $3,000-$5,000 | $0 to +$2,000 |
+| 7-12 | $3-5K/mo | 100-150 | 10-20 | $5,000-$10,000 | $2,000-$5,000 |
 
 **Break-even: Month 3-4.** Profitable from month 4-5 onward.
 
-**Year 1 totals:**
-
 | | Conservative | Optimistic |
 |---|-------------|-----------|
-| Total ad spend | $22,000 | $35,000 |
-| Total revenue | $25,000 | $55,000 |
-| Net profit | $3,000 | $20,000 |
-| Monthly run rate by month 12 | $5,000/mo | $15,000/mo |
+| Year 1 ad spend | $22,000 | $35,000 |
+| Year 1 revenue | $25,000 | $55,000 |
+| Year 1 net | $3,000 | $20,000 |
+| Month 12 run rate | $5,000/mo | $15,000/mo |
+
+**Comparable:** The Venue Report does $1.8M/year with 11 employees in a similar curated venue model.
 
 ---
 
@@ -214,117 +262,105 @@ Ad spend → Traffic → Booking requests (leads) → Venue connections → Reve
 | Email sending (Resend) | $0 | $0 | Free tier |
 | Analytics (PostHog + GA4) | $0 | $0 | Free tier |
 | Database (Supabase) | $0 → $25 | $0-$300 | Frank |
-| Payment processing (Stripe) | 2.9% + $0.30/txn | Variable | Deducted from revenue |
-| **Total operational** | **$7-$32/mo** | **$84-$384/yr** | **Frank** |
+| Payment processing (Stripe) | 2.9% + $0.30/txn | Variable | From revenue |
+| **Total operational** | **$7–$32/mo** | **$84–$384/yr** | **Frank** |
 
-Georg's development tools (Claude subscription, etc.) are Georg's personal expense — not a VENUE cost.
+Georg's development tools are Georg's personal expense — not a VENUE cost.
 
 ---
 
 ## Partnership Structure
 
-### Georg Chimion — Operator (100% of execution)
+### Georg — Operator (100% of execution)
 
-**What Georg brings:**
-- Built the entire product from scratch (2 weeks of full development)
+**What Georg has already built:**
+- Complete product from scratch (2+ weeks of full development)
 - 31 real Miami venues researched and catalogued
-- Full booking wizard, 44-page website, analytics, SEO infrastructure
-- All ongoing development, operations, marketing execution, ad management
-- Venue outreach, lead handling, customer service
-- Estimated sweat equity: 15-20 hours/week
+- 44-page website with booking wizard, venue pages, neighborhood pages
+- Analytics, SEO, sitemap infrastructure
+- Ongoing: 15-20 hours/week
 
-**Georg's ongoing responsibilities:**
+**Georg handles everything:**
 - Product development and maintenance
 - Ad campaign creation, optimization, and reporting
-- All venue research, outreach, and relationship management
+- Venue research, outreach, and relationship management
 - Lead handling and customer concierge
 - Weekly performance reports to Frank
-- All technical operations
 
 ### Frank — Investor + Strategic Advisor
 
 **What Frank brings:**
 - Initial idea and market insight
-- Ad spend funding (primary investment)
+- Ad spend funding (scales with results)
 - All operational costs (domain, hosting, tools)
-- PwC partner credibility (investor conversations, venue partnerships)
-- Strategic network (high-level introductions when relevant)
+- PwC partner credibility for partnerships and investor conversations
+- Strategic network and high-level introductions
 - Investor-facing role if the business seeks funding
 
-**Frank's financial commitment:**
+**Frank's investment ramp:**
 
-| Period | Monthly commitment | Cumulative |
+| Period | Monthly (ads + ops) | Cumulative |
 |--------|-------------------|-----------|
-| Month 1 | $500 (ads) + $20 (ops) | $520 |
-| Month 2 | $1,000 (ads) + $20 (ops) | $1,540 |
-| Month 3 | $1,500 (ads) + $30 (ops) | $3,070 |
-| Month 4-6 | $2,000-3,000/mo (ads) + $30 (ops) | $9,160-$12,160 |
-| Month 7-12 | $3,000-5,000/mo (ads) + $30 (ops) | $27,340-$42,340 |
-| **Year 1 total** | | **$27,000-$42,000** |
+| Month 1 | $520 | $520 |
+| Month 2 | $1,020 | $1,540 |
+| Month 3 | $1,530 | $3,070 |
+| Month 4-6 | $2,030-$3,030/mo | $9K-$12K |
+| Month 7-12 | $3,030-$5,030/mo | $27K-$42K |
 
-**Frank's time commitment:** 1-2 hours/month reviewing reports and providing strategic input. No operational or manual work.
-
----
-
-## Suggested Equity Split
-
-| Scenario | Georg | Frank | Reasoning |
-|----------|-------|-------|-----------|
-| **Recommended** | 75% | 25% | Georg built everything + runs everything. Frank funds growth. |
-| Alternative A | 70% | 30% | If Frank commits to $30K+ year 1 ad spend |
-| Alternative B | 80% | 20% | If Frank's year 1 commitment is under $20K |
-
-**Vesting/protection provisions to discuss:**
-- Frank's equity vests over 12 months tied to ad spend commitment (if he stops funding, equity stops vesting)
-- Georg's equity vests over 12 months tied to continued operations
-- If either party walks away, unvested equity returns to the other
-- All decisions about spending over $5,000/month require agreement from both
+**Frank's time: 1-2 hours/month** reviewing reports, providing strategic input. No operational or manual work.
 
 ---
 
-## What We Need to Decide Together
+## Partnership Terms
 
-1. **Domain name** — What's the production URL? (e.g. venuemiami.com, bookvenue.com)
-2. **Equity split** — Agree on numbers and put it in writing
-3. **Month 1 ad budget** — Confirm $500-$1,000 to start
-4. **Google Ads account** — Set up under a shared business account
-5. **First ad campaigns** — Georg will prepare, Frank approves budget
+**We're partners. We formalize when there's money to split.**
+
+Rather than negotiate equity percentages over something that hasn't made a dollar yet, here's what we agree on now:
+
+1. **Georg builds and runs it.** Frank funds the growth.
+2. **Ad spend starts small** ($500/mo) and only scales when the numbers prove it works.
+3. **No one pays out of pocket once revenue covers costs** — the business funds itself.
+4. **We formalize equity and structure when we hit $1,000/month** in revenue — by then we'll both know exactly what each person contributed.
+5. **If it doesn't work after 3 months of ads**, we both walk away with no hard feelings. Max loss = ~$3,000.
 
 ---
 
 ## Risk Assessment
 
-| Risk | Impact | Mitigation |
-|------|--------|------------|
-| Ads don't convert | No leads, money wasted | Start with $500, test 3-4 campaigns, kill losers fast. Maximum loss = $500. |
-| Venues don't want to pay | No revenue | We prove value with free leads first. Hard to say no when you've gotten 10 free bookings. |
-| Legal: listing venues without permission | Cease & desist | We use only public information. Remove any venue immediately on request. Add disclaimer. |
-| Competition enters Miami market | Price pressure | First-mover advantage + local relationships are the moat. National players can't match concierge touch. |
-| Georg's bandwidth | Slow development | VENUE is Georg's #1 priority project. 15-20 hours/week committed. |
-| Frank stops funding | No growth | Equity vesting tied to funding commitment. If funding stops, Georg can seek other investors or self-fund at smaller scale. |
+| Risk | Max Downside | Mitigation |
+|------|-------------|------------|
+| Ads don't convert | $500 (month 1 test) | Start small, test 3-4 campaigns, kill losers fast |
+| Venues don't pay | No revenue | Prove value with free leads first. Hard to say no after 10 free bookings |
+| Legal (listing without permission) | Cease & desist | Public info only. Remove any venue immediately on request |
+| Competition enters | Price pressure | First-mover + local relationships. National players can't match concierge |
+| Peerspace goes Miami-focused | Lost differentiation | Our 10-15% commission vs their 20%. Service quality wins |
+
+---
+
+## What We Decide Together
+
+1. **Domain name** — What's the production URL? (e.g. venuemiami.com, bookvenue.com)
+2. **Month 1 ad budget** — Confirm $500–$1,000 to test
+3. **Partnership terms** — Agree on the principle: build it, fund it, split it
+4. **Ad accounts** — Set up Google Ads + Instagram Ads
+5. **Launch date** — Pick a week to go live
 
 ---
 
 ## Why This Works
 
-1. **The math is simple.** Spend $100 on ads → get leads → close one $3,000 event → make $360. Repeat.
-2. **Low cost to run.** Under $50/month in operational costs. The only real expense is ad spend, and that scales with results.
-3. **No one owns this market.** There is no "Miami private event booking" platform. First mover wins.
-4. **Free for consumers.** Zero friction to get the funnel flowing.
-5. **Built and ready.** The product exists today. 31 venues, 44 pages, full booking flow. We just need traffic.
+1. **The math is proven.** Industry benchmarks show $1.60 CPC and 4.8% conversion. At 12% commission on Miami's $3,000+ average event, each booking generates $360+.
+2. **The market leader is hated.** Peerspace has a 2.6/5 rating. There's a clear opening for a concierge-quality alternative.
+3. **Miami is a top-3 event market.** 28M visitors, $22B tourism, weddings averaging $40K-$80K. The demand is massive.
+4. **Our commission is the lowest.** 10-15% vs. Peerspace's 20% and Giggster's 19%. Venues will prefer us.
+5. **It's built and ready.** 31 venues, 44 pages, full booking flow. We just need traffic.
+6. **The risk is tiny.** $500 to test if this works. If it doesn't convert in month 1, we stop.
 
 ---
-
-## Next Steps
-
-1. **Frank and Georg align on equity split and ad budget**
-2. **Buy production domain**
-3. **Georg sets up Google Ads + Instagram Ads accounts**
-4. **Launch first campaigns with $500 budget**
-5. **Week 4: Review results, decide whether to scale or adjust**
 
 The product is built. The machine is ready. We just need to turn it on.
 
 ---
 
 *Last updated: March 2026*
+*Market data sourced from: WordStream, PPCChief, SerpWars, Snowmad Digital, First Page Sage, Financial Models Lab, Grand View Research, Miami-Dade Tourism Office, PissedConsumer, Trustpilot, Growjo, Tracxn, Crunchbase*
