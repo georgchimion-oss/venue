@@ -339,3 +339,144 @@ nav { position:fixed; top:0; left:0; right:0; padding:22px 44px; display:flex; a
     .tod-grid { grid-template-columns: 1fr; }
     .modal { padding: 22px 16px; }
 }
+
+/* ══════════════════════════════════════════════
+   VENUE DETAIL PAGE
+   ══════════════════════════════════════════════ */
+
+.venue-detail { max-width: 1200px; margin: 0 auto; padding: 0 24px 60px; }
+
+/* Hero */
+.vd-hero {
+    width: 100%; height: 280px; border-radius: 16px; margin-top: 72px;
+    display: flex; align-items: center; justify-content: center; position: relative;
+    overflow: hidden;
+}
+.vd-hero-emoji { font-size: 80px; opacity: 0.4; }
+.vd-hero-overlay {
+    position: absolute; bottom: 16px; left: 16px;
+}
+.vd-neighborhood-link {
+    background: rgba(255,255,255,0.9); color: var(--dark); padding: 6px 14px;
+    border-radius: 20px; font-size: 12px; font-weight: 500; letter-spacing: 0.06em;
+    text-transform: uppercase; text-decoration: none; backdrop-filter: blur(4px);
+    transition: background 0.2s;
+}
+.vd-neighborhood-link:hover { background: rgba(255,255,255,1); }
+
+/* Content Layout */
+.vd-content {
+    display: grid; grid-template-columns: 1fr 340px; gap: 48px;
+    margin-top: 32px; align-items: start;
+}
+
+/* Main */
+.vd-name {
+    font-family: var(--font-cormorant); font-size: 38px; font-weight: 400;
+    line-height: 1.15; color: var(--dark); margin: 0 0 6px;
+}
+.vd-address { color: var(--mid); font-size: 14px; margin-bottom: 10px; }
+.vd-rating { display: flex; align-items: center; gap: 8px; margin-bottom: 18px; }
+.vd-description { color: var(--dark); font-size: 15px; line-height: 1.65; margin-bottom: 32px; }
+
+/* Details Grid */
+.vd-details-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 32px;
+}
+.vd-detail-card {
+    background: white; border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px;
+}
+.vd-detail-label {
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--mid);
+    font-weight: 600; margin-bottom: 4px;
+}
+.vd-detail-value { font-size: 15px; font-weight: 500; color: var(--dark); }
+.vd-detail-sub { font-size: 12px; color: var(--mid); margin-top: 2px; }
+
+/* Sections */
+.vd-section { margin-bottom: 28px; }
+.vd-section-title {
+    font-family: var(--font-cormorant); font-size: 22px; font-weight: 400;
+    color: var(--dark); margin: 0 0 12px;
+}
+.vd-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.vd-tag {
+    padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 400;
+    background: white; border: 1px solid var(--border); color: var(--dark);
+}
+.vd-pricing-notes { font-size: 14px; color: var(--mid); line-height: 1.6; }
+
+/* Info Grid */
+.vd-info-grid { display: flex; flex-direction: column; gap: 10px; }
+.vd-info-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); }
+.vd-info-label { font-size: 13px; color: var(--mid); font-weight: 500; }
+.vd-info-value { font-size: 13px; color: var(--dark); }
+.vd-info-link { font-size: 13px; color: var(--accent); text-decoration: none; font-weight: 500; }
+.vd-info-link:hover { text-decoration: underline; }
+
+/* Sidebar CTA */
+.vd-sidebar { position: sticky; top: 80px; }
+.vd-cta-card {
+    background: white; border: 1px solid var(--border); border-radius: 16px;
+    padding: 28px 24px; text-align: center;
+}
+.vd-cta-title { font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--mid); font-weight: 600; margin-bottom: 8px; }
+.vd-cta-price { font-family: var(--font-cormorant); font-size: 36px; color: var(--dark); line-height: 1.1; }
+.vd-cta-sub { font-size: 12px; color: var(--mid); margin-bottom: 18px; }
+.vd-cta-btn { width: 100%; justify-content: center; margin-bottom: 10px; }
+.vd-cta-note { font-size: 11px; color: var(--mid); }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .vd-content { grid-template-columns: 1fr; gap: 28px; }
+    .vd-sidebar { position: static; }
+    .vd-hero { height: 200px; margin-top: 62px; }
+    .vd-name { font-size: 30px; }
+}
+@media (max-width: 600px) {
+    .venue-detail { padding: 0 16px 40px; }
+    .vd-details-grid { grid-template-columns: 1fr; }
+    .vd-hero { height: 160px; border-radius: 12px; }
+    .vd-name { font-size: 26px; }
+}
+
+/* ══════════════════════════════════════════════
+   NEIGHBORHOOD PAGE
+   ══════════════════════════════════════════════ */
+
+.neighborhood-page { max-width: 1100px; margin: 0 auto; padding: 90px 24px 60px; }
+.nb-header { margin-bottom: 32px; }
+.nb-tag {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em;
+    color: var(--accent); font-weight: 600; margin-bottom: 8px;
+}
+.nb-title {
+    font-family: var(--font-cormorant); font-size: 36px; font-weight: 400;
+    color: var(--dark); line-height: 1.15; margin: 0 0 10px;
+}
+.nb-subtitle { font-size: 15px; color: var(--mid); line-height: 1.5; }
+
+.nb-venues-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+/* Neighborhood venue card */
+.nb-card {
+    background: white; border: 1px solid var(--border); border-radius: 14px;
+    overflow: hidden; text-decoration: none; color: inherit;
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.nb-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); transform: translateY(-2px); }
+.nb-card-img { height: 140px; display: flex; align-items: center; justify-content: center; }
+.nb-card-img span { font-size: 40px; opacity: 0.4; }
+.nb-card-body { padding: 16px 18px; }
+.nb-card-name { font-size: 16px; font-weight: 500; color: var(--dark); margin-bottom: 4px; }
+.nb-card-meta { font-size: 12px; color: var(--mid); margin-bottom: 6px; }
+.nb-card-price { font-size: 13px; color: var(--accent); font-weight: 500; }
+
+.nb-back { display: inline-block; margin-top: 28px; color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 500; }
+.nb-back:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+    .nb-venues-grid { grid-template-columns: 1fr; }
+    .nb-title { font-size: 28px; }
+    .neighborhood-page { padding: 80px 16px 40px; }
+}

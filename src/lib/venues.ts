@@ -14,6 +14,61 @@ export function getVenueCount(): number {
 }
 
 /**
+ * Get a single venue by its slug (id).
+ * Returns null if not found.
+ */
+export function getVenueBySlug(slug: string): VenueData | null {
+  return getAllVenues().find(v => v.id === slug) || null;
+}
+
+/**
+ * Get all venue slugs (for static page generation).
+ */
+export function getAllVenueSlugs(): string[] {
+  return getAllVenues().map(v => v.id);
+}
+
+/**
+ * Get unique neighborhoods with their venue counts.
+ */
+export function getNeighborhoods(): { name: string; count: number; venues: VenueData[] }[] {
+  const venues = getAllVenues();
+  const map = new Map<string, VenueData[]>();
+  for (const v of venues) {
+    const arr = map.get(v.neighborhood) || [];
+    arr.push(v);
+    map.set(v.neighborhood, arr);
+  }
+  return Array.from(map.entries())
+    .map(([name, vens]) => ({ name, count: vens.length, venues: vens }))
+    .sort((a, b) => b.count - a.count);
+}
+
+/**
+ * Get venues for a specific neighborhood.
+ */
+export function getVenuesByNeighborhood(neighborhood: string): VenueData[] {
+  return getAllVenues().filter(v =>
+    v.neighborhood.toLowerCase().replace(/\s+/g, '-') === neighborhood.toLowerCase()
+    || v.neighborhood.toLowerCase() === neighborhood.toLowerCase()
+  );
+}
+
+/**
+ * Get all neighborhood slugs (for static page generation).
+ */
+export function getAllNeighborhoodSlugs(): string[] {
+  const venues = getAllVenues();
+  const set = new Set(venues.map(v => v.neighborhood.toLowerCase().replace(/\s+/g, '-')));
+  return Array.from(set);
+}
+
+/** Convert kebab-case to Title Case */
+export function formatTag(tag: string): string {
+  return tag.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
+
+/**
  * Filter venues based on user's wizard selections.
  * Returns venues sorted by rating (best first).
  */
