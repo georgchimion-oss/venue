@@ -1,0 +1,2263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VENUE Master Plan — Miami Event Venue Marketplace</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --accent: #C05A3B;
+            --bg: #F8F6F2;
+            --dark: #1A1612;
+            --green: #3A7D5A;
+            --light-gray: #E8E4DE;
+            --border: #D4CCC4;
+            --success: #3A7D5A;
+            --warning: #E67E22;
+            --error: #E74C3C;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, var(--dark) 0%, #2d2420 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            font-family: Georgia, serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        header .meta {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* LAYOUT */
+        .container {
+            display: flex;
+            max-width: 1600px;
+            margin: 0 auto;
+            min-height: calc(100vh - 200px);
+        }
+
+        /* SIDEBAR NAVIGATION */
+        nav.sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid var(--border);
+            padding: 2rem 1.5rem;
+            position: sticky;
+            top: 0;
+            max-height: 100vh;
+            overflow-y: auto;
+            box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+        }
+
+        nav.sidebar h3 {
+            font-family: Georgia, serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+        }
+
+        nav.sidebar h3:first-child {
+            margin-top: 0;
+        }
+
+        nav.sidebar a {
+            display: block;
+            padding: 0.65rem 1rem;
+            color: var(--dark);
+            text-decoration: none;
+            border-left: 3px solid transparent;
+            margin-bottom: 0.35rem;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        nav.sidebar a:hover {
+            background: var(--bg);
+            border-left-color: var(--accent);
+            padding-left: 1.25rem;
+        }
+
+        nav.sidebar a.active {
+            background: var(--bg);
+            border-left-color: var(--accent);
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            flex: 1;
+            padding: 3rem;
+            background: white;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            scroll-margin-top: 80px;
+        }
+
+        section h2 {
+            font-family: Georgia, serif;
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--accent);
+            display: inline-block;
+        }
+
+        section h3 {
+            font-family: Georgia, serif;
+            font-size: 1.4rem;
+            color: var(--dark);
+            margin: 2rem 0 1rem 0;
+        }
+
+        section h4 {
+            font-family: Georgia, serif;
+            font-size: 1.1rem;
+            color: var(--accent);
+            margin: 1.5rem 0 0.75rem 0;
+            font-weight: 600;
+        }
+
+        p, li {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+        }
+
+        strong {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* HIGHLIGHT BOXES */
+        .highlight {
+            background: linear-gradient(135deg, rgba(192, 90, 59, 0.08) 0%, rgba(58, 125, 90, 0.05) 100%);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .highlight h4 {
+            margin-top: 0;
+        }
+
+        /* TABLES */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        thead {
+            background: linear-gradient(135deg, var(--dark) 0%, #2d2420 100%);
+            color: white;
+        }
+
+        th {
+            padding: 1.2rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        th:hover {
+            background: #3a3630;
+        }
+
+        td {
+            padding: 1rem 1.2rem;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+
+        tbody tr:hover {
+            background: var(--bg);
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* COLLAPSIBLE SECTIONS */
+        .collapsible {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            margin: 1.5rem 0;
+            overflow: hidden;
+        }
+
+        .collapsible-header {
+            padding: 1.25rem;
+            background: linear-gradient(to right, var(--bg), white);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: background 0.2s ease;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .collapsible-header:hover {
+            background: linear-gradient(to right, #e8e4de, var(--bg));
+        }
+
+        .collapsible-toggle {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            color: var(--accent);
+        }
+
+        .collapsible-toggle.open {
+            transform: rotate(180deg);
+        }
+
+        .collapsible-content {
+            display: none;
+            padding: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .collapsible-content.open {
+            display: block;
+        }
+
+        /* GRID LAYOUT */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+        }
+
+        .card h4 {
+            color: var(--accent);
+            margin-top: 0;
+        }
+
+        /* MERMAID DIAGRAM */
+        .diagram-container {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            overflow-x: auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .mermaid {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* BADGES AND INDICATORS */
+        .badge {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .badge.success {
+            background: rgba(58, 125, 90, 0.15);
+            color: var(--green);
+        }
+
+        .badge.warning {
+            background: rgba(230, 126, 34, 0.15);
+            color: var(--warning);
+        }
+
+        .badge.primary {
+            background: rgba(192, 90, 59, 0.15);
+            color: var(--accent);
+        }
+
+        /* TIMELINE */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline-item {
+            padding-left: 3rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 2rem;
+            width: 2px;
+            height: calc(100% + 2rem);
+            background: var(--light-gray);
+        }
+
+        .timeline-item h4 {
+            margin-top: 0;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+            border-top: 3px solid var(--accent);
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1000px) {
+            .container {
+                flex-direction: column;
+            }
+
+            nav.sidebar {
+                width: 100%;
+                max-height: none;
+                position: relative;
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 0.5rem;
+                padding: 1.5rem;
+            }
+
+            nav.sidebar h3 {
+                grid-column: 1 / -1;
+                margin-top: 1rem;
+            }
+
+            nav.sidebar h3:first-child {
+                margin-top: 0;
+            }
+
+            main {
+                padding: 2rem;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            th, td {
+                padding: 0.75rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 2rem 1rem;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            main {
+                padding: 1.5rem;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+
+            section h3 {
+                font-size: 1.1rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav.sidebar {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* UTILITY CLASSES */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-2 {
+            margin-top: 2rem;
+        }
+
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>VENUE Master Plan</h1>
+        <p>Miami's Concierge Event Venue Marketplace — Complete Operations Playbook</p>
+        <div class="meta">
+            <strong>Operator:</strong> Georg Chimion &nbsp; | &nbsp; <strong>Advisor:</strong> Frank &nbsp; | &nbsp; <strong>Updated:</strong> March 18, 2026
+        </div>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <h3>Navigation</h3>
+            <a href="#executive-summary" class="nav-link active">Executive Summary</a>
+            <a href="#visual-workflow" class="nav-link">Visual Workflow</a>
+            <a href="#market-opportunity" class="nav-link">Market Opportunity</a>
+            <a href="#competitive-landscape" class="nav-link">Competitive Landscape</a>
+            <a href="#product-review" class="nav-link">Product Review</a>
+            <a href="#gtm-playbook" class="nav-link">GTM Playbook</a>
+            <a href="#lead-handling" class="nav-link">Lead Handling</a>
+            <a href="#revenue-model" class="nav-link">Revenue Model</a>
+            <a href="#partnership" class="nav-link">Partnership</a>
+            <a href="#risk-assessment" class="nav-link">Risk Assessment</a>
+            <a href="#marketing-strategy" class="nav-link">Marketing Strategy</a>
+            <a href="#next-steps" class="nav-link">Next Steps</a>
+        </nav>
+
+        <main>
+            <!-- EXECUTIVE SUMMARY -->
+            <section id="executive-summary">
+                <h2>Executive Summary</h2>
+
+                <h3>What is VENUE?</h3>
+                <p>VENUE is a <strong>Miami-exclusive, concierge-driven event venue marketplace</strong> that connects event planners, hosts, and corporate teams with curated local venues. We solve a critical problem: planning a perfect event in Miami is fragmented, opaque, and often mediocre.</p>
+
+                <p>Unlike Peerspace (automated, low-touch, 2.6/5 rating) and EventUp (subscription model), VENUE combines:</p>
+                <ul>
+                    <li><strong>Curation:</strong> 31 hand-picked venues across Miami's best neighborhoods (Wynwood, Brickell, Design District, Coral Gables, etc.)</li>
+                    <li><strong>Concierge service:</strong> Georg personally triages every lead, matches customers to venues, and handles logistics within 2 hours</li>
+                    <li><strong>Bilingual expertise:</strong> English + Spanish — Miami's competitive advantage</li>
+                    <li><strong>Guided wizard:</strong> 3-step booking flow designed for first-time event planners (Event Type → Location/Details → Preferences → Results)</li>
+                </ul>
+
+                <div class="highlight">
+                    <h4>Current Status</h4>
+                    <p><strong>Prototype complete and deployed.</strong> 44 static pages (homepage + 31 venue pages + 9 neighborhood pages + sitemap/robots). Next.js 16 + React 19 + TypeScript. Domain TBD pending Frank partnership formalization. Waiting on: PostHog account, GA4 property, Supabase setup, Google Search Console submission.</p>
+                </div>
+
+                <h3>The Opportunity</h3>
+                <p>Miami is the <strong>#3 event market in North America</strong> ($22B tourism annually, 28M+ visitors yearly). The wedding/event venue market is worth billions. Yet:</p>
+                <ul>
+                    <li><strong>Peerspace dominates but is hated:</strong> 2.6/5 rating, 20% commission, poor customer service</li>
+                    <li><strong>No local player controls Miami:</strong> Peerspace, Giggster, Splacer, and Tagvenue all compete nationally but neglect local relationships</li>
+                    <li><strong>10,000+ monthly searches for venue keywords</strong> ("baby shower venue miami", "corporate event space miami", etc.) with no clear winner</li>
+                    <li><strong>Average Miami event spend: $3K–$5K per booking</strong> (wedding $40–80K, corporate $5–30K, birthday/shower $2–10K)</li>
+                </ul>
+
+                <h3>Three Moats</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>🎯 Concierge Service</h4>
+                        <p>Georg triages every lead personally within 2 hours, matches 2–3 venues, and handles all follow-up. Competitors automate this and lose trust. This is impossible to scale, but it's our launch weapon.</p>
+                    </div>
+                    <div class="card">
+                        <h4>🇪🇸 Bilingual + Local</h4>
+                        <p>Miami is 70% Hispanic. We speak Spanish, we understand Miami culture, and we build relationships with local venues. Peerspace/Giggster are national and tone-deaf.</p>
+                    </div>
+                    <div class="card">
+                        <h4>💡 Guided Wizard</h4>
+                        <p>Most people don't know what they want. Our 3-step wizard (Event Type → Location → Preferences) reduces friction and increases lead quality. Premium UX (Cormorant Garamond + DM Sans + terracotta) builds trust.</p>
+                    </div>
+                </div>
+
+                <h3>Revenue Model</h3>
+                <p>Two streams:</p>
+                <ul>
+                    <li><strong>Commission:</strong> 10–15% of booking value (e.g., $600–$900 per $5K wedding)</li>
+                    <li><strong>Featured Placement:</strong> $99/month for top-4 venue positioning + priority matching</li>
+                </ul>
+                <p>Operating costs near zero: $7–$32/month (hosting, domain, email, analytics). <strong>Gross margin >95%.</strong></p>
+
+                <h3>The Ask (First 3 Months)</h3>
+                <ul>
+                    <li>Choose production domain with Frank (venue.miami? eventmatch.miami? venuematch.miami?)</li>
+                    <li>Confirm Month 1 ad budget: <strong>$500–$1,000</strong> for Google Ads (high-intent keywords)</li>
+                    <li>Formalize partnership (equity structure, decision-making, weekly cadence)</li>
+                    <li>Set launch date (live in 7 days)</li>
+                </ul>
+
+                <div class="highlight">
+                    <h4>Upside: Year 1 Revenue</h4>
+                    <p><strong>Conservative:</strong> $25K revenue on $22K spend (breakeven month 3–4)<br>
+                    <strong>Optimistic:</strong> $55K revenue on $35K spend</p>
+                    <p>Comparable: The Venue Report does $1.8M/year with 11 people. VENUE's target Year 2: $500K–$1M.</p>
+                </div>
+            </section>
+
+            <!-- VISUAL WORKFLOW -->
+            <section id="visual-workflow">
+                <h2>Visual Workflow</h2>
+                <p>The complete customer → booking journey:</p>
+
+                <div class="diagram-container">
+                    <div class="mermaid">
+flowchart LR
+    subgraph ACQUIRE["ACQUIRE TRAFFIC"]
+        GA["Google Ads<br/>$0.77-$1.60 CPC"]
+        IG["Instagram Ads<br/>Women 25-45 Miami"]
+        SEO["SEO / Blog<br/>Long-tail keywords"]
+        REF["Referrals<br/>Planners + Vendors"]
+    end
+    subgraph CONVERT["CONVERT TO LEADS"]
+        LAND["Landing Page"]
+        WIZ["3-Step Wizard"]
+        FORM["Contact Form"]
+    end
+    subgraph MATCH["CONCIERGE MATCHING"]
+        TRIAGE["Georg Triages<br/>Within 2 hours"]
+        INQUIRY["Venue Inquiry<br/>2-3 venues matched"]
+        RESPONSE["Venue Responds<br/>24-48 hours"]
+    end
+    subgraph CLOSE["CLOSE & REVENUE"]
+        NOTIFY["Send Options<br/>to Customer"]
+        BOOK["Customer Books"]
+        REV["VENUE Earns<br/>10-15% or $99/mo"]
+    end
+    GA --> LAND
+    IG --> LAND
+    SEO --> LAND
+    REF --> LAND
+    LAND --> WIZ --> FORM --> TRIAGE --> INQUIRY --> RESPONSE --> NOTIFY --> BOOK --> REV
+                    </div>
+                </div>
+
+                <h3>The Journey in Detail</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Traffic Acquisition</h4>
+                        <p>Prospects arrive via Google Ads (high-intent), Instagram (brand awareness), organic search (long-tail), or referrals (planner networks). Conversion rates vary: Google ~3–5%, Instagram ~0.5–1%, referral ~10%+.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Landing & Wizard</h4>
+                        <p>Customer lands on homepage, clicks "Find My Venue", enters the 3-step wizard (Event Type → Location/Details → Preferences). Progressive disclosure reduces cognitive load. Premium design builds trust.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Lead Submission</h4>
+                        <p>Customer completes form (name, email, phone, event date, guest count, budget, special requests). Form POSTs to FormSubmit.co → Georg's inbox.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Concierge Triage (Critical)</h4>
+                        <p>Within 2 hours: Georg reads lead, assesses event type/budget/capacity, matches 2–3 venues from database. Sends Template 1 (acknowledgment) to customer.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Venue Inquiry</h4>
+                        <p>Georg sends Template 2 (venue inquiry email) to matched venues. Includes customer event details, preferred dates, expected guest count, budget.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Venue Response (24–48h)</h4>
+                        <p>Venue replies with availability, pricing, package options. If no response in 48h, Georg sends Template 6 (follow-up). Tracks outcome.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Customer Notification</h4>
+                        <p>Georg sends Template 3 to customer: "Here are your 2–3 venue options." Includes pricing, capacity, reviews, photos, venue contact info.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Booking & Revenue</h4>
+                        <p>Customer contacts venue directly OR goes back through VENUE for booking. Either way: if booking confirmed, Georg invoices venue for 10–15% commission (or venue signs $99/mo featured agreement). Template 4 (booking confirmation) sent to both parties.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Partnership Scaling</h4>
+                        <p>After 3+ leads to a venue, Georg sends Template 5 (partnership pitch): "You've gotten great leads from us. Let's formalize: 10–15% commission or $99/mo featured." Converts venues to partners.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MARKET OPPORTUNITY -->
+            <section id="market-opportunity">
+                <h2>Market Opportunity</h2>
+
+                <h3>Miami: #3 Event Market in North America</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>Tourism & Visitors</h4>
+                        <p><strong>28M+ visitors/year</strong> to Miami. $22B tourism revenue. Miami-Dade is one of the busiest event markets in the US.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Event Market Size</h4>
+                        <p>Weddings ($2B+), corporate events ($1B+), private events (showers, birthdays, galas). Estimated $3B+ market in Miami metro.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Average Spend per Event</h4>
+                        <p>Wedding: $40–80K | Corporate: $5–30K | Birthday/Shower: $2–10K | Gala: $10–50K</p>
+                    </div>
+                </div>
+
+                <h3>Search Demand</h3>
+                <p>Google Keyword Planner + SEMrush data shows <strong>10,000+ monthly searches</strong> for venue-related keywords in Miami. Key insight: <strong>No single player dominates.</strong> Peerspace, Giggster, Splacer, and Tagvenue all compete nationally but lack Miami expertise.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Keyword</th>
+                            <th>Est. Monthly Volume</th>
+                            <th>Difficulty</th>
+                            <th>Opportunity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Baby shower venue Miami</td>
+                            <td>320</td>
+                            <td>Low</td>
+                            <td>Immediate TAM</td>
+                        </tr>
+                        <tr>
+                            <td>Birthday party venue Miami</td>
+                            <td>250</td>
+                            <td>Low</td>
+                            <td>Immediate TAM</td>
+                        </tr>
+                        <tr>
+                            <td>Corporate event space Miami</td>
+                            <td>180</td>
+                            <td>Medium</td>
+                            <td>High-value leads</td>
+                        </tr>
+                        <tr>
+                            <td>Wedding venue Miami</td>
+                            <td>450</td>
+                            <td>High</td>
+                            <td>High-value but competitive</td>
+                        </tr>
+                        <tr>
+                            <td>Event space Wynwood</td>
+                            <td>90</td>
+                            <td>Low</td>
+                            <td>Neighborhood focus</td>
+                        </tr>
+                        <tr>
+                            <td>Event space Brickell</td>
+                            <td>85</td>
+                            <td>Low</td>
+                            <td>Neighborhood focus</td>
+                        </tr>
+                        <tr>
+                            <td>Venue rental Miami</td>
+                            <td>200</td>
+                            <td>High</td>
+                            <td>Broad, competitive</td>
+                        </tr>
+                        <tr>
+                            <td>Private event space Miami</td>
+                            <td>110</td>
+                            <td>Medium</td>
+                            <td>Premium positioning</td>
+                        </tr>
+                        <tr>
+                            <td>Loft rental for events Miami</td>
+                            <td>65</td>
+                            <td>Low</td>
+                            <td>Emerging trend</td>
+                        </tr>
+                        <tr>
+                            <td>Outdoor event space Miami</td>
+                            <td>140</td>
+                            <td>Medium</td>
+                            <td>Seasonal demand</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Addressable Market (Year 1)</h3>
+                <p>Conservative approach: target keywords with volume 50–300/month and low-to-medium difficulty. Estimated Year 1 reachable volume: ~2,000–3,000 high-intent searches in our core event types (birthday, shower, corporate).</p>
+                <p>Assume 5–10% conversion to lead (100–300 leads), 10–25% lead-to-booking (10–75 bookings), average value $4,000 per booking = <strong>$40K–$300K potential revenue.</strong> Our conservative Year 1 projection: $25K–$55K (accounts for ramp-up time, testing, optimization).</p>
+            </section>
+
+            <!-- COMPETITIVE LANDSCAPE -->
+            <section id="competitive-landscape">
+                <h2>Competitive Landscape</h2>
+
+                <p>VENUE operates in a fragmented market. No single competitor dominates Miami venues + events. Here's the competitive breakdown:</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Competitor</th>
+                            <th>Model</th>
+                            <th>Commission</th>
+                            <th>Miami Venues</th>
+                            <th>Rating</th>
+                            <th>Key Weakness</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Peerspace</strong></td>
+                            <td>Peer-to-peer, automated</td>
+                            <td>20%</td>
+                            <td>200–400</td>
+                            <td>2.6/5</td>
+                            <td>Poor customer service, impersonal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Giggster</strong></td>
+                            <td>Flexible venues, film-focused</td>
+                            <td>19%</td>
+                            <td>~50 (film-focused)</td>
+                            <td>4.2/5</td>
+                            <td>Niche (film/photo), not events</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Splacer</strong></td>
+                            <td>Marketplace + curation</td>
+                            <td>15–20%</td>
+                            <td>~30</td>
+                            <td>4.0/5</td>
+                            <td>5 cities, not Miami-focused, less personal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>EventUp</strong></td>
+                            <td>Subscription (B2B planners)</td>
+                            <td>N/A (SaaS)</td>
+                            <td>~100</td>
+                            <td>3.8/5</td>
+                            <td>Designed for professionals, not consumers</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tagvenue</strong></td>
+                            <td>Directory + booking</td>
+                            <td>15%</td>
+                            <td>~16</td>
+                            <td>4.1/5</td>
+                            <td>Minimal presence in Miami, limited to luxury weddings</td>
+                        </tr>
+                        <tr>
+                            <td><strong>The Venue Report</strong></td>
+                            <td>Directory (weddings)</td>
+                            <td>N/A (SaaS)</td>
+                            <td>~500 (national)</td>
+                            <td>4.6/5</td>
+                            <td>Weddings only, not events, capital-heavy (11 people), $1.8M revenue</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Competitive Analysis & Key Insight</h3>
+
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span>Peerspace: The Vulnerable Leader</span>
+                        <span class="collapsible-toggle">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <p><strong>Market position:</strong> Largest player in peer-to-peer venues. Raised $37M, valued at $200M+ (2022). Present in 10+ US cities.</p>
+                        <p><strong>Why it failed:</strong> Automated matching + low-touch customer service. 2.6/5 rating reflects poor outcomes. During COVID, they laid off 20% of staff and abandoned customer support. Users report: "No response from venues," "Hidden fees," "Low-quality spaces."</p>
+                        <p><strong>Why we win:</strong> Concierge + bilingual + Miami expertise. We personally match customers to venues and guarantee response within 24–48h. We speak Spanish. We know every venue owner. This is anti-scalable, which is exactly our moat early on.</p>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span>Giggster: Niche Wins</span>
+                        <span class="collapsible-toggle">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <p><strong>Market position:</strong> Film/photography focused. Smaller than Peerspace but profitable. Better rating (4.2/5) because they serve a specific use case well.</p>
+                        <p><strong>Why we win:</strong> Giggster is not targeting events (birthdays, showers, corporate). They're niche. We're events-first, which is a bigger TAM and better monetization.</p>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span>Splacer & Tagvenue: Local Curation Models</span>
+                        <span class="collapsible-toggle">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <p><strong>Market position:</strong> Splacer operates in 5 cities (LA, SF, NYC, Austin, Miami-ish). Tagvenue is wedding-focused, ~16 Miami venues.</p>
+                        <p><strong>Why we win:</strong> Both are national players optimizing for scale. We're Miami-only, which means: (1) we can build local relationships, (2) we can speak Spanish, (3) we can optimize for Miami event types (beach parties, Wynwood lofts, Brickell corporate), (4) we can move faster than national platforms.</p>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span>The Venue Report: Capital-Intensive Directory</span>
+                        <span class="collapsible-toggle">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <p><strong>Market position:</strong> SaaS directory for wedding venues. $1.8M revenue, 11 people. Profitable but slow-growing.</p>
+                        <p><strong>Why we win:</strong> They're weddings-only. We're all events (birthdays, corporate, showers, galas). Wider TAM. Also: they built a SaaS platform (capital-heavy). We're marketplace (capital-light, immediate unit economics).</p>
+                    </div>
+                </div>
+
+                <h3>Lessons from Competitors (Cold Start Playbook)</h3>
+                <ul>
+                    <li><strong>Geographic constraint works:</strong> Peerspace started in SF, then LA, then NYC. Geographic dominance → network effects → revenue. We're starting Miami-only. Right move.</li>
+                    <li><strong>Niche focus wins:</strong> Giggster (film), The Venue Report (weddings) both have high ratings because they serve their niche well. We should lean into "events" (not just weddings) + bilingual + Miami.</li>
+                    <li><strong>Supply-first:</strong> All successful marketplaces (Peerspace, Splacer) recruited venues first, then demand (customers). We have 31 venues. Next: demand generation.</li>
+                    <li><strong>Customer service is a moat:</strong> Peerspace lost trust because of poor support. We gain trust through concierge + bilingual + local relationships. This is defensible for 12–18 months.</li>
+                    <li><strong>Automate later:</strong> We start manual (Georg triages leads). When we hit 100+ leads/month, we build CRM/automation. But not before.</li>
+                </ul>
+            </section>
+
+            <!-- PRODUCT REVIEW -->
+            <section id="product-review">
+                <h2>Product Review: Prototype Status</h2>
+
+                <h3>What's Built</h3>
+                <ul>
+                    <li><strong>44 static pages:</strong> Homepage + 31 venue detail pages + 9 neighborhood guides + sitemap/robots.txt</li>
+                    <li><strong>Tech stack:</strong> Next.js 16, React 19, TypeScript. Deployed to VPS (DigitalOcean, Nginx, pm2).</li>
+                    <li><strong>Venue database:</strong> 31 real Miami venues in `src/data/venues.json`. 9 neighborhoods covered: Wynwood, Brickell, Design District, Coral Gables, Downtown Miami, Coconut Grove, Little Havana, Overtown, Midtown.</li>
+                    <li><strong>Booking wizard:</strong> 3-step progressive disclosure (Event Type → Location/Details → Preferences → Results → Contact Modal)</li>
+                    <li><strong>Form backend:</strong> FormSubmit.co → georg.chimion@gmail.com</li>
+                    <li><strong>Analytics wired:</strong> PostHog + GA4 (7 funnel events ready, but API keys not yet activated)</li>
+                    <li><strong>Design:</strong> Premium typography (Cormorant Garamond headers, DM Sans body), VENUE brand colors (terracotta accent, light background, dark text)</li>
+                </ul>
+
+                <h3>Pre-Launch Fixes (Critical)</h3>
+                <p>Before going live, these 7 issues must be resolved:</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Issue</th>
+                            <th>Impact</th>
+                            <th>Fix</th>
+                            <th>Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>No venue images (gradient placeholders)</td>
+                            <td>Looks cheap, reduces trust</td>
+                            <td>Add real photos to each venue (download from Google Images + get rights)</td>
+                            <td>Critical</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Fake scarcity badges ("2 left this week" hardcoded)</td>
+                            <td>Misleading, reduces trust if customer fact-checks</td>
+                            <td>Remove all fake scarcity copy. Replace with honest "Most requested" if appropriate.</td>
+                            <td>Critical</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Event type filtering broken (filterVenues() doesn't filter bestFor)</td>
+                            <td>Customers select "wedding" but see "birthday" results</td>
+                            <td>Fix `filterVenues()` in `lib/venues.ts` to check `bestFor` array against selected event type</td>
+                            <td>Critical</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>No form validation (email/phone checks)</td>
+                            <td>Junk leads, bad data, customer frustration</td>
+                            <td>Add client-side validation (email regex, phone regex, required fields) + error messages</td>
+                            <td>Critical</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Email exposed in source code (FormSubmit.co endpoint visible)</td>
+                            <td>Spam bots harvest email and send junk</td>
+                            <td>Use FormSubmit "form ID" (hash) instead of direct email endpoint. Or proxy through Vercel serverless function.</td>
+                            <td>High</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>No empty state for 0 results</td>
+                            <td>If no venues match, user sees blank page (confusing)</td>
+                            <td>Add message: "No venues match your criteria. Please adjust filters or contact us for custom options."</td>
+                            <td>High</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>CTA "Book My Event" too committal</td>
+                            <td>Users hesitate because "book" implies purchase</td>
+                            <td>Change CTA to "Find My Venue" or "Explore Venues" to reduce friction</td>
+                            <td>Medium</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>UX Strengths (Don't Change)</h3>
+                <ul>
+                    <li><strong>Premium design language:</strong> Cormorant Garamond (headings) + DM Sans (body) + terracotta accent is differentiated and builds trust vs. Peerspace's generic UI</li>
+                    <li><strong>Per-person pricing + tax/tip:</strong> Instead of venue-total, we show per-person cost (e.g., "$125/person + tax + 20% tip = $150/person"). Unique and transparent.</li>
+                    <li><strong>Progressive wizard:</strong> Step-by-step reduces cognitive load vs. one giant form. Mobile-friendly.</li>
+                    <li><strong>Venue cards:</strong> High-quality cards with ratings, amenities, capacity, pricing. Clear CTA "Request This Space"</li>
+                </ul>
+
+                <div class="highlight">
+                    <h4>Timeline for Fixes</h4>
+                    <p>Issues 1–4 (critical): 2–3 days of work<br>
+                    Issues 5–7 (high/medium): 1 day additional<br>
+                    <strong>Total pre-launch effort: 3–4 days</strong></p>
+                </div>
+            </section>
+
+            <!-- GTM PLAYBOOK -->
+            <section id="gtm-playbook">
+                <h2>Go-to-Market Playbook (Month-by-Month)</h2>
+
+                <h3>Pre-Launch Checklist (Week 0)</h3>
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span>Tasks Before Going Live</span>
+                        <span class="collapsible-toggle">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <ol>
+                            <li><strong>Choose production domain with Frank:</strong> venue.miami? venuematch.miami? eventmatch.miami? (Influence: SEO, brand, cost)</li>
+                            <li><strong>Deploy prototype to production:</strong> Configure DNS, SSL, Nginx. Test all pages + wizard + form on production domain.</li>
+                            <li><strong>Fix 7 pre-launch issues:</strong> Venue images, fake scarcity, filtering, form validation, email exposure, empty states, CTA copy.</li>
+                            <li><strong>Activate PostHog:</strong> Create account, generate API key, add to VPS `.env.local`, verify events fire in dashboard.</li>
+                            <li><strong>Activate GA4:</strong> Create property, generate measurement ID, add to VPS `.env.local`, verify pageviews in GA4 dashboard.</li>
+                            <li><strong>Submit to Google Search Console:</strong> Add production domain, submit XML sitemap, verify indexing in 24–48h.</li>
+                            <li><strong>Set up Google Ads account:</strong> Create account, link to GA4, create first 3 campaigns (high-intent keywords).</li>
+                            <li><strong>Set up Instagram account:</strong> Create business account, link to Facebook Ads Manager, design 3–4 initial Reels.</li>
+                            <li><strong>Build venue contact database:</strong> Email + phone for all 31 venues. Spreadsheet or Airtable. Will use for partnership pitches + follow-ups.</li>
+                            <li><strong>Create Airtable CRM:</strong> Leads table (name, email, phone, event type, date, guest count, budget, venue matched, status). Tracking for follow-ups + metrics.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <h3>Month 1–3: LAUNCH PHASE</h3>
+
+                <h4>Daily Routine (30–60 min/day)</h4>
+                <ul>
+                    <li><strong>09:00 AM:</strong> Check inbox for new leads from FormSubmit</li>
+                    <li><strong>09:15 AM:</strong> For each lead: Send Template 1 (acknowledgment), select 2–3 venues, send Template 2 (venue inquiry)</li>
+                    <li><strong>10:00 AM:</strong> Check responses from yesterday's venue inquiries. If no response, send Template 6 (follow-up).</li>
+                    <li><strong>10:30 AM:</strong> Check Google Ads dashboard. Monitor CTR, CPC, conversion rate. Pause low-performers.</li>
+                    <li><strong>11:00 AM:</strong> Check Instagram DMs, if any.</li>
+                </ul>
+
+                <h4>Weekly Cadence</h4>
+                <ul>
+                    <li><strong>Monday 9 AM:</strong> Metrics review. Log leads, bookings, CAC, LTV, ad spend, ROAS in spreadsheet.</li>
+                    <li><strong>Wednesday 10 AM:</strong> Venue check-in call. Call 3–4 venues to confirm their enthusiasm, ask for referrals, pitch partnership.</li>
+                    <li><strong>Friday 4 PM:</strong> Report to Frank. Leads, bookings, spend, metrics, blockers, asks.</li>
+                </ul>
+
+                <h4>Month 1 Ads Strategy</h4>
+                <ul>
+                    <li><strong>Budget: $200–300</strong> (testing)</li>
+                    <li><strong>Platform: Google Ads only</strong> (Instagram requires 10K followers to run ads effectively)</li>
+                    <li><strong>Keywords: High-intent, low-volume (easy to win)</strong>
+                        <ul>
+                            <li>"Baby shower venue miami"</li>
+                            <li>"Birthday party venue miami"</li>
+                            <li>"Event space wynwood"</li>
+                            <li>"Small event space miami"</li>
+                        </ul>
+                    </li>
+                    <li><strong>Ad copy:</strong> Focus on urgency + personalization. Example: "Find Your Perfect Miami Venue in 3 Minutes — Handpicked Spaces for Birthdays, Showers & Corporate Events"</li>
+                    <li><strong>Landing page:</strong> Homepage (build separate landing pages later if needed)</li>
+                    <li><strong>Target CPA: <$35</strong> (to break even at 10% lead-to-booking at $4K event)</li>
+                </ul>
+
+                <h4>Month 1 Organic</h4>
+                <ul>
+                    <li><strong>Instagram:</strong> 3–4 posts/week (organic only, no paid). Mix of venue tours, event styling ideas, testimonials. Hashtags: #MiamiEvents, #VenueRental, #EventSpace, #WynwoodEvents</li>
+                    <li><strong>SEO:</strong> Submit sitemap to Google Search Console. Monitor indexing. No new content yet.</li>
+                </ul>
+
+                <h4>Month 1 Target Metrics</h4>
+                <ul>
+                    <li>15–30 leads</li>
+                    <li>1–3 bookings (if lucky)</li>
+                    <li>Cost per lead: <$15 average (if 15 leads on $200 spend)</li>
+                    <li>Ad spend ROAS: 0:1 to 1:1 (expect breakeven or loss in Month 1)</li>
+                </ul>
+
+                <h4>Month 1 Kill Switch</h4>
+                <p><strong>If by end of Month 1: >$400 spent with <8 leads, pause ads and reassess.</strong> Either: (1) landing page needs work, (2) keywords are wrong, (3) audience is wrong, (4) pricing is wrong.</p>
+
+                <h3>Month 2–3: REVENUE PHASE</h3>
+
+                <h4>Ads Scaling</h4>
+                <ul>
+                    <li><strong>Budget: $400–600</strong> (scale winners from Month 1)</li>
+                    <li><strong>Add new keywords:</strong> "Corporate event space miami", "Wedding venue miami" (higher CPC but higher LTV)</li>
+                    <li><strong>Create neighborhood landing pages:</strong> Custom pages for "Wynwood Event Spaces", "Brickell Corporate Events", etc. Route ads to specific neighborhood pages for better conversion.</li>
+                    <li><strong>A/B test ad copy:</strong> Test 5 different headlines, track CTR + conversions. Double down on winners.</li>
+                </ul>
+
+                <h4>Organic Growth</h4>
+                <ul>
+                    <li><strong>Instagram:</strong> Push to 500+ followers. Post 4x/week. Run monthly giveaway: "Book your event through VENUE for a chance to win $500 decor credit from [local florist]"</li>
+                    <li><strong>Content:** Start blog. Publish 1 post/month (topics: "How to Plan a Brickell Corporate Event", "Baby Shower Venue Trends in Miami", etc.)</li>
+                </ul>
+
+                <h4>Partnership Outreach</h4>
+                <ul>
+                    <li>After 3+ leads sent to a venue, call with partnership pitch: "Your first venue gets 10% commission. We'll send you pre-qualified leads."</li>
+                    <li>Target: 5+ venues on commission by end of Month 3.</li>
+                </ul>
+
+                <h4>Month 2–3 Target Metrics</h4>
+                <ul>
+                    <li>60–90 leads (cumulative)</li>
+                    <li>5–8 bookings</li>
+                    <li>$400–800 revenue (10–15% commission on 5–8 bookings at $4–5K average)</li>
+                    <li><strong>Break even: Month 3</strong> (revenue = ad spend)</li>
+                </ul>
+
+                <h3>Month 4–6: REVENUE SCALE</h3>
+
+                <h4>Ads Budget: $1–2K/month</h4>
+                <ul>
+                    <li>Expand to 5–6 ad campaigns across event types and neighborhoods</li>
+                    <li>Add Instagram Ads (now that we have 1K+ followers)</li>
+                    <li>Test remarketing (website visitors who didn't convert)</li>
+                </ul>
+
+                <h4>Content Push</h4>
+                <ul>
+                    <li>2 blog posts/month (12 total by Month 6)</li>
+                    <li>Instagram: 4–5 posts/week, Reels 2–3x/week</li>
+                </ul>
+
+                <h4>Bilingual Expansion</h4>
+                <ul>
+                    <li>Translate key pages to Spanish (homepage, wizard, results, blog posts)</li>
+                    <li>Run Spanish-language ads ("Encuentra tu espacio perfecto")</li>
+                    <li>Hire Spanish-speaking contractor for customer support (optional)</li>
+                </ul>
+
+                <h4>Month 4–6 Target Metrics</h4>
+                <ul>
+                    <li>70–90 leads/month (steady state)</li>
+                    <li>$2–3K revenue/month</li>
+                    <li>5+ venue partners signed (10–15% commission agreements)</li>
+                </ul>
+
+                <h3>Month 7–12: SCALE PHASE</h3>
+
+                <h4>Ads: $2–5K/month</h4>
+                <ul>
+                    <li>Scale high-performing keywords + neighborhoods</li>
+                    <li>Test new platforms (TikTok, Pinterest for wedding/shower niche)</li>
+                    <li>Add video ads (venue tours, customer testimonials)</li>
+                </ul>
+
+                <h4>Content Domination</h4>
+                <ul>
+                    <li>24 blog posts total by Month 12 (2/month ongoing)</li>
+                    <li>9 neighborhood guides published and indexed</li>
+                    <li>4 event-type guides (birthday, shower, corporate, wedding)</li>
+                    <li>SEO target: 50+ blog pages ranking in Top 20 for long-tail keywords</li>
+                </ul>
+
+                <h4>Influencer Partnerships</h4>
+                <ul>
+                    <li>15–20 micro-influencers (10K–50K followers) in Miami event space</li>
+                    <li>Offer free venue tours, event decor, photographer credit for Instagram posts/Stories</li>
+                    <li>Target influencers: Wedding planners, event stylists, photographers, florists</li>
+                </ul>
+
+                <h4>Backend Automation</h4>
+                <ul>
+                    <li>Set up Supabase (leads table, venue data, booking tracking)</li>
+                    <li>Build automated email sequences: Template 1 (ack), Template 2 (venue inquiry), Template 3 (match notification), etc.</li>
+                    <li>Create Airtable automations to save email templates → Supabase</li>
+                </ul>
+
+                <h4>Month 7–12 Target Metrics</h4>
+                <ul>
+                    <li>300+ leads/month (by Month 12)</li>
+                    <li>$1–1.5K revenue/month</li>
+                    <li>10–15 venue partners, 30–50 leads/month to partner venues</li>
+                    <li>15–25 bookings/month</li>
+                    <li>Website traffic: 5K–10K/month</li>
+                </ul>
+            </section>
+
+            <!-- LEAD HANDLING -->
+            <section id="lead-handling">
+                <h2>Lead Handling Workflow (Step-by-Step)</h2>
+
+                <p>This is the core operational playbook. Every lead follows this 9-step process. <strong>Georg does all of this manually in Months 1–3.</strong> We automate after Month 6.</p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Step 1: Lead Arrives</h4>
+                        <p>Customer completes wizard → submits form → FormSubmit POSTs to georg.chimion@gmail.com. Email arrives with: name, email, phone, event type, date, guest count, budget, special requests.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Step 2: Acknowledgment (Within 30 min)</h4>
+                        <p><strong>Send Template 1:</strong> "Thanks for reaching out! We're matching you with 2–3 perfect venues. You'll hear from us within 2 hours." Sets expectation, builds trust.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Step 3: Triage & Matching (Within 2 hours)</h4>
+                        <p>Georg reads lead, assesses: event type, budget, date, guest count. Queries VENUE database for venues that match. Criteria: (1) event type in bestFor array, (2) capacity fits, (3) pricing in budget. Log in Airtable CRM.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Step 4: Venue Inquiry (Within 2.5 hours)</h4>
+                        <p><strong>Send Template 2 to each venue:</strong> "We have a client for you: [Event Type], [Date], [Guests], [Budget], [Special Requests]. Can you confirm availability and pricing?" Include customer contact info so venue can follow up directly if interested.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Step 5: Wait for Response (24–48 hours)</h4>
+                        <p>Venue responds (or doesn't). Update Airtable with venue status: "Pending", "Available", "Booked", "Not Interested". If no response in 48h, send follow-up email.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Step 6: Follow-up if No Response (After 48h)</h4>
+                        <p><strong>Send Template 6:</strong> "Hey [Venue], just following up on the lead from Step 4. Interested?" If still no response after 2 follow-ups, flag venue for offline conversation (call/text).</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Step 7: Customer Notification (After 24–48h of venue responses)</h4>
+                        <p><strong>Send Template 3 to customer:</strong> "Great news! We found these 2–3 venues for your [Event Type]:" Include: venue name, capacity, pricing, photos, reviews, amenities, venue contact info, booking link (if available). Encourage customer to reach out directly to venues.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Step 8: Booking Tracking (After customer contacts venue)</h4>
+                        <p>Customer books venue (directly with venue OR through VENUE if we handle booking). Georg confirms booking in Airtable. If booked: (1) Send Template 4 (confirmation) to customer, (2) Invoice venue for 10–15% commission OR facilitate $99/mo featured agreement, (3) Log outcome in CRM.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Step 9: Partnership Pitch (After 3+ leads)</h4>
+                        <p>After 3+ leads sent to a venue, call/email with <strong>Template 5 (partnership pitch):</strong> "You've gotten quality leads from us. Let's formalize: 10–15% commission on bookings + priority matching. Interested?" Convert venues from ad-hoc to formal partners.</p>
+                    </div>
+                </div>
+
+                <h3>Email Templates (6 Total)</h3>
+
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span>Template 1: Customer Acknowledgment</span>
+                        <span class="collapsible-toggle">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <pre style="background: var(--bg); padding: 1rem; border-radius: 4px; overflow-x: auto;">Subject: We're Finding Your Perfect Venue ✓
+
+Hi [Name],
+
+Thanks for reaching out to VENUE! We got your request for a [Event Type] on [Date] for [Guests] guests.
+
+We're already matching you with 2–3 perfect venues that fit your [Budget] budget and [Special Requests]. You'll hear from us within 2 hours with your options.
+
+In the meantime, if you have any questions, just reply to this email.
+
+Best,
+Georg
+VENUE — Miami's Curated Event Venues
+---
+P.S. We personally match every event because we believe in quality over quantity.</pre>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span>Template 2: Venue Inquiry</span>
+                        <span class="collapsible-toggle">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <pre style="background: var(--bg); padding: 1rem; border-radius: 4px; overflow-x: auto;">Subject: New Event Lead: [Event Type] on [Date]
+
+Hi [Venue Manager],
+
+We have a client who's a great fit for [Venue Name]. Here are the details:
+
+Event Type: [Event Type]
+Date: [Date] (flexible?)
+Guest Count: [Guests]
+Budget: [Budget]
+Special Requests: [Any special requests]
+
+Customer Contact: [Name], [Email], [Phone]
+
+Can you confirm availability and pricing? If you're available, feel free to reach out to [Customer Name] directly.
+
+If you'd like to see a consistent flow of pre-qualified leads like this, let's talk partnership. 10–15% commission on bookings.
+
+Thanks!
+Georg
+VENUE — Miami's Curated Event Venues
+---
+P.S. We only send 2–3 leads per week, all pre-qualified.</pre>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span>Template 3: Match Notification to Customer</span>
+                        <span class="collapsible-toggle">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <pre style="background: var(--bg); padding: 1rem; border-radius: 4px; overflow-x: auto;">Subject: Your 3 Perfect Venues [Event Type] [Date]
+
+Hi [Name],
+
+Great news! We found 3 perfect venues for your [Event Type] on [Date].
+
+---
+OPTION 1: [Venue Name]
+Capacity: [Min–Max] guests
+Price: [Pricing]
+[Photo]
+[Amenities]
+[Rating]
+Contact: [Venue Email] or [Phone]
+---
+
+OPTION 2: [Venue Name]
+[Same format]
+---
+
+OPTION 3: [Venue Name]
+[Same format]
+---
+
+Each venue is within your [Budget] budget. Click the links above to reach out directly, or reply if you'd like us to help facilitate.
+
+Questions? Reply to this email.
+
+Best,
+Georg
+VENUE — Miami's Curated Event Venues
+---
+P.S. We hand-select every venue. These are our top 3 picks for your event.</pre>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span>Template 4: Booking Confirmation</span>
+                        <span class="collapsible-toggle">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <pre style="background: var(--bg); padding: 1rem; border-radius: 4px; overflow-x: auto;">Subject: Booking Confirmed! 🎉 [Venue Name] [Date]
+
+Hi [Name] & [Venue Manager],
+
+Congrats! Your booking is confirmed.
+
+Event: [Event Type]
+Venue: [Venue Name]
+Date: [Date]
+Guest Count: [Guests]
+Price: [Total]
+
+[Venue Manager]: Here's the customer's info: [Name], [Email], [Phone]. Reach out with next steps (deposit, timeline, etc.).
+
+[Name]: You're all set! [Venue Manager] will follow up within 24 hours with package details and next steps.
+
+Questions? Reply to this email. We're here to help.
+
+Best,
+Georg
+VENUE — Miami's Curated Event Venues
+---
+P.S. We hope your event is amazing. Tag us @VENUE on Instagram!</pre>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span>Template 5: Partnership Pitch to Venue</span>
+                        <span class="collapsible-toggle">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <pre style="background: var(--bg); padding: 1rem; border-radius: 4px; overflow-x: auto;">Subject: Let's Partner: Consistent Leads for [Venue Name]
+
+Hi [Venue Manager],
+
+Over the last [timeframe], we've sent you [3+] pre-qualified leads. You've booked [X] and loved the quality.
+
+Let's formalize this partnership:
+
+We'll send you 2–3 high-quality event leads per week → you pay 10–15% commission on bookings. No cost unless you book.
+
+OR (if you prefer):
+
+Featured placement: $99/month → we prioritize your venue in matches + your listing gets top placement on our site.
+
+The leads keep coming either way. You're one of our top 3 venues for [Event Type].
+
+Interested? Let's talk.
+
+Best,
+Georg
+VENUE — Miami's Curated Event Venues
+---
+P.S. We're growing. This gets bigger.</pre>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span>Template 6: Venue Follow-up (No Response)</span>
+                        <span class="collapsible-toggle">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <pre style="background: var(--bg); padding: 1rem; border-radius: 4px; overflow-x: auto;">Subject: Quick Follow-up: Event Lead [Date]
+
+Hi [Venue Manager],
+
+Just following up on the lead I sent yesterday (Event: [Event Type], [Date], [Guests], [Budget]).
+
+Is your venue available? If so, I can send you the customer's contact info directly.
+
+Let me know!
+
+Georg
+VENUE — Miami's Curated Event Venues</pre>
+                    </div>
+                </div>
+
+                <h3>Airtable CRM Schema</h3>
+                <p>Track all leads in Airtable. Fields:</p>
+                <ul>
+                    <li><strong>Customer Name, Email, Phone</strong></li>
+                    <li><strong>Event Type:</strong> Birthday, Shower, Corporate, Wedding, Gala, etc.</li>
+                    <li><strong>Date, Guest Count, Budget</strong></li>
+                    <li><strong>Special Requests:</strong> Outdoor, Full Bar, Catering, etc.</li>
+                    <li><strong>Venues Matched:</strong> (linked to Venues table)</li>
+                    <li><strong>Status:</strong> Inquiry Sent, Awaiting Response, Matched, Booked, Not Interested</li>
+                    <li><strong>Notes:</strong> Any follow-ups, blockers, outcome</li>
+                    <li><strong>Booking Value:</strong> (calculated 10–15% commission)</li>
+                    <li><strong>Created, Last Updated</strong></li>
+                </ul>
+
+                <p>Use Airtable views to track: "Leads This Month", "Awaiting Venue Response", "Ready to Notify Customer", "Booked This Month".</p>
+            </section>
+
+            <!-- REVENUE MODEL -->
+            <section id="revenue-model">
+                <h2>Revenue Model & Projections</h2>
+
+                <h3>Revenue Streams</h3>
+
+                <div class="grid">
+                    <div class="card">
+                        <h4>Commission</h4>
+                        <p><strong>10–15% of booking value.</strong> Charged to venue after booking confirmed. Example: $5K booking → $500–$750 commission. Venue pays or we invoice.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Featured Placement</h4>
+                        <p><strong>$99/month per venue.</strong> Venue gets top-4 positioning in venue matches + prominent homepage placement. Optional alternative to commission. Better for casual/low-volume venues.</p>
+                    </div>
+                </div>
+
+                <h3>Unit Economics</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Value</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>CPC (Cost Per Click)</strong></td>
+                            <td>$0.77–$1.60</td>
+                            <td>Google Ads, high-intent keywords (Miami, event type specific)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CTR (Click-Through Rate)</strong></td>
+                            <td>4–8%</td>
+                            <td>Premium ad copy + specific targeting</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Conversion Rate (Click → Lead)</strong></td>
+                            <td>3–5%</td>
+                            <td>Wizard friendly, low friction</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CPL (Cost Per Lead)</strong></td>
+                            <td>$3.71–$30</td>
+                            <td>Higher if low CTR/conversion, lower if high</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lead → Booking Conversion</strong></td>
+                            <td>10–25%</td>
+                            <td>Concierge + handpicked venues = higher conversion</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Average Event Value</strong></td>
+                            <td>$3,000–$5,000</td>
+                            <td>Mix of birthday ($2–5K), shower ($3–6K), corporate ($5–15K)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Commission per Booking</strong></td>
+                            <td>$360–$600</td>
+                            <td>15% of $4K average booking</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cost to Acquire Booking</strong></td>
+                            <td>$24–$330</td>
+                            <td>CPL ($30) ÷ conversion (10–25%)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Profit per Booking</strong></td>
+                            <td>$30–$576</td>
+                            <td>Commission minus CAB, minus overhead</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Monthly Operating Cost</strong></td>
+                            <td>$7–$32</td>
+                            <td>Hosting ($5), domain ($1), email ($1), analytics ($0 free tier)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Year 1 Revenue Projections</h3>
+
+                <p>Two scenarios: <strong>Conservative</strong> (lower leads, higher CAC) vs. <strong>Optimistic</strong> (higher leads, lower CAC).</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Ad Spend</th>
+                            <th>Leads (Conv)</th>
+                            <th>Bookings (Opt)</th>
+                            <th>Revenue (Conv)</th>
+                            <th>Revenue (Opt)</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>M1</strong></td>
+                            <td>$250</td>
+                            <td>15</td>
+                            <td>2</td>
+                            <td>$0</td>
+                            <td>$600</td>
+                            <td>Testing, ramping up</td>
+                        </tr>
+                        <tr>
+                            <td><strong>M2</strong></td>
+                            <td>$500</td>
+                            <td>30</td>
+                            <td>3</td>
+                            <td>$300–500</td>
+                            <td>$1.2K</td>
+                            <td>Optimizing keywords</td>
+                        </tr>
+                        <tr>
+                            <td><strong>M3</strong></td>
+                            <td>$750</td>
+                            <td>45</td>
+                            <td>5</td>
+                            <td>$1.2–2K</td>
+                            <td>$2.5K</td>
+                            <td><strong>Break-even</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>M4</strong></td>
+                            <td>$1K</td>
+                            <td>60</td>
+                            <td>8</td>
+                            <td>$2–3K</td>
+                            <td>$3.6K</td>
+                            <td>Scaling ads</td>
+                        </tr>
+                        <tr>
+                            <td><strong>M5</strong></td>
+                            <td>$1.2K</td>
+                            <td>75</td>
+                            <td>10</td>
+                            <td>$2.5–3.5K</td>
+                            <td>$4.5K</td>
+                            <td>Add partnerships</td>
+                        </tr>
+                        <tr>
+                            <td><strong>M6</strong></td>
+                            <td>$1.5K</td>
+                            <td>90</td>
+                            <td>12</td>
+                            <td>$3–4K</td>
+                            <td>$5.4K</td>
+                            <td>Bilingual launch</td>
+                        </tr>
+                        <tr>
+                            <td><strong>M7</strong></td>
+                            <td>$1.8K</td>
+                            <td>100</td>
+                            <td>14</td>
+                            <td>$4–5.5K</td>
+                            <td>$6.3K</td>
+                            <td>Blog traction</td>
+                        </tr>
+                        <tr>
+                            <td><strong>M8</strong></td>
+                            <td>$2.2K</td>
+                            <td>110</td>
+                            <td>16</td>
+                            <td>$4.5–6K</td>
+                            <td>$7.2K</td>
+                            <td>SEO lift</td>
+                        </tr>
+                        <tr>
+                            <td><strong>M9</strong></td>
+                            <td>$2.5K</td>
+                            <td>120</td>
+                            <td>18</td>
+                            <td>$5–7K</td>
+                            <td>$8.1K</td>
+                            <td>Multiple channels</td>
+                        </tr>
+                        <tr>
+                            <td><strong>M10</strong></td>
+                            <td>$3K</td>
+                            <td>135</td>
+                            <td>22</td>
+                            <td>$6–8.5K</td>
+                            <td>$9.9K</td>
+                            <td>Holiday season ramp</td>
+                        </tr>
+                        <tr>
+                            <td><strong>M11</strong></td>
+                            <td>$3.5K</td>
+                            <td>150</td>
+                            <td>25</td>
+                            <td>$7–10K</td>
+                            <td>$11.25K</td>
+                            <td>Peak season</td>
+                        </tr>
+                        <tr>
+                            <td><strong>M12</strong></td>
+                            <td>$3.5K</td>
+                            <td>150</td>
+                            <td>25</td>
+                            <td>$7–10K</td>
+                            <td>$11.25K</td>
+                            <td>Sustained</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Year 1 Summary</h3>
+
+                <div class="grid">
+                    <div class="card">
+                        <h4>Conservative Scenario</h4>
+                        <p><strong>Total Ad Spend:</strong> $22K<br>
+                        <strong>Total Revenue:</strong> $25K–$50K<br>
+                        <strong>Profit:</strong> $3K–$28K</p>
+                        <p>Assumes: 10–12% lead-to-booking, 15% commission, $4K avg event.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Optimistic Scenario</h4>
+                        <p><strong>Total Ad Spend:</strong> $22K<br>
+                        <strong>Total Revenue:</strong> $55K–$75K<br>
+                        <strong>Profit:</strong> $33K–$53K</p>
+                        <p>Assumes: 15–18% lead-to-booking, 15% commission, $4.5K avg event, +partnership revenue.</p>
+                    </div>
+                </div>
+
+                <h3>Break-Even & Profitability</h3>
+                <ul>
+                    <li><strong>Break-even:</strong> Month 3–4 (revenue ≈ ad spend)</li>
+                    <li><strong>Positive margin:</strong> Month 4+ (revenue > ad spend + cost)</li>
+                    <li><strong>Ramp to $1K/month revenue:</strong> Month 7–9</li>
+                    <li><strong>Ramp to $10K/month revenue:</strong> Not expected in Year 1. This is foundation-building. Year 2 target: $500K–$1M.</li>
+                </ul>
+
+                <h3>Comparable: The Venue Report Benchmarks</h3>
+                <p><strong>The Venue Report:</strong> $1.8M revenue, 11 people, weddings-only, US-wide directory model.</p>
+                <p><strong>VENUE year 2 target:</strong> $500K–$1M revenue, 1 person (Georg) + 1 contractor, all events, Miami-only. Lower revenue but much higher margin (95%+) and faster growth trajectory.</p>
+            </section>
+
+            <!-- PARTNERSHIP -->
+            <section id="partnership">
+                <h2>Partnership Structure & Capitalization</h2>
+
+                <h3>Roles & Responsibilities</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Role</th>
+                            <th>Person</th>
+                            <th>Responsibilities</th>
+                            <th>Time Commitment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Operator</strong></td>
+                            <td>Georg</td>
+                            <td>All execution: dev, product, customer service, venue outreach, ads, marketing, metrics</td>
+                            <td>15–20 hrs/week</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Advisor + Investor</strong></td>
+                            <td>Frank</td>
+                            <td>Strategic guidance, PwC credibility, weekly metrics reviews, decision-making on major pivots</td>
+                            <td>1–2 hrs/month</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Investment Ramp (Capital Commitment)</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Ad Budget Req.</th>
+                            <th>Other Costs</th>
+                            <th>Total Monthly Req.</th>
+                            <th>Cumulative</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>M1</td>
+                            <td>$200–300</td>
+                            <td>$0</td>
+                            <td>$200–300</td>
+                            <td>$200–300</td>
+                        </tr>
+                        <tr>
+                            <td>M2</td>
+                            <td>$400–500</td>
+                            <td>$120 (contractor, if needed)</td>
+                            <td>$520</td>
+                            <td>$720–820</td>
+                        </tr>
+                        <tr>
+                            <td>M3</td>
+                            <td>$750</td>
+                            <td>$120</td>
+                            <td>$870</td>
+                            <td>$1.59K</td>
+                        </tr>
+                        <tr>
+                            <td>M4–6</td>
+                            <td>$1–1.5K</td>
+                            <td>$120</td>
+                            <td>$1.12–1.62K/month</td>
+                            <td>$5.16K–6.66K</td>
+                        </tr>
+                        <tr>
+                            <td>M7–9</td>
+                            <td>$1.8–2.2K</td>
+                            <td>$250 (contractor for content/Spanish)</td>
+                            <td>$2.05–2.45K/month</td>
+                            <td>$11.31K–13.61K</td>
+                        </tr>
+                        <tr>
+                            <td>M10–12</td>
+                            <td>$2.5–3.5K</td>
+                            <td>$250</td>
+                            <td>$2.75–3.75K/month</td>
+                            <td>$20.31K–25.11K</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Frank's Investment Request</h3>
+                <ul>
+                    <li><strong>Total Year 1 capital:</strong> $20K–$25K</li>
+                    <li><strong>Structure:</strong> Milestone-based, not lump sum. Each month, Frank approves budget + metrics review.</li>
+                    <li><strong>Payback:</strong> Month 3–4 (revenue covers spend). After that, profit reinvested in growth or split 50/50 (TBD in partnership agreement).</li>
+                    <li><strong>Max loss scenario:</strong> If VENUE doesn't work, Frank's loss is ~$25K + Georg's time (free labor). Low risk given asset-light model.</li>
+                </ul>
+
+                <h3>Operating Costs (Near Zero)</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Cost/Month</th>
+                            <th>Cost/Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>VPS Hosting (DigitalOcean, 1GB)</td>
+                            <td>$5</td>
+                            <td>$60</td>
+                        </tr>
+                        <tr>
+                            <td>Domain (Namecheap, .miami)</td>
+                            <td>~$0.08</td>
+                            <td>$1</td>
+                        </tr>
+                        <tr>
+                            <td>Email (Gmail Business)</td>
+                            <td>$0</td>
+                            <td>$0 (free)</td>
+                        </tr>
+                        <tr>
+                            <td>Analytics (PostHog free tier + GA4)</td>
+                            <td>$0</td>
+                            <td>$0 (free)</td>
+                        </tr>
+                        <tr>
+                            <td>CRM (Airtable free tier)</td>
+                            <td>$0</td>
+                            <td>$0 (free)</td>
+                        </tr>
+                        <tr>
+                            <td>Video Hosting (YouTube, free)</td>
+                            <td>$0</td>
+                            <td>$0 (free)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>TOTAL OPERATING COST</strong></td>
+                            <td>~$5/month</td>
+                            <td>~$60/year</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Ad spend is separate</strong> and negotiated month-by-month. No fixed SaaS overhead. This is why VENUE's unit economics are so strong.</p>
+
+                <h3>Partnership Terms (To Be Formalized)</h3>
+
+                <div class="highlight">
+                    <h4>Proposed Structure</h4>
+                    <ul>
+                        <li><strong>Equity:</strong> Formalize after $1K/month sustainable revenue. Split TBD (likely 70/30 Georg/Frank or similar).</li>
+                        <li><strong>Governance:</strong> Weekly 30-min sync (Tue/Wed). Monthly financial review. Major pivots require both parties' sign-off.</li>
+                        <li><strong>Profit sharing:</strong> After break-even (Month 3), revenue is split 50/50 (compensation + reinvestment). Once profitable, revisit equity split.</li>
+                        <li><strong>Exit / Buyout:</strong> Either party can propose exit at any time. Fair market value TBD (likely 1–3x annual revenue).</li>
+                        <li><strong>IP ownership:</strong> VENUE brand, customer database, venue relationships = Georg + Frank joint ownership (pending equity docs).</li>
+                    </ul>
+                </div>
+
+                <h3>Risk Allocation</h3>
+                <ul>
+                    <li><strong>Financial risk:</strong> Frank bears capital risk (~$25K max). If VENUE fails, loss is capped.</li>
+                    <li><strong>Time/Opportunity cost:</strong> Georg bears opportunity cost (15–20 hrs/week for 12 months). If VENUE fails, Georg has learned a lot + has distribution.</li>
+                    <li><strong>Upside:</strong> If VENUE hits $500K–$1M revenue in Year 2, Frank's $25K investment becomes $100K–$300K equity stake (5x–12x return).</li>
+                </ul>
+            </section>
+
+            <!-- RISK ASSESSMENT -->
+            <section id="risk-assessment">
+                <h2>Risk Assessment & Mitigation</h2>
+
+                <p>VENUE operates in a competitive, uncertain market. Here are the top risks and our response plan:</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Risk</th>
+                            <th>Threshold (Kill Switch)</th>
+                            <th>Mitigation Strategy</th>
+                            <th>Owner</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ads Don't Convert</strong> — Google/Instagram ads yield <$3.71 CPL but customers don't convert to bookings</td>
+                            <td>CPA > $50 after $1K spent</td>
+                            <td>Pivot to Instagram/partnerships. Test new ad copy. Review landing page. Possibly price too high?</td>
+                            <td>Georg</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Venues Don't Respond</strong> — Venues ignore lead inquiries, breaking concierge model</td>
+                            <td>>50% of venues no-response rate after 48h</td>
+                            <td>Call venues offline. Offer partnership $$ for responsiveness. Remove non-responsive venues from rotation.</td>
+                            <td>Georg</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Venues Don't Pay</strong> — After booking, venue refuses to pay 10–15% commission</td>
+                            <td>After 3 unpaid bookings, formalize payment terms</td>
+                            <td>Shift to $99/mo featured model (no revenue per booking). Use invoicing/Stripe to automate payment. Vet venues upfront.</td>
+                            <td>Georg</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Peerspace Copies Us</strong> — Peerspace launches concierge service, bilingual support, Miami focus</td>
+                            <td>N/A (unlikely in 6 months)</td>
+                            <td>Our moat is relationships + bilingual expertise. Peerspace doesn't have Miami relationships or Spanish fluency. Build partnerships before they do.</td>
+                            <td>Georg</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Georg Bandwidth Maxed</strong> — 15–20 hrs/week isn't enough at scale</td>
+                            <td>50+ leads/month with avg response time >24h</td>
+                            <td>Hire contractor for email/CRM by Month 6. Build Supabase automation by Month 6 to reduce manual work.</td>
+                            <td>Frank</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Market Doesn't Want It</strong> — Low demand, customers prefer Peerspace, 0 bookings after Month 2</td>
+                            <td>$1.5K spent, <15 leads, 0 bookings by Month 2</td>
+                            <td>Pause ads. Conduct customer interviews. Consider product pivot (e.g., B2B venue booking tool instead of B2C).</td>
+                            <td>Georg + Frank</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Kill Switches (Go/No-Go Decisions)</h3>
+
+                <div class="highlight">
+                    <h4>Month 2 Checkpoint: $1,500 Spent</h4>
+                    <p><strong>If:</strong> Total leads < 15 (CPL > $100) OR bookings = 0<br>
+                    <strong>Then:</strong> Pause ads. Meet with Frank. Root cause analysis (landing page? ad copy? targeting? product?).<br>
+                    <strong>Decision:</strong> Pivot, double down, or kill.</p>
+                </div>
+
+                <div class="highlight">
+                    <h4>Month 4 Checkpoint: $2,500 Spent</h4>
+                    <p><strong>If:</strong> Total bookings < 3 OR revenue < $500<br>
+                    <strong>Then:</strong> Signal that model might not work. Reassess partnership with Frank.<br>
+                    <strong>Decision:</strong> Pivot to B2B (sell to planners) or kill.</p>
+                </div>
+
+                <div class="highlight">
+                    <h4>Month 6 Checkpoint: $5,000 Spent</h4>
+                    <p><strong>If:</strong> Total bookings < 8 OR revenue < $1.5K<br>
+                    <strong>Then:</strong> VENUE is not viable at current path. Kill or major pivot.<br>
+                    <strong>Decision:</strong> Either we've found product-market fit by now, or we haven't.</p>
+                </div>
+
+                <h3>Risk Mitigation Strategies</h3>
+
+                <h4>Ad Channel Diversification</h4>
+                <p>Don't rely only on Google Ads. Test: Instagram (M3), TikTok (M6), partnerships (ongoing), SEO (M4+), referrals (ongoing).</p>
+
+                <h4>Customer Interviews (Ongoing)</h4>
+                <p>Every lead, ask: "Why did you choose us?" Every booking, ask: "What would have made this better?" Use feedback to iterate.</p>
+
+                <h4>Venue Relationships (Offline First)</h4>
+                <p>Don't just email venues. Call them. Visit them. Build personal relationships. Trust = partnership.</p>
+
+                <h4>Financial Discipline</h4>
+                <p>Spend only what we've committed. No surprise budget overruns. Monthly cap on ad spend agreed in advance.</p>
+            </section>
+
+            <!-- MARKETING STRATEGY -->
+            <section id="marketing-strategy">
+                <h2>Marketing Strategy Deep Dive</h2>
+
+                <h3>Google Ads: High-Intent Funnel</h3>
+
+                <h4>Campaign Structure (31 Keywords Across 5 Campaigns)</h4>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Campaign</th>
+                            <th>Keywords (Examples)</th>
+                            <th>Budget</th>
+                            <th>Target CPC</th>
+                            <th>Landing Page</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Birthday Parties</strong></td>
+                            <td>Birthday party venue miami, Birthday party space miami, Adult birthday venue miami</td>
+                            <td>$60 (M1)</td>
+                            <td>$0.80</td>
+                            <td>/event-type/birthday</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Baby Showers</strong></td>
+                            <td>Baby shower venue miami, Baby shower space miami, Shower venue wynwood</td>
+                            <td>$50</td>
+                            <td>$0.70</td>
+                            <td>/event-type/shower</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Corporate Events</strong></td>
+                            <td>Corporate event space miami, Team offsite venue miami, Company party space miami</td>
+                            <td>$60</td>
+                            <td>$1.20</td>
+                            <td>/event-type/corporate</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Neighborhood Focus</strong></td>
+                            <td>Event space wynwood, Event space brickell, Event space miami design district</td>
+                            <td>$40</td>
+                            <td>$0.75</td>
+                            <td>/neighborhood/wynwood (etc.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Brand/Category</strong></td>
+                            <td>Venue rental miami, Private event space miami, Loft rental events</td>
+                            <td>$30</td>
+                            <td>$1.50</td>
+                            <td>/</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>Ad Copy Templates</h4>
+
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span>High-Intent Ad (Birthday Parties)</span>
+                        <span class="collapsible-toggle">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <p><strong>Headline 1:</strong> Find Your Perfect Birthday Venue in 3 Minutes</p>
+                        <p><strong>Headline 2:</strong> Handpicked Miami Spaces for Every Budget</p>
+                        <p><strong>Headline 3:</strong> 31 Venues, 2-Hour Concierge Response</p>
+                        <p><strong>Description:</strong> Browse stunning birthday party venues across Wynwood, Brickell, Design District. Get personalized matches in minutes. Book with confidence.</p>
+                        <p><strong>CTA:</strong> Find My Venue</p>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span>High-Intent Ad (Corporate Events)</span>
+                        <span class="collapsible-toggle">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <p><strong>Headline 1:</strong> Corporate Event Spaces That Impress</p>
+                        <p><strong>Headline 2:</strong> Full-Service Venues. Curated for Miami.</p>
+                        <p><strong>Headline 3:</strong> From Team Offsite to Client Dinner</p>
+                        <p><strong>Description:</strong> Discover Miami's best corporate venues. Full bar, catering, AV included. Personalized matching for your event.</p>
+                        <p><strong>CTA:</strong> Explore Venues</p>
+                    </div>
+                </div>
+
+                <h4>Bidding & Budget Allocation (M1–M3)</h4>
+                <ul>
+                    <li><strong>Total budget:</strong> $200–$750/month</li>
+                    <li><strong>Allocation:</strong> 30% birthday, 25% shower, 20% corporate, 15% neighborhood, 10% brand</li>
+                    <li><strong>Bidding strategy:</strong> Manual CPC. Start at target CPC, adjust weekly based on conversion.</li>
+                    <li><strong>Pausing low performers:</strong> If keyword CPL > $40 after 20 clicks, pause for 1 week. Revisit with new ad copy.</li>
+                </ul>
+
+                <h3>Instagram: Brand Awareness & Community</h3>
+
+                <h4>Growth Targets</h4>
+                <ul>
+                    <li>M1: 0 → 100 followers (launch)</li>
+                    <li>M2: 100 → 300</li>
+                    <li>M3: 300 → 500</li>
+                    <li>M6: 500 → 2K</li>
+                    <li>M12: 2K → 10K</li>
+                </ul>
+
+                <h4>Content Mix (4–5 Posts/Week)</h4>
+                <ul>
+                    <li><strong>Reels (2–3x/week):</strong> 15–30 sec videos. Venue tours, event styling, before/after transformations, customer testimonials</li>
+                    <li><strong>Carousels (1x/week):</strong> 5–8 slide decks. "Top 3 Wynwood Venues for Birthdays", "Wedding Planning Checklist", "Budget Breakdown", etc.</li>
+                    <li><strong>Static posts (1–2x/week):</strong> High-quality venue photos, customer spotlights, tips</li>
+                    <li><strong>Stories (Daily):</strong> Behind-the-scenes, venue walkthroughs, Q&A stickers</li>
+                </ul>
+
+                <h4>Content Calendar (M1–M3 Sample)</h4>
+                <p>Mon: Reels (venue tour) | Tue: Carousel (event type guide) | Wed: Reels (styling) | Thu: Static (venue highlight) | Fri: Reels (customer testimonial) | Sat: Carousel (budget tips) | Sun: Static (community spotlight)</p>
+
+                <h4>Hashtag Strategy</h4>
+                <p>Mix of 5–10 branded + 15–20 discovery hashtags per post. Focus: #MiamiEvents, #VenueRental, #EventSpace, #WynwoodVenue, #BirthdayPartyMiami, #CorporateEventSpace, #MiamiWedding, #EventPlanning</p>
+
+                <h4>Paid Instagram (Start M3)</h4>
+                <ul>
+                    <li>Budget: $50–100/month (once we have 500+ followers + content library)</li>
+                    <li>Objective: Traffic (to website) or Engagement (to build community)</li>
+                    <li>Audience: Women 25–45, Miami metro, interested in "weddings", "events", "party planning"</li>
+                </ul>
+
+                <h3>SEO & Content: Long-Tail Discovery</h3>
+
+                <h4>Content Roadmap (Year 1: 24 Posts)</h4>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Examples</th>
+                            <th>Target Keywords</th>
+                            <th>Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Event Type Guides</strong></td>
+                            <td>"How to Plan a Baby Shower in Miami", "Corporate Event Planning 101", "Wedding Venue Trends 2026"</td>
+                            <td>Baby shower guide, corporate event tips, etc.</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Neighborhood Guides</strong></td>
+                            <td>"Best Venues in Wynwood", "Brickell Event Spaces", "Design District Corporate Venues"</td>
+                            <td>Wynwood event space, Brickell venues, etc.</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Trend/How-To</strong></td>
+                            <td>"Budget-Friendly Baby Shower Ideas", "Outdoor Event Planning", "Virtual + In-Person Hybrid Events"</td>
+                            <td>Affordable events, outdoor venues, etc.</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Local Partnerships</strong></td>
+                            <td>"Miami Florists We Love", "Best Caterers for Your Event", "Local Photographers"</td>
+                            <td>Miami florist, event caterer, etc.</td>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>SEO Strategy</h4>
+                <ul>
+                    <li><strong>On-page:</strong> Title (50–60 chars, keyword first), meta description (150–160 chars), H1 (keyword), H2/H3 subheadings, 800–1.5K words per post</li>
+                    <li><strong>Internal linking:</strong> Link blog posts to relevant venue/neighborhood pages</li>
+                    <li><strong>Backlinks:</strong> Reach out to local partners (florists, caterers, DJs) for cross-mentions. Target 1–2 backlinks/month from local blogs/directories.</li>
+                    <li><strong>Schema markup:</strong> JSON-LD for articles, breadcrumbs, FAQ (already in homepage for Organization)</li>
+                </ul>
+
+                <h3>Partnerships: Referral & Cross-Promotion</h3>
+
+                <h4>Partner Types</h4>
+                <ul>
+                    <li><strong>Event Planners:</strong> "For every client you refer to VENUE that books, you get a $50 credit towards our featured venue listings." (Target: 3–5 local planners)</li>
+                    <li><strong>Photographers/Florists/DJs:</strong> "Feature your work on VENUE + link back to your website. Photographers tag customers in VENUE posts." (Target: 10–15 vendors)</li>
+                    <li><strong>Wedding/Event Blogs:</strong> "Guest posts on trending topics. We link to local vendors. Win-win visibility." (Target: Miami event blogs, wedding sites)</li>
+                    <li><strong>Facebook Community Groups:</strong> "Join Miami Event Planners + Venue Seekers group. Participate, not spam. Share VENUE when relevant." (Target: 5–10 relevant groups)</li>
+                </ul>
+
+                <h4>Referral Program (M6+)</h4>
+                <p>Formalize referral incentives once profitable:</p>
+                <ul>
+                    <li>Planner refer customer → customer books → planner gets $100 credit or $50 cash</li>
+                    <li>Vendor refer customer → customer books → vendor gets listing upgrade or cross-promotion</li>
+                    <li>Customer refer friend → friend books → both get discount on future bookings (if applicable)</li>
+                </ul>
+
+                <h3>Bilingual Expansion (M6+)</h3>
+
+                <p>Spanish content critical for Miami (70% Hispanic population). Strategy:</p>
+                <ul>
+                    <li><strong>Website:</strong> Translate homepage, wizard, results, key blog posts to Spanish by M6</li>
+                    <li><strong>Ads:</strong> Create Spanish-language Google Ads + Instagram content targeting Spanish speakers</li>
+                    <li><strong>Customer service:</strong> Hire Spanish-speaking contractor ($200–300/month) for email/phone support</li>
+                    <li><strong>Content:</strong> Publish 2–3 Spanish blog posts/month (M7–12)</li>
+                </ul>
+
+                <p>This is a competitive differentiator. Peerspace and Giggster don't offer Spanish support. We dominate this segment.</p>
+            </section>
+
+            <!-- NEXT STEPS -->
+            <section id="next-steps">
+                <h2>Next Steps: The Ask (5 Decisions)</h2>
+
+                <p>VENUE is ready to launch. We have the product, the market, the plan. Here are the 5 decisions Georg and Frank need to make in the next 7 days:</p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Decision 1: Production Domain</h4>
+                        <p><strong>What:</strong> Choose the domain VENUE will live on.</p>
+                        <p><strong>Options:</strong> venue.miami (strong, local, 2-word) | venuematch.miami (clearer, longer) | eventmatch.miami (broader) | events.miami (generic)</p>
+                        <p><strong>Recommendation:</strong> venue.miami (short, memorable, strong SEO for "venue" keyword)</p>
+                        <p><strong>Cost:</strong> ~$50–100/year</p>
+                        <p><strong>Deadline:</strong> This week</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4>Decision 2: Month 1 Ad Budget</h4>
+                        <p><strong>What:</strong> How much to spend on Google Ads in Month 1 (testing phase)?</p>
+                        <p><strong>Options:</strong> Conservative $200 | Moderate $500 | Aggressive $1,000</p>
+                        <p><strong>Recommendation:</strong> $500 (sweet spot: $15–25 CPL, 20–30 leads expected)</p>
+                        <p><strong>Rationale:</strong> $200 is too low to get meaningful data. $1,000 is too risky if landing page needs iteration.</p>
+                        <p><strong>Deadline:</strong> This week</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4>Decision 3: Partnership Formalization</h4>
+                        <p><strong>What:</strong> Agree on partnership terms and governance.</p>
+                        <p><strong>Key Points:</strong> Equity split (proposed 70/30 Georg/Frank), profit sharing (50/50 post-break-even), weekly syncs, monthly reviews, decision-making on pivots</p>
+                        <p><strong>Deliverable:</strong> 1-page partnership agreement (not a legal doc, just clarity)</p>
+                        <p><strong>Deadline:</strong> This week</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4>Decision 4: Ad Account Setup</h4>
+                        <p><strong>What:</strong> Create Google Ads + Instagram Ads accounts + link to GA4.</p>
+                        <p><strong>Tasks:</strong> (1) Create Google Ads account, (2) Link to GA4 property, (3) Set up conversion tracking, (4) Create first 3 campaigns, (5) Setup Instagram Business account</p>
+                        <p><strong>Owner:</strong> Georg (Frank provides approval + budget card if needed)</p>
+                        <p><strong>Deadline:</strong> By Tuesday (before ads launch)</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4>Decision 5: Launch Date</h4>
+                        <p><strong>What:</strong> When do we go live with VENUE to production + start ads?</p>
+                        <p><strong>Proposed:</strong> Next Monday (7 days from now)</p>
+                        <p><strong>Pre-launch checklist:</strong> (1) Fix 7 product issues, (2) Deploy to production, (3) Test all flows, (4) Setup PostHog + GA4 + Google Search Console, (5) Activate ads</p>
+                        <p><strong>Owner:</strong> Georg (feasible in 5–7 days)</p>
+                        <p><strong>Deadline:</strong> Commit this week</p>
+                    </div>
+                </div>
+
+                <h3>Weekly Sync Template (Post-Launch)</h3>
+                <p>Every Tuesday 10 AM (30 min):</p>
+                <ul>
+                    <li><strong>Leads:</strong> Total leads this week, CPL, bookings</li>
+                    <li><strong>Spend:</strong> Total ad spend, ROAS</li>
+                    <li><strong>Blockers:</strong> What's in the way?</li>
+                    <li><strong>Next week's focus:</strong> What's the priority?</li>
+                    <li><strong>Decisions needed:</strong> Any calls Frank needs to make?</li>
+                </ul>
+
+                <h3>Success Milestones (Tracking)</h3>
+                <ul>
+                    <li><strong>Week 1–2:</strong> Ads running. Aim for 5–10 leads. CPL < $50.</li>
+                    <li><strong>Week 3–4:</strong> First booking (or near). CPL < $35. 15+ leads cumulative.</li>
+                    <li><strong>Month 2:</strong> 5+ bookings cumulative. Revenue > 0. CPL trending down.</li>
+                    <li><strong>Month 3:</strong> 15+ bookings. Revenue ≈ ad spend (break-even). 30+ leads/month steady state.</li>
+                </ul>
+
+                <div class="highlight">
+                    <h4>Final Thought</h4>
+                    <p>VENUE solves a real problem (fragmented Miami event venue market), has a defensible moat (concierge + bilingual + local), and has unit economics that work (95%+ margin, break-even Month 3). The market opportunity is proven ($3B+). Competitors are vulnerable (Peerspace 2.6/5).</p>
+                    <p>We're not inventing something new. We're executing a playbook that works (geographic focus, supply-first, niche excellence). The risk is execution, not strategy. Georg is the right operator (built the product, knows the market, speaks Spanish). Frank is the right capital + credibility partner.</p>
+                    <p><strong>All systems go. Let's move.</strong></p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p><strong>VENUE Master Plan</strong> — Complete Operations Playbook for Miami Event Venue Marketplace</p>
+        <p>Prepared for: Georg Chimion (Operator) + Frank (Advisor/Investor)</p>
+        <p>Last Updated: March 18, 2026 | Next Review: April 1, 2026 (Month 1 Checkpoint)</p>
+        <p style="margin-top: 1.5rem; opacity: 0.7;">This document contains strategic, financial, and operational information. For authorized use only.</p>
+    </footer>
+
+    <script>
+        // Navigation Active State
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Collapsible Sections
+        const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
+        collapsibleHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const toggle = header.querySelector('.collapsible-toggle');
+
+                content.classList.toggle('open');
+                toggle.classList.toggle('open');
+            });
+        });
+
+        // Mermaid Initialization
+        mermaid.contentLoaderCss = "http://localhost:3000/mermaid.css";
+        mermaid.initialize({ startOnLoad: true, theme: 'default', securityLevel: 'loose' });
+        mermaid.contentLoaderCss = "http://localhost:3000/mermaid.css";
+        mermaid.initialize({ startOnLoad: true, theme: 'default', securityLevel: 'loose' });
+    </script>
+</body>
+</html>

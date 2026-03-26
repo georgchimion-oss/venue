@@ -9,8 +9,10 @@ VENUE is a Miami-market private event venue marketplace. It connects people plan
 - **Live site:** https://venue.georg.miami
 - **Co-founder:** Frank (advisory role)
 - **Operator:** Georg Chimion (everything — dev, research, outreach, marketing)
-- **Current phase:** Phase 1 — Concierge MVP
-- **Strategy doc:** `docs/GTM-PLAN.md`
+- **Current phase:** PRE-LAUNCH (prototype complete, production domain TBD, waiting on Frank)
+- **Strategy doc:** `docs/VENUE-Master-Plan.pdf` (master operations plan)
+- **Pitch deck:** `docs/VENUE-Business-Plan.pdf` (for Frank)
+- **Roadmap:** `ROADMAP.md` (living status tracker — check this first every session)
 
 ## Current State (as of 2026-03-18)
 
@@ -23,7 +25,7 @@ The app is a **Next.js 16 + React 19 + TypeScript** app deployed on Georg's VPS.
 - Booking requests POST to FormSubmit.co → georg.chimion@gmail.com
 - PostHog + GA4 analytics infrastructure wired (7 funnel events), needs API keys in `.env.local`
 - JSON-LD structured data for Google SEO
-- Old prototype archived at `docs/legacy-prototype.html`
+- Old prototype archived at `docs/archive/legacy-prototype.html`
 
 ### What's next (remaining Phase 1 tasks):
 - [ ] Create PostHog account, add API key to VPS `.env.local` (see `.env.example`)
@@ -57,11 +59,15 @@ venue/
 │   │   └── venues.json              # 31 real Miami venues across 9 neighborhoods
 │   └── styles/
 │       └── globals.css               # Full design system (ported from prototype CSS)
+├── ROADMAP.md                        # Living status tracker — CHECK THIS FIRST
 ├── docs/
-│   ├── GTM-PLAN.md                   # Master 5-phase go-to-market strategy
+│   ├── VENUE-Business-Plan.pptx      # Pitch deck for Frank (15 slides)
+│   ├── VENUE-Business-Plan.pdf       # Same deck as PDF — SEND TO FRANK
+│   ├── VENUE-Master-Plan.pdf         # Complete operations plan (10 sections, 12-month playbook)
+│   ├── VENUE-Master-Plan.html        # Same plan as interactive HTML (open in browser)
 │   ├── email-templates.md            # 6 concierge email templates
 │   ├── METRICS.md                    # Weekly metrics tracking
-│   └── legacy-prototype.html         # Archived original index.html (reference only)
+│   └── archive/                      # Retired docs
 ├── .env.example                      # PostHog + GA4 key placeholders
 ├── next.config.ts                    # TypeScript check disabled (VPS OOM)
 ├── tsconfig.json
@@ -146,7 +152,7 @@ npm run build        # production build
 - Data access through `lib/venues.ts` (abstracts JSON now, Supabase later)
 - All business context in `docs/` folder
 - Update `CLAUDE.md` and `ROADMAP.md` at end of every session
-- Git: local `master` branch, push to remote `main` via `git push origin HEAD:main`
+- See master `Coding/.claude/CLAUDE.md` for shared conventions (git workflow, design system, VPS details)
 
 ## Business Context
 
