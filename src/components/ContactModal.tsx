@@ -35,7 +35,7 @@ export default function ContactModal({ open, venue, form, updateForm, onClose }:
   };
 
   const handleSubmit = async () => {
-    if (!isFormValid) return;
+    if (!isFormValid || submitting) return;
     setSubmitting(true);
     setError('');
 
@@ -57,7 +57,7 @@ export default function ContactModal({ open, venue, form, updateForm, onClose }:
       minimum_spend: formatCurrency(minSpend),
       est_per_person: '$' + Math.round(ppTotal) + ' (with tax + tip)',
       special_requests: form.notes || 'None',
-      _subject: `VENUE Request: ${venue.name} — ${form.eventType || 'Event'} for ${form.guests} guests`,
+      _subject: `VENUE Request: ${venue.name}, ${form.eventType || 'Event'} for ${form.guests} guests`,
       _template: 'table',
     };
 
@@ -178,7 +178,7 @@ export default function ContactModal({ open, venue, form, updateForm, onClose }:
           </div>
           <div className="modal-note" style={{ marginTop: 16 }}>
             We&apos;ll email next steps to <strong>{form.contactEmail}</strong>.<br />
-            Expect to hear from us within <strong>24 hours</strong> — usually much sooner.
+            Expect to hear from us within <strong>24 hours</strong>, usually much sooner.
           </div>
         </div>
       )}
