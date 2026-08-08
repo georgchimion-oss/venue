@@ -632,7 +632,7 @@
       "name": "The Temple House",
       "neighborhood": "South Beach",
       "address": "1415 Euclid Ave, Miami Beach, FL 33139",
-      "description": "Iconic 16,000 sq ft Art Deco event venue in the heart of South Beach with 25-foot ceilings, a dramatic mezzanine, 360° projection architecture, and fully private standalone building — the gold standard for luxury events.",
+      "description": "Iconic 16,000 sq ft Art Deco event venue in the heart of South Beach with 25-foot ceilings, a dramatic mezzanine, 360° projection architecture, and fully private standalone building. The gold standard for luxury events.",
       "spaceTypes": ["full-venue", "ballroom", "indoor-outdoor"],
       "capacity": {
         "min": 50,
@@ -670,7 +670,7 @@
       "name": "1 Hotel South Beach",
       "neighborhood": "South Beach",
       "address": "2341 Collins Ave, Miami Beach, FL 33139",
-      "description": "Luxury beachfront hotel with 23,000+ sq ft of versatile event space including the Watr rooftop, Habitat restaurant, Plnthouse with ocean terrace, and the 50,000 sq ft Tala Beach oasis — nature-inspired elegance for events of any scale.",
+      "description": "Luxury beachfront hotel with 23,000+ sq ft of versatile event space including the Watr rooftop, Habitat restaurant, Plnthouse with ocean terrace, and the 50,000 sq ft Tala Beach oasis. Nature-inspired elegance for events of any scale.",
       "spaceTypes": ["rooftop", "restaurant", "terrace", "ballroom", "beachfront", "full-venue"],
       "capacity": {
         "min": 10,
@@ -708,7 +708,7 @@
       "name": "Kimpton Angler's Hotel",
       "neighborhood": "South Beach",
       "address": "660 Washington Ave, Miami Beach, FL 33139",
-      "description": "Boutique Art Deco hotel in the heart of South Beach with two brand-new event spaces — the 2,500 sq ft SoBe Room and the 1,470 sq ft SoBe Terrace — plus a lush pool courtyard perfect for intimate and mid-size events.",
+      "description": "Boutique Art Deco hotel in the heart of South Beach with two brand-new event spaces (the 2,500 sq ft SoBe Room and the 1,470 sq ft SoBe Terrace), plus a lush pool courtyard perfect for intimate and mid-size events.",
       "spaceTypes": ["private-room", "terrace", "poolside", "indoor-outdoor"],
       "capacity": {
         "min": 20,
@@ -746,7 +746,7 @@
       "name": "Fairchild Tropical Botanic Garden",
       "neighborhood": "Coral Gables",
       "address": "10901 Old Cutler Rd, Coral Gables, FL 33156",
-      "description": "Sprawling 83-acre tropical garden with multiple stunning event spaces — the Garden House, lakeside marquee tent, and Arts Center — surrounded by rare palms, rainforest, and coastal habitat. Miami's most magical outdoor venue.",
+      "description": "Sprawling 83-acre tropical garden with multiple stunning event spaces (the Garden House, lakeside marquee tent, and Arts Center), surrounded by rare palms, rainforest, and coastal habitat. Miami's most magical outdoor venue.",
       "spaceTypes": ["garden", "full-venue", "tent", "indoor-outdoor"],
       "capacity": {
         "min": 20,
@@ -784,7 +784,7 @@
       "name": "Coral Gables Country Club",
       "neighborhood": "Coral Gables",
       "address": "997 N Greenway Dr, Coral Gables, FL 33134",
-      "description": "Historic country club with elegant ballroom, lush outdoor spaces, and sweeping green views — a classic Coral Gables setting for weddings, galas, and corporate events with capacity up to 1,000 guests.",
+      "description": "Historic country club with elegant ballroom, lush outdoor spaces, and sweeping green views. A classic Coral Gables setting for weddings, galas, and corporate events with capacity up to 1,000 guests.",
       "spaceTypes": ["ballroom", "outdoor-garden", "full-venue"],
       "capacity": {
         "min": 50,
@@ -860,7 +860,7 @@
       "name": "Vizcaya Museum & Gardens",
       "neighborhood": "Coconut Grove",
       "address": "3251 S Miami Ave, Miami, FL 33129",
-      "description": "Breathtaking Italian Renaissance-style villa on Biscayne Bay with 10 acres of formal gardens, a stone barge, and ornate interiors — Miami's most iconic and photographed event venue for weddings and galas.",
+      "description": "Breathtaking Italian Renaissance-style villa on Biscayne Bay with 10 acres of formal gardens, a stone barge, and ornate interiors. Miami's most iconic and photographed event venue for weddings and galas.",
       "spaceTypes": ["garden", "terrace", "historic-mansion", "waterfront"],
       "capacity": {
         "min": 25,
@@ -898,7 +898,7 @@
       "name": "Mayfair House Hotel & Garden",
       "neighborhood": "Coconut Grove",
       "address": "3000 Florida Ave, Coconut Grove, FL 33133",
-      "description": "Boutique hotel in the heart of Coconut Grove with 18,000+ sq ft of event space across 12 unique venues — from a wood-paneled ballroom with vaulted ceilings to an outdoor terrace and rooftop rum bar, plus catering by Lost Boy & Co.",
+      "description": "Boutique hotel in the heart of Coconut Grove with 18,000+ sq ft of event space across 12 unique venues: from a wood-paneled ballroom with vaulted ceilings to an outdoor terrace and rooftop rum bar, plus catering by Lost Boy & Co.",
       "spaceTypes": ["ballroom", "terrace", "rooftop", "private-room", "indoor-outdoor"],
       "capacity": {
         "min": 14,
@@ -936,7 +936,7 @@
       "name": "Mr. C Coconut Grove",
       "neighborhood": "Coconut Grove",
       "address": "2988 McFarlane Rd, Coconut Grove, FL 33133",
-      "description": "Italian luxury hotel by the Cipriani family with a 2,500 sq ft indoor event space, wraparound terrace, and Port-Cochere for up to 400 guests — refined European elegance meets tropical Coconut Grove charm.",
+      "description": "Italian luxury hotel by the Cipriani family with a 2,500 sq ft indoor event space, wraparound terrace, and Port-Cochere for up to 400 guests. Refined European elegance meets tropical Coconut Grove charm.",
       "spaceTypes": ["ballroom", "terrace", "full-venue", "indoor-outdoor"],
       "capacity": {
         "min": 20,
@@ -974,7 +974,7 @@
       "name": "Little River Studios",
       "neighborhood": "Little River",
       "address": "300 NE 71st St, Miami, FL 33138",
-      "description": "Sprawling 10,000 sq ft indoor-outdoor production and event space on an acre of land in Miami's creative Little River district — a blank canvas for weddings, festivals, brand activations, and large-scale events up to 2,750 guests.",
+      "description": "Sprawling 10,000 sq ft indoor-outdoor production and event space on an acre of land in Miami's creative Little River district. A blank canvas for weddings, festivals, brand activations, and large-scale events up to 2,750 guests.",
       "spaceTypes": ["full-venue", "indoor-outdoor", "production-space", "outdoor-garden"],
       "capacity": {
         "min": 50,
@@ -1012,7 +1012,7 @@
       "name": "The Citadel",
       "neighborhood": "Little River",
       "address": "8300 NE 2nd Ave, Miami, FL 33138",
-      "description": "Multi-level food hall and event complex in Little River with a 5,000 sq ft rooftop bar offering sweeping views, a 4,000 sq ft indoor mezzanine, and a 500-capacity entertainment space — vibrant, creative, and endlessly versatile.",
+      "description": "Multi-level food hall and event complex in Little River with a 5,000 sq ft rooftop bar offering sweeping views, a 4,000 sq ft indoor mezzanine, and a 500-capacity entertainment space. Vibrant, creative, and endlessly versatile.",
       "spaceTypes": ["rooftop", "mezzanine", "full-venue", "indoor-outdoor"],
       "capacity": {
         "min": 20,
@@ -1050,7 +1050,7 @@
       "name": "Biltmore Hotel",
       "neighborhood": "Coral Gables",
       "address": "1200 Anastasia Ave, Coral Gables, FL 33134",
-      "description": "A National Historic Landmark featuring Mediterranean Revival architecture with over 75,000 sq ft of indoor/outdoor event space — three ballrooms, terraces, an amphitheater, and Miami's most legendary pool. The definitive grand venue.",
+      "description": "A National Historic Landmark featuring Mediterranean Revival architecture with over 75,000 sq ft of indoor/outdoor event space: three ballrooms, terraces, an amphitheater, and Miami's most legendary pool. The definitive grand venue.",
       "spaceTypes": ["ballroom", "terrace", "full-venue", "outdoor-garden", "pool-area"],
       "capacity": {
         "min": 20,
@@ -1088,7 +1088,7 @@
       "name": "Ball & Chain",
       "neighborhood": "Little Havana",
       "address": "1513 SW 8th St, Miami, FL 33135",
-      "description": "Legendary live music venue on Calle Ocho open since 1935, blending Cuban culture with vibrant nightlife — salsa dancers, award-winning musicians, DJs, authentic cigar rollers, and an electric open-air pineapple-shaped stage in the back garden.",
+      "description": "Legendary live music venue on Calle Ocho open since 1935, blending Cuban culture with vibrant nightlife: salsa dancers, award-winning musicians, DJs, authentic cigar rollers, and an electric open-air pineapple-shaped stage in the back garden.",
       "spaceTypes": ["full-venue", "outdoor-garden", "lounge", "stage"],
       "capacity": {
         "min": 20,
@@ -1126,7 +1126,7 @@
       "name": "Café La Trova",
       "neighborhood": "Little Havana",
       "address": "971 SW 8th St, Miami, FL 33130",
-      "description": "Michelin-recognized Cuban cocktail bar and restaurant on Calle Ocho by celebrity chef Michelle Bernstein and master cantinero Julio Cabrera — three configurable sections with traditional folding doors, live entertainment, and world-class cocktails.",
+      "description": "Michelin-recognized Cuban cocktail bar and restaurant on Calle Ocho by celebrity chef Michelle Bernstein and master cantinero Julio Cabrera. Three configurable sections with traditional folding doors, live entertainment, and world-class cocktails.",
       "spaceTypes": ["restaurant", "private-room", "full-venue", "indoor-outdoor"],
       "capacity": {
         "min": 20,
@@ -1164,7 +1164,7 @@
       "name": "Pérez Art Museum Miami (PAMM)",
       "neighborhood": "Downtown",
       "address": "1103 Biscayne Blvd, Miami, FL 33132",
-      "description": "World-class waterfront art museum designed by Herzog & de Meuron with stunning Biscayne Bay views, hanging gardens, and 120,000 sq ft of dramatic architecture — the ultimate backdrop for sophisticated corporate events, galas, and celebrations.",
+      "description": "World-class waterfront art museum designed by Herzog & de Meuron with stunning Biscayne Bay views, hanging gardens, and 120,000 sq ft of dramatic architecture. The ultimate backdrop for sophisticated corporate events, galas, and celebrations.",
       "spaceTypes": ["terrace", "gallery", "full-venue", "waterfront"],
       "capacity": {
         "min": 50,

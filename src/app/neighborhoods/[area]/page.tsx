@@ -19,10 +19,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (venues.length === 0) return { title: 'Neighborhood Not Found' };
 
   return {
-    title: `${displayName} Event Venues — ${venues.length} Private Spaces | VENUE Miami`,
+    title: `${displayName} Event Venues: ${venues.length} Private Spaces | VENUE Miami`,
     description: `Browse ${venues.length} private event venues in ${displayName}, Miami. Book birthday parties, corporate events, baby showers & more. Free to browse.`,
     openGraph: {
-      title: `${displayName} Event Venues — VENUE Miami`,
+      title: `${displayName} Event Venues | VENUE Miami`,
       description: `${venues.length} private event spaces in ${displayName}. Find your perfect venue.`,
       url: `https://venue.georg.miami/neighborhoods/${area}`,
       siteName: 'VENUE',

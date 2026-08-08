@@ -17,10 +17,10 @@ const OCCASION_OPTIONS = [
   { emoji: '🤝', label: 'All ages' },
 ];
 const TIME_OPTIONS = [
-  { emoji: '🌅', label: 'Morning', range: '8 AM – 12 PM' },
-  { emoji: '☀️', label: 'Afternoon', range: '12 PM – 5 PM' },
-  { emoji: '🌆', label: 'Evening', range: '5 PM – 10 PM' },
-  { emoji: '🌙', label: 'Late Night', range: '10 PM – 2 AM' },
+  { emoji: '🌅', label: 'Morning', range: '8 AM to 12 PM' },
+  { emoji: '☀️', label: 'Afternoon', range: '12 PM to 5 PM' },
+  { emoji: '🌆', label: 'Evening', range: '5 PM to 10 PM' },
+  { emoji: '🌙', label: 'Late Night', range: '10 PM to 2 AM' },
 ];
 
 export default function LocationStep({ form, updateForm, onNext, onBack }: LocationStepProps) {

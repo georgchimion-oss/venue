@@ -23,8 +23,8 @@ const SmallCheckSvg = () => (
 
 const BUDGET_OPTIONS = [
   { emoji: '💛', name: 'Under $1k', desc: 'Small intimate gatherings', value: 'Under $1,000' },
-  { emoji: '🧡', name: '$1k – $3k', desc: 'Mid-size events', value: '$1,000 – $3,000' },
-  { emoji: '❤️', name: '$3k – $7k', desc: 'Premium experience', value: '$3,000 – $7,000' },
+  { emoji: '🧡', name: '$1k-$3k', desc: 'Mid-size events', value: '$1,000-$3,000' },
+  { emoji: '❤️', name: '$3k-$7k', desc: 'Premium experience', value: '$3,000-$7,000' },
   { emoji: '💎', name: '$7k+', desc: 'All-inclusive luxury', value: '$7,000+' },
 ];
 
@@ -36,9 +36,9 @@ const CATERING_OPTIONS = [
 ];
 
 const DRINKS_OPTIONS = [
-  { emoji: '🥤', name: 'Soft Drinks & Mocktails', desc: 'Juices, sodas, mocktails — great for all ages and family events', est: '~$8–12/person', value: 'Non-Alcoholic' },
-  { emoji: '🍷', name: 'Beer & Wine', desc: 'Curated selection of beers and wines', est: '~$20–30/person', value: 'Beer & Wine' },
-  { emoji: '🍸', name: 'Full Open Bar', desc: 'Beer, wine, spirits, and signature cocktails', est: '~$45–65/person', value: 'Full Open Bar' },
+  { emoji: '🥤', name: 'Soft Drinks & Mocktails', desc: 'Juices, sodas, mocktails. Great for all ages and family events', est: '~$8-12/person', value: 'Non-Alcoholic' },
+  { emoji: '🍷', name: 'Beer & Wine', desc: 'Curated selection of beers and wines', est: '~$20-30/person', value: 'Beer & Wine' },
+  { emoji: '🍸', name: 'Full Open Bar', desc: 'Beer, wine, spirits, and signature cocktails', est: '~$45-65/person', value: 'Full Open Bar' },
 ];
 
 const VIBE_OPTIONS = [

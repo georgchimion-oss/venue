@@ -20,9 +20,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "VENUE — Book Private Spaces for Any Occasion | Miami",
+  title: "VENUE: Book Private Spaces for Any Occasion | Miami",
   description:
-    "Find and book private event spaces in Miami. From baby showers to boardrooms — we handle the venue, setup, and staff. Free for consumers.",
+    "Find and book private event spaces in Miami. From baby showers to boardrooms, we handle the venue, setup, and staff. Free for consumers.",
   keywords: [
     "private event space miami",
     "baby shower venue miami",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "venue booking miami",
   ],
   openGraph: {
-    title: "VENUE — Book Private Spaces for Any Occasion",
+    title: "VENUE: Book Private Spaces for Any Occasion",
     description:
       "Find and book private event spaces in Miami. Free to browse, no credit card required.",
     url: "https://venue.georg.miami",

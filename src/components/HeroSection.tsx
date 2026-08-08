@@ -29,7 +29,7 @@ export default function HeroSection({ venueCount, onStart }: HeroSectionProps) {
             Every<br />occasion.<br /><em>One tap.</em>
           </h1>
           <p className="hero-sub au" style={{ animationDelay: '0.36s' }}>
-            From baby showers to boardrooms — find and book a private space in hours, not weeks. We handle the venue, setup, and staff.
+            From baby showers to boardrooms, find and book a private space in hours, not weeks. We handle the venue, setup, and staff.
           </p>
           <div className="hero-cta-row au" style={{ animationDelay: '0.48s' }}>
             <button className="btn-primary" onClick={onStart}>

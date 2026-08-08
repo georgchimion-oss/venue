@@ -23,10 +23,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!venue) return { title: 'Venue Not Found' };
 
   return {
-    title: `${venue.name} — Private Event Space in ${venue.neighborhood} | VENUE`,
+    title: `${venue.name}: Private Event Space in ${venue.neighborhood} | VENUE`,
     description: `Book ${venue.name} in ${venue.neighborhood}, Miami for your next event. Capacity up to ${venue.capacity.max} guests. ${venue.description}`,
     openGraph: {
-      title: `${venue.name} — ${venue.neighborhood} Event Space`,
+      title: `${venue.name}: ${venue.neighborhood} Event Space`,
       description: venue.description,
       url: `https://venue.georg.miami/venues/${venue.id}`,
       siteName: 'VENUE',
@@ -113,7 +113,7 @@ export default async function VenueDetailPage({ params }: Props) {
             <div className="vd-details-grid">
               <div className="vd-detail-card">
                 <div className="vd-detail-label">Capacity</div>
-                <div className="vd-detail-value">{venue.capacity.min}–{venue.capacity.max} guests</div>
+                <div className="vd-detail-value">{venue.capacity.min}-{venue.capacity.max} guests</div>
                 <div className="vd-detail-sub">
                   {venue.capacity.seated} seated · {venue.capacity.cocktail} cocktail
                 </div>

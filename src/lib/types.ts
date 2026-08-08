@@ -103,7 +103,7 @@ export const EVENT_TYPES = [
   { emoji: '🎈', name: 'Kids Party', desc: 'Fun, safe, and memorable. Kid-friendly spaces with activities and catering.' },
   { emoji: '💼', name: 'Corporate Event', desc: 'Team events, client dinners, offsites, and celebrations. AV + catering included.' },
   { emoji: '🎄', name: 'Holiday Party', desc: 'Seasonal celebrations for families or teams. Festive decor available.' },
-  { emoji: '✨', name: 'Something Else', desc: 'Retirement, reunion, anniversary, bar mitzvah — tell us and we\'ll find the space.' },
+  { emoji: '✨', name: 'Something Else', desc: 'Retirement, reunion, anniversary, bar mitzvah? Tell us and we\'ll find the space.' },
 ] as const;
 
 // ── Visual Constants ──
