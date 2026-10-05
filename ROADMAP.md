@@ -1,5 +1,7 @@
 # VENUE — Roadmap & Status Tracker
 
+> **2026-08-06:** Double-submit race in ContactModal fixed and deployed (commit f1fd3c2). One rapid double-click now sends exactly one FormSubmit request, verified live with Playwright network capture. Em dashes stripped from email subject and success-modal copy.
+
 > **Last updated:** 2026-03-18
 > **Current stage:** PRE-LAUNCH (Prototype complete, waiting on Frank decisions)
 > **Next milestone:** Georg + Frank meeting → domain decision → launch
